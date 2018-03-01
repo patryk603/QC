@@ -18,7 +18,7 @@ public class Linkedin {
     @BeforeClass(alwaysRun = true)
     public void setUp() throws Exception {
         driver = new ChromeDriver();
-        baseUrl = "https://www.gowork.pl";
+        baseUrl = "https://www.linkedin.com/";
 
 
     }
@@ -26,13 +26,22 @@ public class Linkedin {
     @Test
     public void testLot() throws Exception {
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-        driver.get(baseUrl + "/opinie_czytaj,291125");
-        driver.findElement(By.cssSelector("#rateYo > div > div.jq-ry-rated-group.jq-ry-group > svg:nth-child(1) > polygon")).click();
+        driver.get(baseUrl);
+        driver.findElement(By.id("login-email")).clear();
+        driver.findElement(By.id("login-email")).sendKeys("patryk603@wp.pl");
+        driver.findElement(By.id("login-password")).clear();
+        driver.findElement(By.id("login-password")).sendKeys("P@kier1989r");
+        driver.findElement(By.id("login-submit")).click();
+        driver.findElement(By.id("messaging-nav-item")).click();
+        driver.findElement(By.id("nav-settings__dropdown-trigger")).click();
+        driver.findElement(By.xpath("//a[contains(@href,\"/m/logout/\")]")).click();
+        //[alternative]driver.findElement(By.xpath("//*[contains(text(),\"Wyloguj się\")]")).click();
+
     }
 
     @AfterClass(alwaysRun = true)
     public void tearDown() throws Exception {
-        driver.quit();
+        //driver.quit();
 
         }
 
