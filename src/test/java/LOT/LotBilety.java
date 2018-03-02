@@ -24,14 +24,13 @@ public class LotBilety {
         baseUrl = "http://www.lot.com/";
     }
 
-    @Test
+    @Test(groups=("p1"))
     public void testLot() throws Exception {
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         driver.get(baseUrl + "pl/pl/");
         driver.findElement(By.cssSelector("h3.h3.g-no-padding-b")).click();
         driver.findElement(By.cssSelector("span.darkBlueColorText")).click();
         driver.findElement(By.cssSelector("button.o-btn.submit")).submit();
-        driver.findElement(By.cssSelector("img.img_responsive")).click();
         driver.findElement(By.cssSelector("img.img_responsive")).click();
     }
 

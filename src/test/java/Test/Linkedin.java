@@ -23,7 +23,7 @@ public class Linkedin {
 
     }
 
-    @Test
+    @Test(groups=("l1"))
     public void testLot() throws Exception {
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         driver.get(baseUrl);
@@ -41,7 +41,7 @@ public class Linkedin {
 
     @AfterClass(alwaysRun = true)
     public void tearDown() throws Exception {
-        //driver.quit();
+        driver.quit();
 
         }
 
