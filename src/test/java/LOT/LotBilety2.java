@@ -21,7 +21,7 @@ public class LotBilety2 {
         baseUrl = "http://www.lot.com/";
     }
 
-    @Test
+    @Test(groups=("p1"))
     public void testLot() throws Exception {
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         driver.get(baseUrl + "pl/pl/");
