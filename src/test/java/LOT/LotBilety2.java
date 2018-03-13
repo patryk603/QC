@@ -28,12 +28,12 @@ public class LotBilety2 {
         driver.findElement(By.cssSelector("h3.h3.g-no-padding-b")).click();
         driver.findElement(By.cssSelector("span.darkBlueColorText")).click();
         driver.findElement(By.cssSelector("button.o-btn.submit")).submit();
-        driver.findElement(By.cssSelector("img.img_responsive")).click();
+        driver.findElement(By.id("VAB__flight__rates__rate__header__content_-1-ECONOMY")).click();
     }
 
     @AfterClass(alwaysRun = true)
     public void tearDown() throws Exception {
-        driver.quit();
+        //driver.quit();
 
         }
 

@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default Suite]" guice-stage="DEVELOPMENT">
   <test name="LOTests(failed)">
     <classes>
-      <class name="GAM.GAM_Login">
+      <class name="LOT.LotBilety">
         <methods>
-          <include name="afterMethod"/>
-          <include name="beforeMethod"/>
-          <include name="main"/>
+          <include name="tearDown"/>
+          <include name="Bilet_WAW_LHR_Economy"/>
+          <include name="setUp"/>
         </methods>
-      </class> <!-- GAM.GAM_Login -->
+      </class> <!-- LOT.LotBilety -->
     </classes>
   </test> <!-- LOTests(failed) -->
 </suite> <!-- Failed suite [Default Suite] -->
