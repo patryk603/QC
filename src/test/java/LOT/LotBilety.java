@@ -31,6 +31,7 @@ public class LotBilety {
         driver.findElement(By.cssSelector("h3.h3.g-no-padding-b")).click();
         driver.findElement(By.cssSelector("span.darkBlueColorText")).click();
         driver.findElement(By.cssSelector("button.o-btn.submit")).submit();
+        //Thread.sleep(5000);
         driver.findElement(By.cssSelector("img.img_responsive")).click();
     }
 
