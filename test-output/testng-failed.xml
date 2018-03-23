@@ -1,25 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Pozdro Dla Ekipy IT:)]" guice-stage="DEVELOPMENT">
+<suite name="Failed suite [Default Suite]" guice-stage="DEVELOPMENT">
   <test name="LOTests(failed)">
-    <groups>
-      <run>
-        <include name="p1"/>
-      </run>
-    </groups>
     <classes>
-      <class name="LOT.LotBilety">
+      <class name="Test.Mati">
         <methods>
-          <include name="Test_Promocji"/>
-          <include name="tearDown"/>
-          <include name="Bilet_WAW_LHR_Economy"/>
+          <include name="testLot"/>
           <include name="setUp"/>
-          <include name="Test_Biletow"/>
-          <include name="Bilet_WAW_LHR_PremiumEconomy"/>
-          <include name="Bilet_WAW_LHR_Business"/>
-          <include name="Test_Zarezewuj"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- LOT.LotBilety -->
+      </class> <!-- Test.Mati -->
     </classes>
   </test> <!-- LOTests(failed) -->
-</suite> <!-- Failed suite [Pozdro Dla Ekipy IT:)] -->
+</suite> <!-- Failed suite [Default Suite] -->
