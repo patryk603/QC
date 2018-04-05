@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Default Suite]" guice-stage="DEVELOPMENT">
-  <test name="LOTests(failed)">
+  <test thread-count="5" name="LOTests(failed)">
     <classes>
-      <class name="Test.Mati">
+      <class name="LOT.LotBilety">
         <methods>
-          <include name="testLot"/>
-          <include name="setUp"/>
           <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="Test_Biletow"/>
         </methods>
-      </class> <!-- Test.Mati -->
+      </class> <!-- LOT.LotBilety -->
     </classes>
   </test> <!-- LOTests(failed) -->
 </suite> <!-- Failed suite [Default Suite] -->
