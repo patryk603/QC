@@ -29,16 +29,34 @@ public class LotBilety {
     }
 
     @Test(groups=("p1"))
-    public void Test_Biletow() throws Exception {
+    public void Test_HomePageTabs_PL() throws Exception {
         driver.get(baseUrl + "pl/pl/");
-        HomePage.zalogujsie.click();
-        //driver.findElement(By.xpath("//*[@id='menu-settings']/a/span")).click();
-
+        HomePage.login.click();
+        driver.navigate().back();
+        HomePage.Book.click();
+        driver.navigate().back();
+        HomePage.DealsAndOffers.click();
+        driver.navigate().back();
+        HomePage.PrepareForTravel.click();
+        driver.navigate().back();
+        HomePage.DuringForFlight.click();
+        driver.navigate().back();
+        HomePage.CustomerService.click();
+        driver.navigate().back();
+        HomePage.MilesAndMore.click();
+        driver.navigate().back();
     }
 
     @Test(groups=("p1"))
-    public void Test_Zarezewuj() throws Exception {
-        driver.get(baseUrl + "pl/pl/zarezerwuj-header");
+    public void Test_HomePageTabsVisible() throws Exception {
+        driver.get(baseUrl + "pl/pl/");
+        HomePage.login.isDisplayed();
+        HomePage.Book.isDisplayed();
+        HomePage.DealsAndOffers.isDisplayed();
+        HomePage.PrepareForTravel.isDisplayed();
+        HomePage.DuringForFlight.isDisplayed();
+        HomePage.CustomerService.isDisplayed();
+        HomePage.MilesAndMore.isDisplayed();
     }
 
     @Test(groups=("p1"))

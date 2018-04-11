@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="LOTests(failed)">
     <classes>
-      <class name="LOT.LotBilety">
+      <class name="PRE2LOT.Booking">
         <methods>
+          <include name="Test_From_WAW_TO_JFK_prices"/>
           <include name="tearDown"/>
           <include name="setUp"/>
-          <include name="Test_Biletow"/>
         </methods>
-      </class> <!-- LOT.LotBilety -->
+      </class> <!-- PRE2LOT.Booking -->
     </classes>
   </test> <!-- LOTests(failed) -->
 </suite> <!-- Failed suite [Default Suite] -->

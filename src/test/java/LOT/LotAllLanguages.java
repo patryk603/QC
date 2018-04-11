@@ -11,7 +11,7 @@ import pageObjects.HomePage;
 
 import java.util.concurrent.TimeUnit;
 
-public class LotBilety2 {
+public class LotAllLanguages {
     private WebDriver driver;
     private String baseUrl;
     private boolean acceptNextAlert = true;
@@ -146,6 +146,40 @@ public class LotBilety2 {
         driver.navigate().back();
     }
 
+    @Test(groups=("p1"))
+    public void Test_HomePageTabs_CN() throws Exception {
+        driver.get(baseUrl + "cn/zh/");
+        HomePage.login.click();
+        driver.navigate().back();
+        HomePage.Book.click();
+        driver.navigate().back();
+        HomePage.DealsAndOffers.click();
+        driver.navigate().back();
+        HomePage.PrepareForTravel.click();
+        driver.navigate().back();
+        HomePage.DuringForFlight.click();
+        driver.navigate().back();
+        HomePage.CustomerService.click();
+        driver.navigate().back();
+    }
+
+    @Test(groups=("p1"))
+    public void Test_HomePageTabs_HR() throws Exception {
+        driver.get(baseUrl + "hr/en/");
+        HomePage.login.click();
+        driver.navigate().back();
+        HomePage.Book.click();
+        driver.navigate().back();
+        HomePage.DealsAndOffers.click();
+        driver.navigate().back();
+        HomePage.PrepareForTravel.click();
+        driver.navigate().back();
+        HomePage.DuringForFlight.click();
+        driver.navigate().back();
+        HomePage.CustomerService.click();
+        driver.navigate().back();
+    }
+
 
 
 
@@ -154,6 +188,6 @@ public class LotBilety2 {
     public void tearDown() throws Exception {
         driver.quit();
 
-        }
+    }
 
 }
