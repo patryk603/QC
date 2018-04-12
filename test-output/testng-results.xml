@@ -1,24 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
+<testng-results ignored="2" total="3" passed="1" failed="0" skipped="0">
   <reporter-output>
+    <line>
+      <![CDATA[[1631.59, 1631.59, 1631.59, 1631.59, 2831.59, 2831.59, 2831.59, 2831.59, 3681.59, 3681.59, 3681.59, 3681.59, 6231.59, 6231.59, 6231.59, 6231.59, 1661.58, 1661.58, 1661.58, 1661.58, 2861.58, 2861.58, 2861.58, 2861.58, 3711.58, 3711.58, 3711.58, 3711.58, 6261.58, 6261.58, 6261.58, 6261.58]]]>
+    </line>
   </reporter-output>
-  <suite started-at="2018-04-11T14:40:20Z" name="Default Suite" finished-at="2018-04-11T14:41:12Z" duration-ms="52273">
+  <suite started-at="2018-04-12T11:17:31Z" name="Default Suite" finished-at="2018-04-12T11:18:36Z" duration-ms="65007">
     <groups>
       <group name="p1">
-        <method signature="Booking.Test_From_WAW_TO_JFK_prices()[pri:0, instance:PRE2LOT.Booking@4470f8a6]" name="Test_From_WAW_TO_JFK_prices" class="PRE2LOT.Booking"/>
+        <method signature="Booking.Test_From_WAW_TO_ICN_prices()[pri:0, instance:PRE2LOT.Booking@7c83dc97]" name="Test_From_WAW_TO_ICN_prices" class="PRE2LOT.Booking"/>
       </group> <!-- p1 -->
     </groups>
-    <test started-at="2018-04-11T14:40:20Z" name="LOTests" finished-at="2018-04-11T14:41:12Z" duration-ms="52273">
+    <test started-at="2018-04-12T11:17:31Z" name="LOTests" finished-at="2018-04-12T11:18:36Z" duration-ms="65007">
       <class name="PRE2LOT.Booking">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:PRE2LOT.Booking@4470f8a6]" started-at="2018-04-11T14:40:20Z" name="setUp" finished-at="2018-04-11T14:40:45Z" duration-ms="24677" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:PRE2LOT.Booking@7c83dc97]" started-at="2018-04-12T11:17:31Z" name="setUp" finished-at="2018-04-12T11:17:44Z" duration-ms="13488" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="Test_From_WAW_TO_JFK_prices()[pri:0, instance:PRE2LOT.Booking@4470f8a6]" started-at="2018-04-11T14:40:45Z" name="Test_From_WAW_TO_JFK_prices" finished-at="2018-04-11T14:41:12Z" duration-ms="27578" status="PASS">
+        <test-method signature="Test_From_WAW_TO_ICN_prices()[pri:0, instance:PRE2LOT.Booking@7c83dc97]" started-at="2018-04-12T11:17:44Z" name="Test_From_WAW_TO_ICN_prices" finished-at="2018-04-12T11:18:36Z" duration-ms="51494" status="PASS">
           <reporter-output>
+            <line>
+              <![CDATA[[1631.59, 1631.59, 1631.59, 1631.59, 2831.59, 2831.59, 2831.59, 2831.59, 3681.59, 3681.59, 3681.59, 3681.59, 6231.59, 6231.59, 6231.59, 6231.59, 1661.58, 1661.58, 1661.58, 1661.58, 2861.58, 2861.58, 2861.58, 2861.58, 3711.58, 3711.58, 3711.58, 3711.58, 6261.58, 6261.58, 6261.58, 6261.58]]]>
+            </line>
           </reporter-output>
-        </test-method> <!-- Test_From_WAW_TO_JFK_prices -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:PRE2LOT.Booking@4470f8a6]" started-at="2018-04-11T14:41:12Z" name="tearDown" finished-at="2018-04-11T14:41:12Z" duration-ms="1" status="PASS">
+        </test-method> <!-- Test_From_WAW_TO_ICN_prices -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:PRE2LOT.Booking@7c83dc97]" started-at="2018-04-12T11:18:36Z" name="tearDown" finished-at="2018-04-12T11:18:36Z" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

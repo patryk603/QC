@@ -5,7 +5,7 @@
     <classes>
       <class name="PRE2LOT.Booking">
         <methods>
-          <include name="Test_From_WAW_TO_JFK_prices"/>
+          <include name="Test_From_WAW_TO_ICN_prices"/>
           <include name="tearDown"/>
           <include name="setUp"/>
         </methods>
