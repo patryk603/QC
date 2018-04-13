@@ -1,33 +1,92 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="2" total="3" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
+    <line>
+      <![CDATA[[287.63, 287.63, 287.63, 287.63, 287.63, 287.63, 372.63, 372.63, 372.63, 372.63, 372.63, 372.63, 502.63, 502.63, 502.63, 502.63, 502.63, 502.63, 889.66, 889.66, 889.66, 889.66, 889.66, 889.66, 1019.66, 1019.66, 1019.66, 1019.66, 1019.66, 1019.66, 988.67, 988.67, 988.67, 988.67, 988.67, 988.67, 348.38, 348.38, 348.38, 348.38, 349.38, 348.38, 433.38, 433.38, 433.38, 433.38, 434.38, 433.38, 563.38, 563.38, 563.38, 563.38, 564.38, 563.38, 905.41, 905.41, 905.41, 905.41, 906.41, 905.41, 1035.41, 1035.41, 1035.41, 1035.41, 1036.41, 1035.41, 1005.42, 1005.42, 1005.42, 1005.42, 1005.42, 1005.42]]]>
+    </line>
     <line>
       <![CDATA[[1631.59, 1631.59, 1631.59, 1631.59, 2831.59, 2831.59, 2831.59, 2831.59, 3681.59, 3681.59, 3681.59, 3681.59, 6231.59, 6231.59, 6231.59, 6231.59, 1661.58, 1661.58, 1661.58, 1661.58, 2861.58, 2861.58, 2861.58, 2861.58, 3711.58, 3711.58, 3711.58, 3711.58, 6261.58, 6261.58, 6261.58, 6261.58]]]>
     </line>
+    <line>
+      <![CDATA[[1171.66, 1171.66, 1171.66, 1171.66, 1554.66, 1554.66, 1554.66, 1554.66, 2429.66, 2429.66, 2429.66, 2429.66, 3879.66, 3879.66, 3879.66, 3879.66, 1087.74, 1087.74, 1087.74, 1087.74, 1395.74, 1395.74, 1395.74, 1395.74, 2270.74, 2270.74, 2270.74, 2270.74, 3795.74, 3795.74, 3795.74, 3795.74]]]>
+    </line>
+    <line>
+      <![CDATA[[797.66, 797.66, 797.66, 797.66, 797.66, 797.66, 882.66, 882.66, 882.66, 882.66, 882.66, 882.66, 1052.66, 1052.66, 1052.66, 1052.66, 1052.66, 1052.66, 932.69, 932.69, 932.69, 932.69, 932.69, 932.69, 1067.69, 1067.69, 1067.69, 1067.69, 1067.69, 1067.69, 1031.72, 1031.72, 1031.72, 1031.72, 1031.72, 1031.72, 277.0, 277.0, 278.0, 277.0, 277.0, 278.0, 362.0, 362.0, 363.0, 362.0, 362.0, 363.0, 532.0, 532.0, 533.0, 532.0, 532.0, 533.0, 888.03, 888.03, 888.03, 888.03, 888.03, 888.03, 1023.03, 1023.03, 1023.03, 1023.03, 1023.03, 1023.03, 986.06, 986.06, 987.06, 986.06, 986.06, 987.06, 277.0, 277.0, 278.0, 277.0, 277.0, 278.0, 362.0, 362.0, 363.0, 362.0, 362.0, 363.0, 532.0, 532.0, 533.0, 532.0, 532.0, 533.0, 888.03, 888.03, 888.03, 888.03, 888.03, 888.03, 1023.03, 1023.03, 1023.03, 1023.03, 1023.03, 1023.03, 986.06, 986.06, 987.06, 986.06, 986.06, 987.06]]]>
+    </line>
   </reporter-output>
-  <suite started-at="2018-04-12T11:17:31Z" name="Default Suite" finished-at="2018-04-12T11:18:36Z" duration-ms="65007">
+  <suite started-at="2018-04-13T09:55:14Z" name="Default Suite" finished-at="2018-04-13T09:57:17Z" duration-ms="123326">
     <groups>
-      <group name="p1">
-        <method signature="Booking.Test_From_WAW_TO_ICN_prices()[pri:0, instance:PRE2LOT.Booking@7c83dc97]" name="Test_From_WAW_TO_ICN_prices" class="PRE2LOT.Booking"/>
-      </group> <!-- p1 -->
     </groups>
-    <test started-at="2018-04-12T11:17:31Z" name="LOTests" finished-at="2018-04-12T11:18:36Z" duration-ms="65007">
+    <test started-at="2018-04-13T09:55:14Z" name="LOTests" finished-at="2018-04-13T09:57:17Z" duration-ms="123326">
       <class name="PRE2LOT.Booking">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:PRE2LOT.Booking@7c83dc97]" started-at="2018-04-12T11:17:31Z" name="setUp" finished-at="2018-04-12T11:17:44Z" duration-ms="13488" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:PRE2LOT.Booking@484970b0]" started-at="2018-04-13T09:55:14Z" name="setUp" finished-at="2018-04-13T09:55:28Z" duration-ms="14401" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="Test_From_WAW_TO_ICN_prices()[pri:0, instance:PRE2LOT.Booking@7c83dc97]" started-at="2018-04-12T11:17:44Z" name="Test_From_WAW_TO_ICN_prices" finished-at="2018-04-12T11:18:36Z" duration-ms="51494" status="PASS">
+        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:PRE2LOT.Booking@484970b0]" started-at="2018-04-13T09:55:28Z" name="BeforeMethod" finished-at="2018-04-13T09:55:33Z" duration-ms="4961" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeMethod -->
+        <test-method signature="Test_From_WAW_TO_BCN_prices()[pri:0, instance:PRE2LOT.Booking@484970b0]" started-at="2018-04-13T09:55:33Z" name="Test_From_WAW_TO_BCN_prices" finished-at="2018-04-13T09:56:06Z" duration-ms="32604" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[[287.63, 287.63, 287.63, 287.63, 287.63, 287.63, 372.63, 372.63, 372.63, 372.63, 372.63, 372.63, 502.63, 502.63, 502.63, 502.63, 502.63, 502.63, 889.66, 889.66, 889.66, 889.66, 889.66, 889.66, 1019.66, 1019.66, 1019.66, 1019.66, 1019.66, 1019.66, 988.67, 988.67, 988.67, 988.67, 988.67, 988.67, 348.38, 348.38, 348.38, 348.38, 349.38, 348.38, 433.38, 433.38, 433.38, 433.38, 434.38, 433.38, 563.38, 563.38, 563.38, 563.38, 564.38, 563.38, 905.41, 905.41, 905.41, 905.41, 906.41, 905.41, 1035.41, 1035.41, 1035.41, 1035.41, 1036.41, 1035.41, 1005.42, 1005.42, 1005.42, 1005.42, 1005.42, 1005.42]]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- Test_From_WAW_TO_BCN_prices -->
+        <test-method is-config="true" signature="browserSetUp()[pri:0, instance:PRE2LOT.Booking@484970b0]" started-at="2018-04-13T09:56:06Z" name="browserSetUp" finished-at="2018-04-13T09:56:06Z" duration-ms="111" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserSetUp -->
+        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:PRE2LOT.Booking@484970b0]" started-at="2018-04-13T09:56:06Z" name="BeforeMethod" finished-at="2018-04-13T09:56:11Z" duration-ms="5527" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeMethod -->
+        <test-method signature="Test_From_WAW_TO_ICN_prices()[pri:0, instance:PRE2LOT.Booking@484970b0]" started-at="2018-04-13T09:56:11Z" name="Test_From_WAW_TO_ICN_prices" finished-at="2018-04-13T09:56:32Z" duration-ms="20901" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[[1631.59, 1631.59, 1631.59, 1631.59, 2831.59, 2831.59, 2831.59, 2831.59, 3681.59, 3681.59, 3681.59, 3681.59, 6231.59, 6231.59, 6231.59, 6231.59, 1661.58, 1661.58, 1661.58, 1661.58, 2861.58, 2861.58, 2861.58, 2861.58, 3711.58, 3711.58, 3711.58, 3711.58, 6261.58, 6261.58, 6261.58, 6261.58]]]>
             </line>
           </reporter-output>
         </test-method> <!-- Test_From_WAW_TO_ICN_prices -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:PRE2LOT.Booking@7c83dc97]" started-at="2018-04-12T11:18:36Z" name="tearDown" finished-at="2018-04-12T11:18:36Z" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="browserSetUp()[pri:0, instance:PRE2LOT.Booking@484970b0]" started-at="2018-04-13T09:56:32Z" name="browserSetUp" finished-at="2018-04-13T09:56:32Z" duration-ms="104" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tearDown -->
+        </test-method> <!-- browserSetUp -->
+        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:PRE2LOT.Booking@484970b0]" started-at="2018-04-13T09:56:32Z" name="BeforeMethod" finished-at="2018-04-13T09:56:37Z" duration-ms="4916" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeMethod -->
+        <test-method signature="Test_From_WAW_TO_JFK_prices()[pri:0, instance:PRE2LOT.Booking@484970b0]" started-at="2018-04-13T09:56:37Z" name="Test_From_WAW_TO_JFK_prices" finished-at="2018-04-13T09:56:51Z" duration-ms="14017" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[[1171.66, 1171.66, 1171.66, 1171.66, 1554.66, 1554.66, 1554.66, 1554.66, 2429.66, 2429.66, 2429.66, 2429.66, 3879.66, 3879.66, 3879.66, 3879.66, 1087.74, 1087.74, 1087.74, 1087.74, 1395.74, 1395.74, 1395.74, 1395.74, 2270.74, 2270.74, 2270.74, 2270.74, 3795.74, 3795.74, 3795.74, 3795.74]]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- Test_From_WAW_TO_JFK_prices -->
+        <test-method is-config="true" signature="browserSetUp()[pri:0, instance:PRE2LOT.Booking@484970b0]" started-at="2018-04-13T09:56:51Z" name="browserSetUp" finished-at="2018-04-13T09:56:51Z" duration-ms="97" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserSetUp -->
+        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:PRE2LOT.Booking@484970b0]" started-at="2018-04-13T09:56:51Z" name="BeforeMethod" finished-at="2018-04-13T09:56:56Z" duration-ms="4527" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeMethod -->
+        <test-method signature="Test_From_WAW_TO_LUX_prices()[pri:0, instance:PRE2LOT.Booking@484970b0]" started-at="2018-04-13T09:56:56Z" name="Test_From_WAW_TO_LUX_prices" finished-at="2018-04-13T09:57:15Z" duration-ms="18826" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[[797.66, 797.66, 797.66, 797.66, 797.66, 797.66, 882.66, 882.66, 882.66, 882.66, 882.66, 882.66, 1052.66, 1052.66, 1052.66, 1052.66, 1052.66, 1052.66, 932.69, 932.69, 932.69, 932.69, 932.69, 932.69, 1067.69, 1067.69, 1067.69, 1067.69, 1067.69, 1067.69, 1031.72, 1031.72, 1031.72, 1031.72, 1031.72, 1031.72, 277.0, 277.0, 278.0, 277.0, 277.0, 278.0, 362.0, 362.0, 363.0, 362.0, 362.0, 363.0, 532.0, 532.0, 533.0, 532.0, 532.0, 533.0, 888.03, 888.03, 888.03, 888.03, 888.03, 888.03, 1023.03, 1023.03, 1023.03, 1023.03, 1023.03, 1023.03, 986.06, 986.06, 987.06, 986.06, 986.06, 987.06, 277.0, 277.0, 278.0, 277.0, 277.0, 278.0, 362.0, 362.0, 363.0, 362.0, 362.0, 363.0, 532.0, 532.0, 533.0, 532.0, 532.0, 533.0, 888.03, 888.03, 888.03, 888.03, 888.03, 888.03, 1023.03, 1023.03, 1023.03, 1023.03, 1023.03, 1023.03, 986.06, 986.06, 987.06, 986.06, 986.06, 987.06]]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- Test_From_WAW_TO_LUX_prices -->
+        <test-method is-config="true" signature="browserSetUp()[pri:0, instance:PRE2LOT.Booking@484970b0]" started-at="2018-04-13T09:57:15Z" name="browserSetUp" finished-at="2018-04-13T09:57:15Z" duration-ms="95" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserSetUp -->
+        <test-method is-config="true" signature="shutDownSelenium()[pri:0, instance:PRE2LOT.Booking@484970b0]" started-at="2018-04-13T09:57:15Z" name="shutDownSelenium" finished-at="2018-04-13T09:57:17Z" duration-ms="2219" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shutDownSelenium -->
       </class> <!-- PRE2LOT.Booking -->
     </test> <!-- LOTests -->
   </suite> <!-- Default Suite -->

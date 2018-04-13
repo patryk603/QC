@@ -5,8 +5,11 @@
     <classes>
       <class name="PRE2LOT.Booking">
         <methods>
-          <include name="Test_From_WAW_TO_ICN_prices"/>
-          <include name="tearDown"/>
+          <include name="Test_From_WAW_TO_JFK"/>
+          <include name="Test_From_WAW_TO_JFK_prices"/>
+          <include name="shutDownSelenium2"/>
+          <include name="BeforeMethod"/>
+          <include name="shutDownSelenium"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- PRE2LOT.Booking -->
