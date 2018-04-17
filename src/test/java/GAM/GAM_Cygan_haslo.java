@@ -22,7 +22,6 @@ public class GAM_Cygan_haslo {
         driver = new ChromeDriver();
 
 
-
         //Put a Implicit wait, this means that any search for elements on the page could take the time the implicit wait is set for before throwing exception
 
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -91,11 +90,9 @@ public class GAM_Cygan_haslo {
         driver.findElement(By.xpath("//*[@id=\"2222confirmRow\"]/td[2]/input")).sendKeys("samolot2");
 
 
-        // driver.findElement(By.xpath("/html/body/form/div/button[1]")).click();
+        driver.findElement(By.xpath("/html/body/form/div/button[1]")).click();
 
 
-        //driver.findElement(By.xpath("/html/body/div[1]/div/div[2]/ul/li[1]/a")).click();
-        //driver.findElement(By.xpath("/html/body/div[1]/div/div[2]/ul/li[1]/ul/li[7]/ul/li[2]/a")).click();
 
 
     }

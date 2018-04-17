@@ -1,0 +1,5 @@
+set classpath=C:\Users\30001236\IdeaProjects\LOTests\target\test-classes;C:\Users\30001236\IdeaProjects\LOTests\lib\*
+
+cd C:\Users\30001236\IdeaProjects\LOTests
+
+java org.testng.TestNG C:\Users\30001236\IdeaProjects\LOTests\src\main\resources\testng.xml

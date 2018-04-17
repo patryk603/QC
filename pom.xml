@@ -10,6 +10,12 @@
     <dependencies>
 
         <dependency>
+            <groupId>com.github.2gis.winium</groupId>
+            <artifactId>winium-elements-desktop</artifactId>
+            <version>0.1.0-1</version>
+        </dependency>
+
+        <dependency>
         <groupId>org.testng</groupId>
         <artifactId>testng</artifactId>
         <version>6.14.2</version>

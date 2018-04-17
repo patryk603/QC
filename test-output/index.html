@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_Suite" class="navigator-link ">
-                    <span>C:\Users\30001236\.IdeaIC2017.3\system\temp-testng-customsuite.xml</span>
+                    <span>C:\Users\30001236\.IdeaIC2018.1\system\temp-testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -59,7 +59,7 @@
                 </li>
                 <li>
                   <a href="#" panel-name="group-Default_Suite" class="navigator-link ">
-                    <span>0 groups</span>
+                    <span>1 group</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -102,7 +102,7 @@
                     <div class="method-list-content passed suite-Default_Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_Suite" title="LOT.connectis" class="method navigator-link" hash-for-method="testLot">testLot</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_Suite" title="LOT.LotAllLanguages" class="method navigator-link" hash-for-method="Test_HomePageTabs_KR">Test_HomePageTabs_KR</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_Suite -->
@@ -120,14 +120,14 @@
           <div class="suite-Default_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">LOT.connectis</span>
+              <span class="class-name">LOT.LotAllLanguages</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testLot">
-                  </a> <!-- testLot -->
-                  <span class="method-name">testLot</span>
+                  <a name="Test_HomePageTabs_KR">
+                  </a> <!-- Test_HomePageTabs_KR -->
+                  <span class="method-name">Test_HomePageTabs_KR</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -135,16 +135,20 @@
         </div> <!-- panel Default_Suite -->
         <div panel-name="test-xml-Default_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\30001236\.IdeaIC2017.3\system\temp-testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\30001236\.IdeaIC2018.1\system\temp-testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Default Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
-  &lt;test name=&quot;LOTests&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;LOTests&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;LOT.connectis&quot;/&gt;
+      &lt;class name=&quot;LOT.LotAllLanguages&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;Test_HomePageTabs_KR&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- LOT.LotAllLanguages --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- LOTests --&gt;
 &lt;/suite&gt; &lt;!-- Default Suite --&gt;
@@ -168,6 +172,14 @@
             <span class="header-content">Groups for Default Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="test-group">
+              <span class="test-group-name">p1</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">Test_HomePageTabs_KR</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="times-Default_Suite" class="panel">
@@ -186,14 +198,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testLot')
-data.setCell(0, 2, 'LOT.connectis')
-data.setCell(0, 3, 11433);
+data.setCell(0, 1, 'Test_HomePageTabs_KR')
+data.setCell(0, 2, 'LOT.LotAllLanguages')
+data.setCell(0, 3, 39011);
 window.suiteTableData['Default_Suite']= { tableData: data, tableDiv: 'times-div-Default_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 11 seconds</span>
+              <span class="suite-total-time">Total running time: 39 seconds</span>
               <div id="times-div-Default_Suite">
               </div> <!-- times-div-Default_Suite -->
             </div> <!-- times-div -->
@@ -208,9 +220,104 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Default_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">45 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">LOT.LotAllLanguages</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">Test_HomePageTabs_GB</span>
+                <br/>
+                <span class="ignored-method-name">Test_HomePageTabs_CY</span>
+                <br/>
+                <span class="ignored-method-name">Test_HomePageTabs_LB</span>
+                <br/>
+                <span class="ignored-method-name">Test_HomePageTabs_CZ</span>
+                <br/>
+                <span class="ignored-method-name">Test_HomePageTabs_JA</span>
+                <br/>
+                <span class="ignored-method-name">Test_HomePageTabs_AT</span>
+                <br/>
+                <span class="ignored-method-name">Test_HomePageTabs_ES</span>
+                <br/>
+                <span class="ignored-method-name">Test_HomePageTabs_KZ</span>
+                <br/>
+                <span class="ignored-method-name">Test_HomePageTabs_AM</span>
+                <br/>
+                <span class="ignored-method-name">Test_HomePageTabs_CH</span>
+                <br/>
+                <span class="ignored-method-name">Test_HomePageTabs_EG</span>
+                <br/>
+                <span class="ignored-method-name">Test_HomePageTabs_IL</span>
+                <br/>
+                <span class="ignored-method-name">Test_HomePageTabs_EE</span>
+                <br/>
+                <span class="ignored-method-name">Test_HomePageTabs_CA</span>
+                <br/>
+                <span class="ignored-method-name">Test_HomePageTabs_GE</span>
+                <br/>
+                <span class="ignored-method-name">Test_HomePageTabs_MK</span>
+                <br/>
+                <span class="ignored-method-name">Test_HomePageTabs_US</span>
+                <br/>
+                <span class="ignored-method-name">Test_HomePageTabs_ME</span>
+                <br/>
+                <span class="ignored-method-name">Test_HomePageTabs_SK</span>
+                <br/>
+                <span class="ignored-method-name">Test_HomePageTabs_SI</span>
+                <br/>
+                <span class="ignored-method-name">Test_HomePageTabs_BY</span>
+                <br/>
+                <span class="ignored-method-name">Test_HomePageTabs_MD</span>
+                <br/>
+                <span class="ignored-method-name">Test_HomePageTabs_SG</span>
+                <br/>
+                <span class="ignored-method-name">Test_HomePageTabs_SE</span>
+                <br/>
+                <span class="ignored-method-name">Test_HomePageTabs_FR</span>
+                <br/>
+                <span class="ignored-method-name">Test_HomePageTabs_UA</span>
+                <br/>
+                <span class="ignored-method-name">Test_HomePageTabs_HU</span>
+                <br/>
+                <span class="ignored-method-name">Test_HomePageTabs_HR</span>
+                <br/>
+                <span class="ignored-method-name">Test_HomePageTabs_LV</span>
+                <br/>
+                <span class="ignored-method-name">Test_HomePageTabs_CN</span>
+                <br/>
+                <span class="ignored-method-name">Test_HomePageTabs_GR</span>
+                <br/>
+                <span class="ignored-method-name">Test_HomePageTabs_IT</span>
+                <br/>
+                <span class="ignored-method-name">Test_HomePageTabs_LT</span>
+                <br/>
+                <span class="ignored-method-name">Test_HomePageTabs_LU</span>
+                <br/>
+                <span class="ignored-method-name">Test_HomePageTabs_DK</span>
+                <br/>
+                <span class="ignored-method-name">Test_HomePageTabs_BE</span>
+                <br/>
+                <span class="ignored-method-name">Test_HomePageTabs_FI</span>
+                <br/>
+                <span class="ignored-method-name">Test_HomePageTabs_RU</span>
+                <br/>
+                <span class="ignored-method-name">Test_HomePageTabs_DE</span>
+                <br/>
+                <span class="ignored-method-name">Test_HomePageTabs_NO</span>
+                <br/>
+                <span class="ignored-method-name">Test_HomePageTabs_RS</span>
+                <br/>
+                <span class="ignored-method-name">Test_HomePageTabs_NL</span>
+                <br/>
+                <span class="ignored-method-name">Test_HomePageTabs_TR</span>
+                <br/>
+                <span class="ignored-method-name">Test_HomePageTabs_PL</span>
+                <br/>
+                <span class="ignored-method-name">Test_HomePageTabs_RO</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Default_Suite" class="panel">
@@ -219,18 +326,18 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">LOT.connectis</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">LOT.LotAllLanguages</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">testLot</span>
-                <span class="method-start">3141 ms</span>
+                <span class="method-name">Test_HomePageTabs_KR</span>
+                <span class="method-start">2656 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">14574 ms</span>
+                <span class="method-start">41669 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
