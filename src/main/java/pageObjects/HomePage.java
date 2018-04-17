@@ -19,6 +19,9 @@ public class HomePage {
     @FindBy(xpath = "//*[@id='menu-settings']/a/span")
     public static WebElement login;
 
+    @FindBy(css = "body > header > div > div > div.b-column.two > h1 > a > img")
+    public static WebElement lotlogo;
+
     @FindBy(css = "#mainlink-1 > a > h3")
     public static WebElement Book;
 
