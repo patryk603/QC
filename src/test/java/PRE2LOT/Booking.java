@@ -6,7 +6,6 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
 import org.testng.annotations.*;
 import PRE2_pageObjects.HomePage;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;

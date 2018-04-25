@@ -26,7 +26,7 @@ public class HomePage {
     @FindBy(css = "#_bookingportlet_WAR_lotairwaysportlet_INSTANCE_wl9jlWyYLKBg_returningPicker > div > div > button")
     public static WebElement Return;
 
-    @FindBy(css = "#ui-datepicker-div > div.ui-datepicker-group.ui-datepicker-group-first > table > tbody > tr:nth-child(2) > td.ui-datepicker-days-cell-over.ui-datepicker-current-day.ui-datepicker-today > a")
+    @FindBy(css = "#ui-datepicker-div > div.ui-datepicker-group.ui-datepicker-group-first > table > tbody > tr > td > a.ui-state-default.ui-state-highlight.ui-state-active.ui-state-hover")
     public static WebElement Today;
 
     @FindBy(css = "#ui-datepicker-div > div.ui-datepicker-group.ui-datepicker-group-last > table > tbody > tr:nth-child(1) > td:nth-child(3) > a")
@@ -35,7 +35,8 @@ public class HomePage {
     @FindBy(id = "_availabilityportlet_WAR_lotairwaysportlet_precioFormatAdult-1-EUPINKTAN-3")
     public static WebElement LotEconomySaver;
 
-
+    @FindBy(css = "body > header > div > div > div.b-column.four.g-text-right.fontresizer-eight.o-header-controls.right > ul:nth-child(4) > li > a > span")
+    public static WebElement Login;
 
 
 

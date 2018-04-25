@@ -12,7 +12,7 @@
         <dependency>
             <groupId>com.github.2gis.winium</groupId>
             <artifactId>winium-elements-desktop</artifactId>
-            <version>0.1.0-1</version>
+            <version>0.2.0-1</version>
         </dependency>
 
         <dependency>

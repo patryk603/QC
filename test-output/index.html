@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Default_Suite" class="navigator-link">
-              <span class="suite-name border-passed">Default Suite</span>
+              <span class="suite-name border-failed">Default Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,21 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">1 method, 1 failed,   </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Default_Suite" class="hide-methods passed suite-Default_Suite"> (hide)</a> <!-- hide-methods passed suite-Default_Suite -->
-                      <a href="#" panel-name="suite-Default_Suite" class="show-methods passed suite-Default_Suite"> (show)</a> <!-- show-methods passed suite-Default_Suite -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Default_Suite" class="hide-methods failed suite-Default_Suite"> (hide)</a> <!-- hide-methods failed suite-Default_Suite -->
+                      <a href="#" panel-name="suite-Default_Suite" class="show-methods failed suite-Default_Suite"> (show)</a> <!-- show-methods failed suite-Default_Suite -->
                     </span>
-                    <div class="method-list-content passed suite-Default_Suite">
+                    <div class="method-list-content failed suite-Default_Suite">
                       <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_Suite" title="LOT.LotAllLanguages" class="method navigator-link" hash-for-method="Test_HomePageTabs_KR">Test_HomePageTabs_KR</a> <!-- method navigator-link -->
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_Suite" title="PRE2LOT.Booking2" class="method navigator-link" hash-for-method="Test_From_WAW_TO_JFK_prices">Test_From_WAW_TO_JFK_prices</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-Default_Suite -->
+                    </div> <!-- method-list-content failed suite-Default_Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -117,21 +117,47 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_Suite" class="panel Default_Suite">
-          <div class="suite-Default_Suite-class-passed">
+          <div class="suite-Default_Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">LOT.LotAllLanguages</span>
+              <img src="failed.png"/>
+              <span class="class-name">PRE2LOT.Booking2</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="Test_HomePageTabs_KR">
-                  </a> <!-- Test_HomePageTabs_KR -->
-                  <span class="method-name">Test_HomePageTabs_KR</span>
+                  <a name="Test_From_WAW_TO_JFK_prices">
+                  </a> <!-- Test_From_WAW_TO_JFK_prices -->
+                  <span class="method-name">Test_From_WAW_TO_JFK_prices</span>
+                  <div class="stack-trace">org.openqa.selenium.InvalidSelectorException: invalid selector: An invalid or illegal selector was specified
+  (Session info: chrome=66.0.3359.117)
+  (Driver info: chromedriver=2.36.540470 (e522d04694c7ebea4ba8821272dbef4f9b818c91),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/invalid_selector_exception.html
+Build info: version: &apos;3.9.1&apos;, revision: &apos;63f7b50&apos;, time: &apos;2018-02-07T22:42:22.379Z&apos;
+System info: host: &apos;N-5CG7492PHQ&apos;, ip: &apos;192.168.13.99&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;9.0.4&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.36.540470 (e522d04694c7eb..., userDataDir: C:\Users\30001236\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 66.0.3359.117, webStorageEnabled: true}
+Session ID: c78b9462fca40c7646934c8d4dcb400a
+*** Element info: {Using=css selector, value=a.ui-state-default:contains(&quot;29&quot;)}
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:371)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:465)
+	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:430)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at PRE2LOT.Booking2.Test_From_WAW_TO_JFK_prices(Booking2.java:51)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_Suite-class-passed -->
+          </div> <!-- suite-Default_Suite-class-failed -->
         </div> <!-- panel Default_Suite -->
         <div panel-name="test-xml-Default_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -144,11 +170,11 @@
 &lt;suite name=&quot;Default Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;LOTests&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;LOT.LotAllLanguages&quot;&gt;
+      &lt;class name=&quot;PRE2LOT.Booking2&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;Test_HomePageTabs_KR&quot;/&gt;
+          &lt;include name=&quot;Test_From_WAW_TO_JFK_prices&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- LOT.LotAllLanguages --&gt;
+      &lt;/class&gt; &lt;!-- PRE2LOT.Booking2 --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- LOTests --&gt;
 &lt;/suite&gt; &lt;!-- Default Suite --&gt;
@@ -173,10 +199,10 @@
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="test-group">
-              <span class="test-group-name">p1</span>
+              <span class="test-group-name">pre2</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">Test_HomePageTabs_KR</span>
+                <span class="method-in-group-name">Test_From_WAW_TO_JFK_prices</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -198,14 +224,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'Test_HomePageTabs_KR')
-data.setCell(0, 2, 'LOT.LotAllLanguages')
-data.setCell(0, 3, 39011);
+data.setCell(0, 1, 'Test_From_WAW_TO_JFK_prices')
+data.setCell(0, 2, 'PRE2LOT.Booking2')
+data.setCell(0, 3, 5864);
 window.suiteTableData['Default_Suite']= { tableData: data, tableDiv: 'times-div-Default_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 39 seconds</span>
+              <span class="suite-total-time">Total running time: 5 seconds</span>
               <div id="times-div-Default_Suite">
               </div> <!-- times-div-Default_Suite -->
             </div> <!-- times-div -->
@@ -220,104 +246,9 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Default_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">45 ignored methods</span>
+            <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">LOT.LotAllLanguages</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">Test_HomePageTabs_GB</span>
-                <br/>
-                <span class="ignored-method-name">Test_HomePageTabs_CY</span>
-                <br/>
-                <span class="ignored-method-name">Test_HomePageTabs_LB</span>
-                <br/>
-                <span class="ignored-method-name">Test_HomePageTabs_CZ</span>
-                <br/>
-                <span class="ignored-method-name">Test_HomePageTabs_JA</span>
-                <br/>
-                <span class="ignored-method-name">Test_HomePageTabs_AT</span>
-                <br/>
-                <span class="ignored-method-name">Test_HomePageTabs_ES</span>
-                <br/>
-                <span class="ignored-method-name">Test_HomePageTabs_KZ</span>
-                <br/>
-                <span class="ignored-method-name">Test_HomePageTabs_AM</span>
-                <br/>
-                <span class="ignored-method-name">Test_HomePageTabs_CH</span>
-                <br/>
-                <span class="ignored-method-name">Test_HomePageTabs_EG</span>
-                <br/>
-                <span class="ignored-method-name">Test_HomePageTabs_IL</span>
-                <br/>
-                <span class="ignored-method-name">Test_HomePageTabs_EE</span>
-                <br/>
-                <span class="ignored-method-name">Test_HomePageTabs_CA</span>
-                <br/>
-                <span class="ignored-method-name">Test_HomePageTabs_GE</span>
-                <br/>
-                <span class="ignored-method-name">Test_HomePageTabs_MK</span>
-                <br/>
-                <span class="ignored-method-name">Test_HomePageTabs_US</span>
-                <br/>
-                <span class="ignored-method-name">Test_HomePageTabs_ME</span>
-                <br/>
-                <span class="ignored-method-name">Test_HomePageTabs_SK</span>
-                <br/>
-                <span class="ignored-method-name">Test_HomePageTabs_SI</span>
-                <br/>
-                <span class="ignored-method-name">Test_HomePageTabs_BY</span>
-                <br/>
-                <span class="ignored-method-name">Test_HomePageTabs_MD</span>
-                <br/>
-                <span class="ignored-method-name">Test_HomePageTabs_SG</span>
-                <br/>
-                <span class="ignored-method-name">Test_HomePageTabs_SE</span>
-                <br/>
-                <span class="ignored-method-name">Test_HomePageTabs_FR</span>
-                <br/>
-                <span class="ignored-method-name">Test_HomePageTabs_UA</span>
-                <br/>
-                <span class="ignored-method-name">Test_HomePageTabs_HU</span>
-                <br/>
-                <span class="ignored-method-name">Test_HomePageTabs_HR</span>
-                <br/>
-                <span class="ignored-method-name">Test_HomePageTabs_LV</span>
-                <br/>
-                <span class="ignored-method-name">Test_HomePageTabs_CN</span>
-                <br/>
-                <span class="ignored-method-name">Test_HomePageTabs_GR</span>
-                <br/>
-                <span class="ignored-method-name">Test_HomePageTabs_IT</span>
-                <br/>
-                <span class="ignored-method-name">Test_HomePageTabs_LT</span>
-                <br/>
-                <span class="ignored-method-name">Test_HomePageTabs_LU</span>
-                <br/>
-                <span class="ignored-method-name">Test_HomePageTabs_DK</span>
-                <br/>
-                <span class="ignored-method-name">Test_HomePageTabs_BE</span>
-                <br/>
-                <span class="ignored-method-name">Test_HomePageTabs_FI</span>
-                <br/>
-                <span class="ignored-method-name">Test_HomePageTabs_RU</span>
-                <br/>
-                <span class="ignored-method-name">Test_HomePageTabs_DE</span>
-                <br/>
-                <span class="ignored-method-name">Test_HomePageTabs_NO</span>
-                <br/>
-                <span class="ignored-method-name">Test_HomePageTabs_RS</span>
-                <br/>
-                <span class="ignored-method-name">Test_HomePageTabs_NL</span>
-                <br/>
-                <span class="ignored-method-name">Test_HomePageTabs_TR</span>
-                <br/>
-                <span class="ignored-method-name">Test_HomePageTabs_PL</span>
-                <br/>
-                <span class="ignored-method-name">Test_HomePageTabs_RO</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Default_Suite" class="panel">
@@ -326,18 +257,28 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">LOT.LotAllLanguages</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">PRE2LOT.Booking2</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">BeforeMethod</span>
+                <span class="method-start">12814 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">Test_HomePageTabs_KR</span>
-                <span class="method-start">2656 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">Test_From_WAW_TO_JFK_prices</span>
+                <span class="method-start">17635 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">browserSetUp</span>
+                <span class="method-start">23510 ms</span>
+              </div> <!-- configuration-method after -->
               <div class="configuration-class after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">41669 ms</span>
+                <span class="method-name">shutDownSelenium</span>
+                <span class="method-start">23640 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

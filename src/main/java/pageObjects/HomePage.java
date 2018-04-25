@@ -19,7 +19,7 @@ public class HomePage {
     @FindBy(xpath = "//*[@id='menu-settings']/a/span")
     public static WebElement login;
 
-    @FindBy(css = "body > header > div > div > div.b-column.two > h1 > a > img")
+    @FindBy(css = "img.logo")
     public static WebElement lotlogo;
 
     @FindBy(css = "#mainlink-1 > a > h3")
@@ -39,6 +39,12 @@ public class HomePage {
 
     @FindBy(css = "#menu-main > ul > li:nth-child(6) > a > h3 > span")
     public static WebElement MilesAndMore;
+
+    @FindBy(css = "li.item.active")
+    public static WebElement ZapraszamyNaPoklad;
+
+
+
 
     public HomePage(WebDriver driver){
 
