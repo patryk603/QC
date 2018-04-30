@@ -43,6 +43,17 @@ public class HomePage {
     @FindBy(css = "li.item.active")
     public static WebElement ZapraszamyNaPoklad;
 
+    @FindBy(css = ".tab-title[href*=\"reservation\"]")
+    public static WebElement ManageBooking;
+
+    @FindBy(id = "lastName")
+    public static WebElement LastName;
+
+    @FindBy(id = "bookingNumber")
+    public static WebElement BookingNumber;
+
+    @FindBy(css = "#myBookingsForm > div > div.booker-column-3 > button")
+    public static WebElement NextBtn;
 
 
 
