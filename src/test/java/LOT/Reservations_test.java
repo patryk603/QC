@@ -1,6 +1,5 @@
 package LOT;
 
-import DDT.ExcelDataConfig;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
@@ -14,7 +13,7 @@ import pageObjects.MyBookings;
 
 import java.util.concurrent.TimeUnit;
 
-public class Reservations {
+public class Reservations_test {
     private WebDriver driver;
     private String baseUrl;
 
@@ -40,20 +39,22 @@ public class Reservations {
 
     @AfterClass(alwaysRun = true)
     public void tearDown() throws Exception {
-        driver.quit();
+        //driver.quit();
     }
 
     @DataProvider(name ="data")
     public Object[][] passData()
     {
-        ExcelDataConfig config = new ExcelDataConfig("C:\\Users\\30001236\\IdeaProjects\\LOTests\\testData\\Data.xlsx");
-        int rows = config.getRowCount(0);
-        Object[][] data=new Object[rows][2];
+        Object[][] data=new Object[3][2];
 
-        for(int i=0;i<rows;i++){
-            data[i][0]=config.getData(0,i,0);
-            data[i][1]=config.getData(0,i,1);
-        }
+        data[0][0]="NOVOSELITSKY";
+        data[0][1]="NZUJ4Z2";
+        data[1][0]="NOVOSELITSKY";
+        data[1][1]="NZUJ4Z";
+        data[2][0]="NOVOSELITSKY";
+        data[2][1]="NZUJ4Z";
+
         return data;
     }
+
 }

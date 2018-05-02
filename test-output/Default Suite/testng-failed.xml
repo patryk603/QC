@@ -3,15 +3,13 @@
 <suite name="Failed suite [Default Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="LOTests(failed)">
     <classes>
-      <class name="PRE2LOT.Booking2">
+      <class name="LOT.Reservations">
         <methods>
-          <include name="Test_From_WAW_TO_JFK_prices"/>
-          <include name="browserSetUp"/>
-          <include name="BeforeMethod"/>
+          <include name="Test_ManageYourBooking" invocation-numbers="0 1 2 3 5"/>
+          <include name="tearDown"/>
           <include name="setUp"/>
-          <include name="shutDownSelenium"/>
         </methods>
-      </class> <!-- PRE2LOT.Booking2 -->
+      </class> <!-- LOT.Reservations -->
     </classes>
   </test> <!-- LOTests(failed) -->
 </suite> <!-- Failed suite [Default Suite] -->
