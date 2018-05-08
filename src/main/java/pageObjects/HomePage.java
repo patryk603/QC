@@ -55,6 +55,24 @@ public class HomePage {
     @FindBy(css = "#myBookingsForm > div > div.booker-column-3 > button")
     public static WebElement NextBtn;
 
+    @FindBy(id = "select2-departureAirport-container")
+    public static WebElement FromList;
+
+    @FindBy(id = "select2-destinationAirport-container")
+    public static WebElement ToList;
+
+    @FindBy(css = ".select2-search__field")
+    public static WebElement FromToText;
+
+    @FindBy(id = "departureDate")
+    public static WebElement DepartureDate;
+
+    @FindBy(id = "returnDate")
+    public static WebElement ReturnDate;
+
+    @FindBy(id = "submit-booker")
+    public static WebElement Submit;
+
 
 
     public HomePage(WebDriver driver){
