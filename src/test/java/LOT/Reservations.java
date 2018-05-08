@@ -1,6 +1,7 @@
 package LOT;
 
 import DDT.ExcelDataConfig;
+import Main.MainTest;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
@@ -14,20 +15,20 @@ import pageObjects.MyBookings;
 
 import java.util.concurrent.TimeUnit;
 
-public class Reservations {
-    private WebDriver driver;
+public class Reservations extends MainTest {
     private String baseUrl;
 
     @BeforeClass(alwaysRun = true)
     public void setUp() throws Exception {
         driver = new ChromeDriver();
+        driver.manage().deleteAllCookies();
         baseUrl = "http://www.lot.com/";
-        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(6, TimeUnit.SECONDS);
         PageFactory.initElements(driver, HomePage.class);
         PageFactory.initElements(driver, MyBookings.class);
     }
 
-    @Test(dataProvider = "data")
+    @Test(dataProvider = "data",groups=("Reservation"))
     public void Test_ManageYourBooking(String username, String password) throws Exception {
         driver.get(baseUrl + "pl/en/");
         HomePage.ManageBooking.click();
@@ -35,7 +36,7 @@ public class Reservations {
         HomePage.BookingNumber.sendKeys(password);
         HomePage.NextBtn.click();
         String BookingNr = MyBookings.ReservationNumber.getText();
-        Assert.assertEquals(BookingNr , password,"Reservation not find");
+        Assert.assertEquals(BookingNr , password,"Reservation Not Found");
     }
 
     @AfterClass(alwaysRun = true)

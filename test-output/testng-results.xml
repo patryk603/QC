@@ -1,54 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testng-results ignored="0" total="6" passed="1" failed="5" skipped="0">
   <reporter-output>
+    <line>
+      <![CDATA[<a href='C:\Users\30001236\IdeaProjects\LOTests\ErrorScreenshot\Test_ManageYourBooking20180507_151743.jpg'> <img src='C:\Users\30001236\IdeaProjects\LOTests\ErrorScreenshot\Test_ManageYourBooking20180507_151743.jpg' height='400' width='600'/> </a><br>20180507_151743]]>
+    </line>
+    <line>
+      <![CDATA[<a href='C:\Users\30001236\IdeaProjects\LOTests\ErrorScreenshot\Test_ManageYourBooking20180507_151757.jpg'> <img src='C:\Users\30001236\IdeaProjects\LOTests\ErrorScreenshot\Test_ManageYourBooking20180507_151757.jpg' height='400' width='600'/> </a><br>20180507_151757]]>
+    </line>
+    <line>
+      <![CDATA[<a href='C:\Users\30001236\IdeaProjects\LOTests\ErrorScreenshot\Test_ManageYourBooking20180507_151810.jpg'> <img src='C:\Users\30001236\IdeaProjects\LOTests\ErrorScreenshot\Test_ManageYourBooking20180507_151810.jpg' height='400' width='600'/> </a><br>20180507_151810]]>
+    </line>
+    <line>
+      <![CDATA[<a href='C:\Users\30001236\IdeaProjects\LOTests\ErrorScreenshot\Test_ManageYourBooking20180507_151827.jpg'> <img src='C:\Users\30001236\IdeaProjects\LOTests\ErrorScreenshot\Test_ManageYourBooking20180507_151827.jpg' height='400' width='600'/> </a><br>20180507_151827]]>
+    </line>
+    <line>
+      <![CDATA[<a href='C:\Users\30001236\IdeaProjects\LOTests\ErrorScreenshot\Test_ManageYourBooking20180507_151857.jpg'> <img src='C:\Users\30001236\IdeaProjects\LOTests\ErrorScreenshot\Test_ManageYourBooking20180507_151857.jpg' height='400' width='600'/> </a><br>20180507_151857]]>
+    </line>
   </reporter-output>
-  <suite started-at="2018-05-02T13:11:34Z" name="Default Suite" finished-at="2018-05-02T13:14:00Z" duration-ms="145141">
+  <suite started-at="2018-05-07T13:17:17Z" name="Default Suite" finished-at="2018-05-07T13:18:59Z" duration-ms="101590">
     <groups>
+      <group name="Reservation">
+        <method signature="Reservations.Test_ManageYourBooking(java.lang.String, java.lang.String)[pri:0, instance:LOT.Reservations@1d8bd0de]" name="Test_ManageYourBooking" class="LOT.Reservations"/>
+      </group> <!-- Reservation -->
     </groups>
-    <test started-at="2018-05-02T13:11:34Z" name="LOTests" finished-at="2018-05-02T13:14:00Z" duration-ms="145141">
+    <test started-at="2018-05-07T13:17:17Z" name="LOTests" finished-at="2018-05-07T13:18:59Z" duration-ms="101590">
       <class name="LOT.Reservations">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:LOT.Reservations@ba54932]" started-at="2018-05-02T13:11:34Z" name="setUp" finished-at="2018-05-02T13:11:37Z" duration-ms="2941" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:LOT.Reservations@1d8bd0de]" started-at="2018-05-07T13:17:17Z" name="setUp" finished-at="2018-05-07T13:17:20Z" duration-ms="2757" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="Test_ManageYourBooking(java.lang.String, java.lang.String)[pri:0, instance:LOT.Reservations@ba54932]" started-at="2018-05-02T13:11:38Z" name="Test_ManageYourBooking" data-provider="data" finished-at="2018-05-02T13:12:05Z" duration-ms="26801" status="FAIL">
+        <test-method signature="Test_ManageYourBooking(java.lang.String, java.lang.String)[pri:0, instance:LOT.Reservations@1d8bd0de]" started-at="2018-05-07T13:17:21Z" name="Test_ManageYourBooking" data-provider="data" finished-at="2018-05-07T13:17:42Z" duration-ms="21678" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA[admin1]]>
+                <![CDATA[Kowalski1]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[demo1]]>
+                <![CDATA[NRREZ1]]>
               </value>
             </param>
           </params>
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
               <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"#nr-your-ticket > div.nr-your-ticket--header > div.nr-your-ticket--group > p"}
-  (Session info: chrome=66.0.3359.117)
+  (Session info: chrome=66.0.3359.139)
   (Driver info: chromedriver=2.36.540470 (e522d04694c7ebea4ba8821272dbef4f9b818c91),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
 Command duration or timeout: 0 milliseconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.9.1', revision: '63f7b50', time: '2018-02-07T22:42:22.379Z'
-System info: host: 'N-5CG7492PHQ', ip: '10.23.72.209', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '9.0.4'
+System info: host: 'N-5CG7492PHQ', ip: '192.168.13.173', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '9.0.4'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.36.540470 (e522d04694c7eb..., userDataDir: C:\Users\30001236\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 66.0.3359.117, webStorageEnabled: true}
-Session ID: 0fbf545bc12969c86eafd4607e37aef0
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.36.540470 (e522d04694c7eb..., userDataDir: C:\Users\30001236\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 66.0.3359.139, webStorageEnabled: true}
+Session ID: 6ccc3987d1c78f282a9881dee672778e
 *** Element info: {Using=css selector, value=#nr-your-ticket > div.nr-your-ticket--header > div.nr-your-ticket--group > p}]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#nr-your-ticket > div.nr-your-ticket--header > div.nr-your-ticket--group > p"}
-  (Session info: chrome=66.0.3359.117)
+  (Session info: chrome=66.0.3359.139)
   (Driver info: chromedriver=2.36.540470 (e522d04694c7ebea4ba8821272dbef4f9b818c91),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
 Command duration or timeout: 0 milliseconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.9.1', revision: '63f7b50', time: '2018-02-07T22:42:22.379Z'
-System info: host: 'N-5CG7492PHQ', ip: '10.23.72.209', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '9.0.4'
+System info: host: 'N-5CG7492PHQ', ip: '192.168.13.173', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '9.0.4'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.36.540470 (e522d04694c7eb..., userDataDir: C:\Users\30001236\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 66.0.3359.117, webStorageEnabled: true}
-Session ID: 0fbf545bc12969c86eafd4607e37aef0
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.36.540470 (e522d04694c7eb..., userDataDir: C:\Users\30001236\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 66.0.3359.139, webStorageEnabled: true}
+Session ID: 6ccc3987d1c78f282a9881dee672778e
 *** Element info: {Using=css selector, value=#nr-your-ticket > div.nr-your-ticket--header > div.nr-your-ticket--group > p}
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
@@ -69,7 +87,7 @@ at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:3
 at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
 at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
 at com.sun.proxy.$Proxy12.getText(Unknown Source)
-at LOT.Reservations.Test_ManageYourBooking(Reservations.java:37)
+at LOT.Reservations.Test_ManageYourBooking(Reservations.java:38)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -98,46 +116,49 @@ at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:123)
             </full-stacktrace>
           </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
+            <line>
+              <![CDATA[<a href='C:\Users\30001236\IdeaProjects\LOTests\ErrorScreenshot\Test_ManageYourBooking20180507_151743.jpg'> <img src='C:\Users\30001236\IdeaProjects\LOTests\ErrorScreenshot\Test_ManageYourBooking20180507_151743.jpg' height='400' width='600'/> </a><br>20180507_151743]]>
+            </line>
           </reporter-output>
         </test-method> <!-- Test_ManageYourBooking -->
-        <test-method signature="Test_ManageYourBooking(java.lang.String, java.lang.String)[pri:0, instance:LOT.Reservations@ba54932]" started-at="2018-05-02T13:12:05Z" name="Test_ManageYourBooking" data-provider="data" finished-at="2018-05-02T13:12:30Z" duration-ms="24445" status="FAIL">
+        <test-method signature="Test_ManageYourBooking(java.lang.String, java.lang.String)[pri:0, instance:LOT.Reservations@1d8bd0de]" started-at="2018-05-07T13:17:43Z" name="Test_ManageYourBooking" data-provider="data" finished-at="2018-05-07T13:17:56Z" duration-ms="13698" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA[admin2]]>
+                <![CDATA[Kowalski2]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[demo2]]>
+                <![CDATA[NRREZ2]]>
               </value>
             </param>
           </params>
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
               <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"#nr-your-ticket > div.nr-your-ticket--header > div.nr-your-ticket--group > p"}
-  (Session info: chrome=66.0.3359.117)
+  (Session info: chrome=66.0.3359.139)
   (Driver info: chromedriver=2.36.540470 (e522d04694c7ebea4ba8821272dbef4f9b818c91),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
 Command duration or timeout: 0 milliseconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.9.1', revision: '63f7b50', time: '2018-02-07T22:42:22.379Z'
-System info: host: 'N-5CG7492PHQ', ip: '10.23.72.209', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '9.0.4'
+System info: host: 'N-5CG7492PHQ', ip: '192.168.13.173', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '9.0.4'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.36.540470 (e522d04694c7eb..., userDataDir: C:\Users\30001236\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 66.0.3359.117, webStorageEnabled: true}
-Session ID: 0fbf545bc12969c86eafd4607e37aef0
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.36.540470 (e522d04694c7eb..., userDataDir: C:\Users\30001236\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 66.0.3359.139, webStorageEnabled: true}
+Session ID: 6ccc3987d1c78f282a9881dee672778e
 *** Element info: {Using=css selector, value=#nr-your-ticket > div.nr-your-ticket--header > div.nr-your-ticket--group > p}]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#nr-your-ticket > div.nr-your-ticket--header > div.nr-your-ticket--group > p"}
-  (Session info: chrome=66.0.3359.117)
+  (Session info: chrome=66.0.3359.139)
   (Driver info: chromedriver=2.36.540470 (e522d04694c7ebea4ba8821272dbef4f9b818c91),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
 Command duration or timeout: 0 milliseconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.9.1', revision: '63f7b50', time: '2018-02-07T22:42:22.379Z'
-System info: host: 'N-5CG7492PHQ', ip: '10.23.72.209', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '9.0.4'
+System info: host: 'N-5CG7492PHQ', ip: '192.168.13.173', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '9.0.4'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.36.540470 (e522d04694c7eb..., userDataDir: C:\Users\30001236\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 66.0.3359.117, webStorageEnabled: true}
-Session ID: 0fbf545bc12969c86eafd4607e37aef0
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.36.540470 (e522d04694c7eb..., userDataDir: C:\Users\30001236\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 66.0.3359.139, webStorageEnabled: true}
+Session ID: 6ccc3987d1c78f282a9881dee672778e
 *** Element info: {Using=css selector, value=#nr-your-ticket > div.nr-your-ticket--header > div.nr-your-ticket--group > p}
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
@@ -158,7 +179,7 @@ at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:3
 at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
 at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
 at com.sun.proxy.$Proxy12.getText(Unknown Source)
-at LOT.Reservations.Test_ManageYourBooking(Reservations.java:37)
+at LOT.Reservations.Test_ManageYourBooking(Reservations.java:38)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -187,46 +208,49 @@ at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:123)
             </full-stacktrace>
           </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
+            <line>
+              <![CDATA[<a href='C:\Users\30001236\IdeaProjects\LOTests\ErrorScreenshot\Test_ManageYourBooking20180507_151757.jpg'> <img src='C:\Users\30001236\IdeaProjects\LOTests\ErrorScreenshot\Test_ManageYourBooking20180507_151757.jpg' height='400' width='600'/> </a><br>20180507_151757]]>
+            </line>
           </reporter-output>
         </test-method> <!-- Test_ManageYourBooking -->
-        <test-method signature="Test_ManageYourBooking(java.lang.String, java.lang.String)[pri:0, instance:LOT.Reservations@ba54932]" started-at="2018-05-02T13:12:30Z" name="Test_ManageYourBooking" data-provider="data" finished-at="2018-05-02T13:12:54Z" duration-ms="24572" status="FAIL">
+        <test-method signature="Test_ManageYourBooking(java.lang.String, java.lang.String)[pri:0, instance:LOT.Reservations@1d8bd0de]" started-at="2018-05-07T13:17:57Z" name="Test_ManageYourBooking" data-provider="data" finished-at="2018-05-07T13:18:09Z" duration-ms="12651" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA[admin3]]>
+                <![CDATA[Kowalski3]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[demo3]]>
+                <![CDATA[NRREZ3]]>
               </value>
             </param>
           </params>
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
               <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"#nr-your-ticket > div.nr-your-ticket--header > div.nr-your-ticket--group > p"}
-  (Session info: chrome=66.0.3359.117)
+  (Session info: chrome=66.0.3359.139)
   (Driver info: chromedriver=2.36.540470 (e522d04694c7ebea4ba8821272dbef4f9b818c91),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
 Command duration or timeout: 0 milliseconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.9.1', revision: '63f7b50', time: '2018-02-07T22:42:22.379Z'
-System info: host: 'N-5CG7492PHQ', ip: '10.23.72.209', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '9.0.4'
+System info: host: 'N-5CG7492PHQ', ip: '192.168.13.173', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '9.0.4'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.36.540470 (e522d04694c7eb..., userDataDir: C:\Users\30001236\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 66.0.3359.117, webStorageEnabled: true}
-Session ID: 0fbf545bc12969c86eafd4607e37aef0
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.36.540470 (e522d04694c7eb..., userDataDir: C:\Users\30001236\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 66.0.3359.139, webStorageEnabled: true}
+Session ID: 6ccc3987d1c78f282a9881dee672778e
 *** Element info: {Using=css selector, value=#nr-your-ticket > div.nr-your-ticket--header > div.nr-your-ticket--group > p}]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#nr-your-ticket > div.nr-your-ticket--header > div.nr-your-ticket--group > p"}
-  (Session info: chrome=66.0.3359.117)
+  (Session info: chrome=66.0.3359.139)
   (Driver info: chromedriver=2.36.540470 (e522d04694c7ebea4ba8821272dbef4f9b818c91),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
 Command duration or timeout: 0 milliseconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.9.1', revision: '63f7b50', time: '2018-02-07T22:42:22.379Z'
-System info: host: 'N-5CG7492PHQ', ip: '10.23.72.209', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '9.0.4'
+System info: host: 'N-5CG7492PHQ', ip: '192.168.13.173', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '9.0.4'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.36.540470 (e522d04694c7eb..., userDataDir: C:\Users\30001236\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 66.0.3359.117, webStorageEnabled: true}
-Session ID: 0fbf545bc12969c86eafd4607e37aef0
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.36.540470 (e522d04694c7eb..., userDataDir: C:\Users\30001236\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 66.0.3359.139, webStorageEnabled: true}
+Session ID: 6ccc3987d1c78f282a9881dee672778e
 *** Element info: {Using=css selector, value=#nr-your-ticket > div.nr-your-ticket--header > div.nr-your-ticket--group > p}
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
@@ -247,7 +271,7 @@ at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:3
 at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
 at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
 at com.sun.proxy.$Proxy12.getText(Unknown Source)
-at LOT.Reservations.Test_ManageYourBooking(Reservations.java:37)
+at LOT.Reservations.Test_ManageYourBooking(Reservations.java:38)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -276,9 +300,12 @@ at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:123)
             </full-stacktrace>
           </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
+            <line>
+              <![CDATA[<a href='C:\Users\30001236\IdeaProjects\LOTests\ErrorScreenshot\Test_ManageYourBooking20180507_151810.jpg'> <img src='C:\Users\30001236\IdeaProjects\LOTests\ErrorScreenshot\Test_ManageYourBooking20180507_151810.jpg' height='400' width='600'/> </a><br>20180507_151810]]>
+            </line>
           </reporter-output>
         </test-method> <!-- Test_ManageYourBooking -->
-        <test-method signature="Test_ManageYourBooking(java.lang.String, java.lang.String)[pri:0, instance:LOT.Reservations@ba54932]" started-at="2018-05-02T13:12:54Z" name="Test_ManageYourBooking" data-provider="data" finished-at="2018-05-02T13:13:12Z" duration-ms="18056" status="FAIL">
+        <test-method signature="Test_ManageYourBooking(java.lang.String, java.lang.String)[pri:0, instance:LOT.Reservations@1d8bd0de]" started-at="2018-05-07T13:18:10Z" name="Test_ManageYourBooking" data-provider="data" finished-at="2018-05-07T13:18:27Z" duration-ms="17420" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -293,16 +320,16 @@ at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:123)
           </params>
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[Reservation not find expected [NZUJ4Z2] but found [NZUJ4Z]]]>
+              <![CDATA[Reservation Not Found expected [NZUJ4Z2] but found [NZUJ4Z]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Reservation not find expected [NZUJ4Z2] but found [NZUJ4Z]
+              <![CDATA[java.lang.AssertionError: Reservation Not Found expected [NZUJ4Z2] but found [NZUJ4Z]
 at org.testng.Assert.fail(Assert.java:96)
 at org.testng.Assert.failNotEquals(Assert.java:776)
 at org.testng.Assert.assertEqualsImpl(Assert.java:137)
 at org.testng.Assert.assertEquals(Assert.java:118)
 at org.testng.Assert.assertEquals(Assert.java:453)
-at LOT.Reservations.Test_ManageYourBooking(Reservations.java:38)
+at LOT.Reservations.Test_ManageYourBooking(Reservations.java:39)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -331,9 +358,12 @@ at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:123)
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
+            <line>
+              <![CDATA[<a href='C:\Users\30001236\IdeaProjects\LOTests\ErrorScreenshot\Test_ManageYourBooking20180507_151827.jpg'> <img src='C:\Users\30001236\IdeaProjects\LOTests\ErrorScreenshot\Test_ManageYourBooking20180507_151827.jpg' height='400' width='600'/> </a><br>20180507_151827]]>
+            </line>
           </reporter-output>
         </test-method> <!-- Test_ManageYourBooking -->
-        <test-method signature="Test_ManageYourBooking(java.lang.String, java.lang.String)[pri:0, instance:LOT.Reservations@ba54932]" started-at="2018-05-02T13:13:12Z" name="Test_ManageYourBooking" data-provider="data" finished-at="2018-05-02T13:13:31Z" duration-ms="18997" status="PASS">
+        <test-method signature="Test_ManageYourBooking(java.lang.String, java.lang.String)[pri:0, instance:LOT.Reservations@1d8bd0de]" started-at="2018-05-07T13:18:27Z" name="Test_ManageYourBooking" data-provider="data" finished-at="2018-05-07T13:18:44Z" duration-ms="16953" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -349,44 +379,44 @@ at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:123)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Test_ManageYourBooking -->
-        <test-method signature="Test_ManageYourBooking(java.lang.String, java.lang.String)[pri:0, instance:LOT.Reservations@ba54932]" started-at="2018-05-02T13:13:31Z" name="Test_ManageYourBooking" data-provider="data" finished-at="2018-05-02T13:13:58Z" duration-ms="27098" status="FAIL">
+        <test-method signature="Test_ManageYourBooking(java.lang.String, java.lang.String)[pri:0, instance:LOT.Reservations@1d8bd0de]" started-at="2018-05-07T13:18:44Z" name="Test_ManageYourBooking" data-provider="data" finished-at="2018-05-07T13:18:57Z" duration-ms="12805" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA[admin6]]>
+                <![CDATA[Nowak1]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[demo6]]>
+                <![CDATA[NRREZ4]]>
               </value>
             </param>
           </params>
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
               <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"#nr-your-ticket > div.nr-your-ticket--header > div.nr-your-ticket--group > p"}
-  (Session info: chrome=66.0.3359.117)
+  (Session info: chrome=66.0.3359.139)
   (Driver info: chromedriver=2.36.540470 (e522d04694c7ebea4ba8821272dbef4f9b818c91),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
 Command duration or timeout: 0 milliseconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.9.1', revision: '63f7b50', time: '2018-02-07T22:42:22.379Z'
-System info: host: 'N-5CG7492PHQ', ip: '10.23.72.209', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '9.0.4'
+System info: host: 'N-5CG7492PHQ', ip: '192.168.13.173', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '9.0.4'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.36.540470 (e522d04694c7eb..., userDataDir: C:\Users\30001236\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 66.0.3359.117, webStorageEnabled: true}
-Session ID: 0fbf545bc12969c86eafd4607e37aef0
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.36.540470 (e522d04694c7eb..., userDataDir: C:\Users\30001236\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 66.0.3359.139, webStorageEnabled: true}
+Session ID: 6ccc3987d1c78f282a9881dee672778e
 *** Element info: {Using=css selector, value=#nr-your-ticket > div.nr-your-ticket--header > div.nr-your-ticket--group > p}]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#nr-your-ticket > div.nr-your-ticket--header > div.nr-your-ticket--group > p"}
-  (Session info: chrome=66.0.3359.117)
+  (Session info: chrome=66.0.3359.139)
   (Driver info: chromedriver=2.36.540470 (e522d04694c7ebea4ba8821272dbef4f9b818c91),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
 Command duration or timeout: 0 milliseconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.9.1', revision: '63f7b50', time: '2018-02-07T22:42:22.379Z'
-System info: host: 'N-5CG7492PHQ', ip: '10.23.72.209', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '9.0.4'
+System info: host: 'N-5CG7492PHQ', ip: '192.168.13.173', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '9.0.4'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.36.540470 (e522d04694c7eb..., userDataDir: C:\Users\30001236\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 66.0.3359.117, webStorageEnabled: true}
-Session ID: 0fbf545bc12969c86eafd4607e37aef0
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.36.540470 (e522d04694c7eb..., userDataDir: C:\Users\30001236\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 66.0.3359.139, webStorageEnabled: true}
+Session ID: 6ccc3987d1c78f282a9881dee672778e
 *** Element info: {Using=css selector, value=#nr-your-ticket > div.nr-your-ticket--header > div.nr-your-ticket--group > p}
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
@@ -407,7 +437,7 @@ at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:3
 at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
 at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
 at com.sun.proxy.$Proxy12.getText(Unknown Source)
-at LOT.Reservations.Test_ManageYourBooking(Reservations.java:37)
+at LOT.Reservations.Test_ManageYourBooking(Reservations.java:38)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -436,9 +466,12 @@ at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:123)
             </full-stacktrace>
           </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
+            <line>
+              <![CDATA[<a href='C:\Users\30001236\IdeaProjects\LOTests\ErrorScreenshot\Test_ManageYourBooking20180507_151857.jpg'> <img src='C:\Users\30001236\IdeaProjects\LOTests\ErrorScreenshot\Test_ManageYourBooking20180507_151857.jpg' height='400' width='600'/> </a><br>20180507_151857]]>
+            </line>
           </reporter-output>
         </test-method> <!-- Test_ManageYourBooking -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:LOT.Reservations@ba54932]" started-at="2018-05-02T13:13:58Z" name="tearDown" finished-at="2018-05-02T13:14:00Z" duration-ms="1191" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:LOT.Reservations@1d8bd0de]" started-at="2018-05-07T13:18:57Z" name="tearDown" finished-at="2018-05-07T13:18:59Z" duration-ms="1226" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
