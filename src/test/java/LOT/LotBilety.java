@@ -24,7 +24,7 @@ public class LotBilety extends MainTest {
     private boolean acceptNextAlert = true;
     private StringBuffer verificationErrors = new StringBuffer();
 
-    @BeforeMethod(alwaysRun = true)
+    @BeforeTest(alwaysRun = true)
     public void setUp() throws Exception {
         driver = new ChromeDriver();
         driver.manage().deleteAllCookies();
@@ -45,8 +45,9 @@ public class LotBilety extends MainTest {
         HomePage.FromToText.sendKeys(to,Keys.ENTER);
         HomePage.DepartureDate.sendKeys(departure);
         HomePage.ReturnDate.sendKeys(back);
+
         HomePage.Submit.submit();
-        WebElement test = fluentWait(By.cssSelector(".logo"));
+
         HomePage.lotlogo.click();
     }
 

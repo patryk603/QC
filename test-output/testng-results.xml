@@ -2,22 +2,22 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
     <line>
-      <![CDATA[<a href='C:\Users\30001236\IdeaProjects\LOTests\ErrorScreenshot\Test_BuyTickets20180508_155341.jpg'> <img src='C:\Users\30001236\IdeaProjects\LOTests\ErrorScreenshot\Test_BuyTickets20180508_155341.jpg' height='400' width='600'/> </a><br>20180508_155341]]>
+      <![CDATA[<a href='C:\Users\30001236\IdeaProjects\LOTests\ErrorScreenshot\Test_BuyTickets20180509_114727.jpg'> <img src='C:\Users\30001236\IdeaProjects\LOTests\ErrorScreenshot\Test_BuyTickets20180509_114727.jpg' height='400' width='600'/> </a><br>20180509_114727]]>
     </line>
   </reporter-output>
-  <suite started-at="2018-05-08T13:53:28Z" name="Default Suite" finished-at="2018-05-08T13:53:41Z" duration-ms="12647">
+  <suite started-at="2018-05-09T09:46:53Z" name="Default Suite" finished-at="2018-05-09T09:47:28Z" duration-ms="34533">
     <groups>
       <group name="BuyTickets">
-        <method signature="LotBilety.Test_BuyTickets(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:LOT.LotBilety@87a85e1]" name="Test_BuyTickets" class="LOT.LotBilety"/>
+        <method signature="LotBilety.Test_BuyTickets(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:LOT.LotBilety@757acd7b]" name="Test_BuyTickets" class="LOT.LotBilety"/>
       </group> <!-- BuyTickets -->
     </groups>
-    <test started-at="2018-05-08T13:53:28Z" name="LOTests" finished-at="2018-05-08T13:53:41Z" duration-ms="12647">
+    <test started-at="2018-05-09T09:46:53Z" name="LOTests" finished-at="2018-05-09T09:47:28Z" duration-ms="34533">
       <class name="LOT.LotBilety">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:LOT.LotBilety@87a85e1]" started-at="2018-05-08T13:53:30Z" name="setUp" finished-at="2018-05-08T13:53:32Z" duration-ms="2743" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:LOT.LotBilety@757acd7b]" started-at="2018-05-09T09:46:53Z" name="setUp" finished-at="2018-05-09T09:46:57Z" duration-ms="3167" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="Test_BuyTickets(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:LOT.LotBilety@87a85e1]" started-at="2018-05-08T13:53:32Z" name="Test_BuyTickets" data-provider="data" finished-at="2018-05-08T13:53:40Z" duration-ms="7776" status="FAIL">
+        <test-method signature="Test_BuyTickets(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:LOT.LotBilety@757acd7b]" started-at="2018-05-09T09:46:57Z" name="Test_BuyTickets" data-provider="data" finished-at="2018-05-09T09:47:27Z" duration-ms="29076" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -47,26 +47,26 @@
           </params>
           <exception class="org.openqa.selenium.WebDriverException">
             <message>
-              <![CDATA[unknown error: Element <img class="logo" src="//do4r85wsrjs5z.cloudfront.net/oobeocpdpgllkj/img/logo_en.svg" alt="LOT Polish Airlines | Airline Tickets | lot.com"> is not clickable at point (233, 44). Other element would receive the click: <div class="preloader-logo-wrapper">...</div>
+              <![CDATA[unknown error: Element <img class="logo" src="//do4r85wsrjs5z.cloudfront.net/ppbeocpdmglmkj/img/logo_en.svg" alt="LOT Polish Airlines | Airline Tickets | lot.com"> is not clickable at point (233, 44). Other element would receive the click: <div class="preloader-logo-wrapper">...</div>
   (Session info: chrome=66.0.3359.139)
   (Driver info: chromedriver=2.36.540470 (e522d04694c7ebea4ba8821272dbef4f9b818c91),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
 Command duration or timeout: 0 milliseconds
 Build info: version: '3.9.1', revision: '63f7b50', time: '2018-02-07T22:42:22.379Z'
-System info: host: 'N-5CG7492PHQ', ip: '10.23.72.209', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '9.0.4'
+System info: host: 'N-5CG7492PHQ', ip: '192.168.13.120', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '9.0.4'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
 Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.36.540470 (e522d04694c7eb..., userDataDir: C:\Users\30001236\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 66.0.3359.139, webStorageEnabled: true}
-Session ID: 09100518666c52f1b35490073c4efdbc]]>
+Session ID: 36b9e8b7888eaa843d5a2719460e1363]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: unknown error: Element <img class="logo" src="//do4r85wsrjs5z.cloudfront.net/oobeocpdpgllkj/img/logo_en.svg" alt="LOT Polish Airlines | Airline Tickets | lot.com"> is not clickable at point (233, 44). Other element would receive the click: <div class="preloader-logo-wrapper">...</div>
+              <![CDATA[org.openqa.selenium.WebDriverException: unknown error: Element <img class="logo" src="//do4r85wsrjs5z.cloudfront.net/ppbeocpdmglmkj/img/logo_en.svg" alt="LOT Polish Airlines | Airline Tickets | lot.com"> is not clickable at point (233, 44). Other element would receive the click: <div class="preloader-logo-wrapper">...</div>
   (Session info: chrome=66.0.3359.139)
   (Driver info: chromedriver=2.36.540470 (e522d04694c7ebea4ba8821272dbef4f9b818c91),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
 Command duration or timeout: 0 milliseconds
 Build info: version: '3.9.1', revision: '63f7b50', time: '2018-02-07T22:42:22.379Z'
-System info: host: 'N-5CG7492PHQ', ip: '10.23.72.209', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '9.0.4'
+System info: host: 'N-5CG7492PHQ', ip: '192.168.13.120', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '9.0.4'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
 Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.36.540470 (e522d04694c7eb..., userDataDir: C:\Users\30001236\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 66.0.3359.139, webStorageEnabled: true}
-Session ID: 09100518666c52f1b35490073c4efdbc
+Session ID: 36b9e8b7888eaa843d5a2719460e1363
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -87,7 +87,7 @@ at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Delegating
 at java.base/java.lang.reflect.Method.invoke(Method.java:564)
 at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
 at com.sun.proxy.$Proxy12.click(Unknown Source)
-at LOT.LotBilety.Test_BuyTickets(LotBilety.java:50)
+at LOT.LotBilety.Test_BuyTickets(LotBilety.java:52)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -117,11 +117,11 @@ at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:123)
           </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
             <line>
-              <![CDATA[<a href='C:\Users\30001236\IdeaProjects\LOTests\ErrorScreenshot\Test_BuyTickets20180508_155341.jpg'> <img src='C:\Users\30001236\IdeaProjects\LOTests\ErrorScreenshot\Test_BuyTickets20180508_155341.jpg' height='400' width='600'/> </a><br>20180508_155341]]>
+              <![CDATA[<a href='C:\Users\30001236\IdeaProjects\LOTests\ErrorScreenshot\Test_BuyTickets20180509_114727.jpg'> <img src='C:\Users\30001236\IdeaProjects\LOTests\ErrorScreenshot\Test_BuyTickets20180509_114727.jpg' height='400' width='600'/> </a><br>20180509_114727]]>
             </line>
           </reporter-output>
         </test-method> <!-- Test_BuyTickets -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:LOT.LotBilety@87a85e1]" started-at="2018-05-08T13:53:41Z" name="tearDown" finished-at="2018-05-08T13:53:41Z" duration-ms="284" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:LOT.LotBilety@757acd7b]" started-at="2018-05-09T09:47:27Z" name="tearDown" finished-at="2018-05-09T09:47:28Z" duration-ms="564" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
