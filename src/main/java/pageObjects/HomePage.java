@@ -19,7 +19,7 @@ public class HomePage {
     @FindBy(xpath = "//*[@id='menu-settings']/a/span")
     public static WebElement login;
 
-    @FindBy(css = "img.logo")
+    @FindBy(id = "logo_home_link")
     public static WebElement lotlogo;
 
     @FindBy(css = "#mainlink-1 > a > h3")
@@ -63,6 +63,14 @@ public class HomePage {
 
     @FindBy(css = ".select2-search__field")
     public static WebElement FromToText;
+
+
+    @FindBy(id = "lot")
+    public static WebElement Lot;
+
+
+    @FindBy(xpath = "/html//body[@id='lot']//input[@role='textbox']")
+    public static WebElement ToToText;
 
     @FindBy(id = "departureDate")
     public static WebElement DepartureDate;
