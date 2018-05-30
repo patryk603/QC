@@ -14,8 +14,8 @@ public class ExtrasPage {
     @FindBy(css = ".nr-cart--buttons>button")
     public static WebElement BigContinue;
 
-    @FindBy(css = ".nr-anc__section__footer.clearfix")
-    public static WebElement Footer;
+    @FindBy(id = "ancillaries-content")
+    public static WebElement Seats;
 
 
 

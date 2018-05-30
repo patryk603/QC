@@ -1,5 +1,6 @@
 package DDT;
 
+import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
@@ -29,6 +30,16 @@ public class ExcelDataConfig {
         sheet1 = wb.getSheetAt(sheetNumber);
         String data = sheet1.getRow(row).getCell(column).getStringCellValue();
         return data;
+
+    }
+
+    public XSSFCell getNumber(int sheetNumber, int row, int column)
+    {
+        sheet1 = wb.getSheetAt(sheetNumber);
+        XSSFCell data = sheet1.getRow(row).getCell(column);
+
+        return data;
+
     }
 
     public int getRowCount(int sheetIndex)

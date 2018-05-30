@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods, 1 failed,   1 passed</span>
+                    <span class="method-stats">3 methods, 1 failed,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -102,7 +102,7 @@
                     <div class="method-list-content failed suite-Default_Suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_Suite" title="LOT.LotBilety3" class="method navigator-link" hash-for-method="Test_BuyTickets(us/en/, WAW, JFK, 12.06.2018, 12.07.2018)">Test_BuyTickets(us/en/, WAW, JFK, 12.06.2018, 12.07.2018)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_Suite" title="LOT.LotBiletyEU" class="method navigator-link" hash-for-method="Test_BuyTickets(fr/fr/, WAW, JFK, 20.0, 30.0)">Test_BuyTickets(fr/fr/, WAW, JFK, 20.0, 30.0)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_Suite -->
@@ -116,7 +116,12 @@
                     <div class="method-list-content passed suite-Default_Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_Suite" title="LOT.LotBilety3" class="method navigator-link" hash-for-method="Test_BuyTickets(pl/pl/, WAW, JFK, 12.06.2018, 12.07.2018)">Test_BuyTickets(pl/pl/, WAW, JFK, 12.06.2018, 12.07.2018)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_Suite" title="LOT.LotBiletyEU" class="method navigator-link" hash-for-method="Test_BuyTickets(es/es/, WAW, JFK, 11.0, 22.0)">Test_BuyTickets(es/es/, WAW, JFK, 11.0, 22.0)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_Suite" title="LOT.LotBiletyEU" class="method navigator-link" hash-for-method="Test_BuyTickets(pl/pl/, WAW, JFK, 11.0, 22.0)">Test_BuyTickets(pl/pl/, WAW, JFK, 11.0, 22.0)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_Suite -->
@@ -134,30 +139,24 @@
           <div class="suite-Default_Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">LOT.LotBilety3</span>
+              <span class="class-name">LOT.LotBiletyEU</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="Test_BuyTickets(us/en/, WAW, JFK, 12.06.2018, 12.07.2018)">
-                  </a> <!-- Test_BuyTickets(us/en/, WAW, JFK, 12.06.2018, 12.07.2018) -->
+                  <a name="Test_BuyTickets(fr/fr/, WAW, JFK, 20.0, 30.0)">
+                  </a> <!-- Test_BuyTickets(fr/fr/, WAW, JFK, 20.0, 30.0) -->
                   <span class="method-name">Test_BuyTickets</span>
-                  <span class="parameters">(us/en/, WAW, JFK, 12.06.2018, 12.07.2018)</span>
-                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator &apos;By.cssSelector: .btn.btn-type3[onclick*=&quot;accept&quot;]&apos; (tried for 30 second(s) with 500 MILLISECONDS interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:82)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
-	at LOT.LotBilety3.Test_BuyTickets(LotBilety3.java:96)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;.btn.btn-type3[onclick*=&quot;accept&quot;]&quot;}
-  (Session info: chrome=66.0.3359.139)
+                  <span class="parameters">(fr/fr/, WAW, JFK, 20.0, 30.0)</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: unknown error: Element &lt;div class=&quot;row-group jsOfferSection&quot; id=&quot;_availabilityportlet_WAR_lotairwaysportlet_offerIda-2-EUPINKTAN-2&quot;&gt;...&lt;/div&gt; is not clickable at point (506, 360). Other element would receive the click: &lt;div class=&quot;modal-backdrop fade in&quot;&gt;&lt;/div&gt;
+  (Session info: chrome=66.0.3359.181)
   (Driver info: chromedriver=2.36.540470 (e522d04694c7ebea4ba8821272dbef4f9b818c91),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
 Command duration or timeout: 0 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.9.1&apos;, revision: &apos;63f7b50&apos;, time: &apos;2018-02-07T22:42:22.379Z&apos;
-System info: host: &apos;N-5CG7492PHQ&apos;, ip: &apos;192.168.12.151&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;9.0.4&apos;
+System info: host: &apos;N-5CG7492PHQ&apos;, ip: &apos;10.23.72.173&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;9.0.4&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.36.540470 (e522d04694c7eb..., userDataDir: C:\Users\30001236\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 66.0.3359.139, webStorageEnabled: true}
-Session ID: 7e8103fe2493c097b809c34ce70d59fd
-*** Element info: {Using=css selector, value=.btn.btn-type3[onclick*=&quot;accept&quot;]}
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.36.540470 (e522d04694c7eb..., userDataDir: C:\Users\30001236\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 66.0.3359.181, webStorageEnabled: true}
+Session ID: fa866407acd7bf0415a8c3b9a5c6c876
 	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
 	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
 	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
@@ -166,22 +165,12 @@ Session ID: 7e8103fe2493c097b809c34ce70d59fd
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:371)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:465)
-	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:430)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy12.isDisplayed(Unknown Source)
-	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:315)
-	at org.openqa.selenium.support.ui.ExpectedConditions.access$100(ExpectedConditions.java:44)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:301)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:298)
-	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:686)
-	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:682)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
-	... 25 more
-... Removed 28 stack frames
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:279)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at com.sun.proxy.$Proxy12.click(Unknown Source)
+	at LOT.LotBiletyEU.Test_BuyTickets(LotBiletyEU.java:134)
+... Removed 32 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -190,15 +179,23 @@ Session ID: 7e8103fe2493c097b809c34ce70d59fd
           <div class="suite-Default_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">LOT.LotBilety3</span>
+              <span class="class-name">LOT.LotBiletyEU</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="Test_BuyTickets(pl/pl/, WAW, JFK, 12.06.2018, 12.07.2018)">
-                  </a> <!-- Test_BuyTickets(pl/pl/, WAW, JFK, 12.06.2018, 12.07.2018) -->
+                  <a name="Test_BuyTickets(es/es/, WAW, JFK, 11.0, 22.0)">
+                  </a> <!-- Test_BuyTickets(es/es/, WAW, JFK, 11.0, 22.0) -->
                   <span class="method-name">Test_BuyTickets</span>
-                  <span class="parameters">(pl/pl/, WAW, JFK, 12.06.2018, 12.07.2018)</span>
+                  <span class="parameters">(es/es/, WAW, JFK, 11.0, 22.0)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Test_BuyTickets(pl/pl/, WAW, JFK, 11.0, 22.0)">
+                  </a> <!-- Test_BuyTickets(pl/pl/, WAW, JFK, 11.0, 22.0) -->
+                  <span class="method-name">Test_BuyTickets</span>
+                  <span class="parameters">(pl/pl/, WAW, JFK, 11.0, 22.0)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -215,11 +212,11 @@ Session ID: 7e8103fe2493c097b809c34ce70d59fd
 &lt;suite name=&quot;Default Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;LOTests&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;LOT.LotBilety3&quot;&gt;
+      &lt;class name=&quot;LOT.LotBiletyEU&quot;&gt;
         &lt;methods&gt;
           &lt;include name=&quot;Test_BuyTickets&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- LOT.LotBilety3 --&gt;
+      &lt;/class&gt; &lt;!-- LOT.LotBiletyEU --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- LOTests --&gt;
 &lt;/suite&gt; &lt;!-- Default Suite --&gt;
@@ -267,20 +264,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(3);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'Test_BuyTickets')
-data.setCell(0, 2, 'LOT.LotBilety3')
-data.setCell(0, 3, 80716);
+data.setCell(0, 2, 'LOT.LotBiletyEU')
+data.setCell(0, 3, 48988);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'Test_BuyTickets')
-data.setCell(1, 2, 'LOT.LotBilety3')
-data.setCell(1, 3, 52446);
+data.setCell(1, 2, 'LOT.LotBiletyEU')
+data.setCell(1, 3, 38941);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'Test_BuyTickets')
+data.setCell(2, 2, 'LOT.LotBiletyEU')
+data.setCell(2, 3, 20592);
 window.suiteTableData['Default_Suite']= { tableData: data, tableDiv: 'times-div-Default_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 minutes</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-Default_Suite">
               </div> <!-- times-div-Default_Suite -->
             </div> <!-- times-div -->
@@ -292,9 +293,24 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="reporter-method-div">
-              <span class="reporter-method-name">Test_BuyTickets(us/en/, WAW, JFK, 12.06.2018, 12.07.2018)</span>
+              <span class="reporter-method-name">Test_BuyTickets(es/es/, WAW, JFK, 11.0, 22.0)</span>
               <div class="reporter-method-output-div">
-                <span class="reporter-method-output"><a href='C:\Users\30001236\IdeaProjects\LOTests\ErrorScreenshot\Test_BuyTickets20180518_121427.jpg'> <img src='C:\Users\30001236\IdeaProjects\LOTests\ErrorScreenshot\Test_BuyTickets20180518_121427.jpg' height='400' width='600'/> </a><br>20180518_121427</span>
+                <span class="reporter-method-output"><a href='C:\Users\30001236\IdeaProjects\LOTests\ErrorScreenshot\HomePage es\es\WAWJFK11.022.020180530_145830.jpg'> <img src='C:\Users\30001236\IdeaProjects\LOTests\ErrorScreenshot\HomePage es\es\WAWJFK11.022.020180530_145830.jpg' height='1080' width='1920'/> </a><br>20180530_145830</span>
+                <span class="reporter-method-output"><a href='C:\Users\30001236\IdeaProjects\LOTests\ErrorScreenshot\Test_BuyTickets20180530_145914.jpg'> <img src='C:\Users\30001236\IdeaProjects\LOTests\ErrorScreenshot\Test_BuyTickets20180530_145914.jpg' height='1080' width='1920'/> </a><br>20180530_145914</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">Test_BuyTickets(pl/pl/, WAW, JFK, 11.0, 22.0)</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output"><a href='C:\Users\30001236\IdeaProjects\LOTests\ErrorScreenshot\HomePage pl\pl\WAWJFK11.022.020180530_145751.jpg'> <img src='C:\Users\30001236\IdeaProjects\LOTests\ErrorScreenshot\HomePage pl\pl\WAWJFK11.022.020180530_145751.jpg' height='1080' width='1920'/> </a><br>20180530_145751</span>
+                <span class="reporter-method-output"><a href='C:\Users\30001236\IdeaProjects\LOTests\ErrorScreenshot\Test_BuyTickets20180530_145825.jpg'> <img src='C:\Users\30001236\IdeaProjects\LOTests\ErrorScreenshot\Test_BuyTickets20180530_145825.jpg' height='1080' width='1920'/> </a><br>20180530_145825</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">Test_BuyTickets(fr/fr/, WAW, JFK, 20.0, 30.0)</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output"><a href='C:\Users\30001236\IdeaProjects\LOTests\ErrorScreenshot\HomePage fr\fr\WAWJFK20.030.020180530_145729.jpg'> <img src='C:\Users\30001236\IdeaProjects\LOTests\ErrorScreenshot\HomePage fr\fr\WAWJFK20.030.020180530_145729.jpg' height='1080' width='1920'/> </a><br>20180530_145729</span>
+                <span class="reporter-method-output"><a href='C:\Users\30001236\IdeaProjects\LOTests\ErrorScreenshot\Test_BuyTickets20180530_145745.jpg'> <img src='C:\Users\30001236\IdeaProjects\LOTests\ErrorScreenshot\Test_BuyTickets20180530_145745.jpg' height='1080' width='1920'/> </a><br>20180530_145745</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -312,24 +328,28 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">LOT.LotBilety3</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">LOT.LotBiletyEU</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">setUp</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
-                <span class="method-name">Test_BuyTickets(pl/pl/, WAW, JFK, 12.06.2018, 12.07.2018)</span>
-                <span class="method-start">3478 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">Test_BuyTickets(us/en/, WAW, JFK, 12.06.2018, 12.07.2018)</span>
-                <span class="method-start">55927 ms</span>
+                <span class="method-name">Test_BuyTickets(fr/fr/, WAW, JFK, 20.0, 30.0)</span>
+                <span class="method-start">3468 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Test_BuyTickets(pl/pl/, WAW, JFK, 11.0, 22.0)</span>
+                <span class="method-start">24466 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Test_BuyTickets(es/es/, WAW, JFK, 11.0, 22.0)</span>
+                <span class="method-start">63765 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">137107 ms</span>
+                <span class="method-start">113135 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

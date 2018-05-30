@@ -11,10 +11,10 @@ public class FlightsPage {
 
     final WebDriver driver;
 
-    @FindBy(xpath = "//*[@id=\"flights-table__table_1\"]/tbody/tr[2]/td[1]")
+    @FindBy(css = ".row-group.jsOfferSection[id*=\"Ida\"][class*=\"row-group jsOfferSection\"]:not([style*=\"display: none\"])")
     public static WebElement FirstTO;
 
-    @FindBy(xpath = "//*[@id=\"flights-table__table_2\"]/tbody/tr[2]/td[1]")
+    @FindBy(css = ".row-group.jsOfferSection[id*=\"Vuelta\"][class*=\"row-group jsOfferSection\"]:not([style*=\"display: none\"])")
     public static WebElement FirstBack;
 
     @FindBy(css = ".nr-cart--buttons--tablet>button")

@@ -41,6 +41,9 @@ public class PassengersPage {
     @FindBy(css = ".nr-cart--buttons>button")
     public static WebElement BigContinue;
 
+    @FindBy(css = ".nr-cart--buttons--tablet>button")
+    public static WebElement SmallContinue;
+
     @FindBy(css = ".btn.btn-type3[onclick*=\"accept\"]")
     public static WebElement PopupAccept;
 

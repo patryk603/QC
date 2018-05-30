@@ -11,6 +11,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 public class GetScreenshot extends MainTest {
+
     public static String capture (String screenshotName) throws IOException {
         TakesScreenshot ts = (TakesScreenshot) driver;
         File source = ts.getScreenshotAs(OutputType.FILE);
@@ -19,7 +20,7 @@ public class GetScreenshot extends MainTest {
         File destination = new File(dest);
         FileUtils.copyFile(source, destination);
 
-        Reporter.log("<a href='"+ destination.getAbsolutePath() + "'> <img src='"+ destination.getAbsolutePath() + "' height='400' width='600'/> </a><br>" + timeStamp);
+        Reporter.log("<a href='"+ destination.getAbsolutePath() + "'> <img src='"+ destination.getAbsolutePath() + "' height='1080' width='1920'/> </a><br>" + timeStamp);
 
         return dest;
     }

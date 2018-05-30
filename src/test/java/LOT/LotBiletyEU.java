@@ -1,6 +1,7 @@
 package LOT;
 
 import DDT.ExcelDataConfig;
+import Main.GetScreenshot;
 import Main.MainTest;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.openqa.selenium.Keys;
@@ -15,12 +16,13 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import pageObjects.*;
 
+import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.concurrent.TimeUnit;
 
-public class LotBilety2 extends MainTest {
+public class LotBiletyEU extends MainTest{
     private String baseUrl;
     private boolean acceptNextAlert = true;
     private StringBuffer verificationErrors = new StringBuffer();
@@ -50,6 +52,7 @@ public class LotBilety2 extends MainTest {
         PageFactory.initElements(driver, PaymentPage.class);
     }
 
+
     @Test(dataProvider = "data",groups=("BuyTickets"))
     public void Test_BuyTickets(String localization, String from, String to, XSSFCell departuredata, XSSFCell returndata) throws Exception {
 
@@ -59,15 +62,20 @@ public class LotBilety2 extends MainTest {
 
         //TIME
         String dat1 = String.valueOf(departuredata);
-
-        dat1 = dat1.replaceAll(".0", "");
-
+        if (dat1.length() > 0) {
+            dat1 = dat1.substring(0, (dat1.length() - 2));
+        }
 
         String dat2 = String.valueOf(returndata);
-        dat2 = dat2.replaceAll(".0", "");
+        if (dat2.length() > 0) {
+            dat2 = dat2.substring(0, (dat2.length() - 2));
+        }
 
+        System.out.println(departuredata);
+        System.out.println(returndata);
         System.out.println(dat1);
         System.out.println(dat2);
+
         //Given Date in String format
         String timeStamp = new SimpleDateFormat("dd.MM.yyyy").format(Calendar.getInstance().getTime());
         System.out.println(timeStamp);
@@ -97,10 +105,15 @@ public class LotBilety2 extends MainTest {
         //Displaying the new Date after addition of Days
         System.out.println("Date after Addition/ Departure: "+newDate);
         System.out.println("Date after Addition/ Return: "+newDate2);
-        //TIME */
+        //TIME
 
         //TestStart
         //HomePage
+        try {
+            GetScreenshot.capture("HomePage " +localization +from +to +departuredata +returndata);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         HomePage.FromList.click();
         HomePage.FromToText.sendKeys(from,Keys.ENTER);
         HomePage.Lot.click();
@@ -159,7 +172,7 @@ public class LotBilety2 extends MainTest {
             System.out.println("No Popup : "+ e.getMessage());
         }
         //Extra Page
-        wait.until(ExpectedConditions.visibilityOf(ExtrasPage.Seats));
+        //wait.until(ExpectedConditions.visibilityOf(ExtrasPage.Seats));
         try {
             wait.until(ExpectedConditions.visibilityOf(ExtrasPage.BigContinue));
             ExtrasPage.BigContinue.click();
@@ -230,7 +243,7 @@ public class LotBilety2 extends MainTest {
     @AfterClass(alwaysRun = true)
     public void tearDown() throws Exception {
         driver.manage().deleteAllCookies();
-        //driver.quit();
+        driver.quit();
     }
 
 }

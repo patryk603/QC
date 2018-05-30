@@ -19,8 +19,9 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.concurrent.TimeUnit;
+import java.text.NumberFormat;
 
-public class LotBilety2 extends MainTest {
+public class LotBilety4 extends MainTest{
     private String baseUrl;
     private boolean acceptNextAlert = true;
     private StringBuffer verificationErrors = new StringBuffer();
@@ -49,6 +50,7 @@ public class LotBilety2 extends MainTest {
         PageFactory.initElements(driver, ExtrasPage.class);
         PageFactory.initElements(driver, PaymentPage.class);
     }
+
 
     @Test(dataProvider = "data",groups=("BuyTickets"))
     public void Test_BuyTickets(String localization, String from, String to, XSSFCell departuredata, XSSFCell returndata) throws Exception {
