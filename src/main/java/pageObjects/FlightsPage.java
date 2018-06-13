@@ -11,11 +11,17 @@ public class FlightsPage {
 
     final WebDriver driver;
 
-    @FindBy(css = ".row-group.jsOfferSection[id*=\"Ida\"][class*=\"row-group jsOfferSection\"]:not([style*=\"display: none\"])")
+    @FindBy(css = ".row-group.jsOfferSection[id*=\"Ida\"][class*=\"row-group jsOfferSection\"]:not([id*=\"0\"]):not([style*=\"display: none\"])")
     public static WebElement FirstTO;
 
-    @FindBy(css = ".row-group.jsOfferSection[id*=\"Vuelta\"][class*=\"row-group jsOfferSection\"]:not([style*=\"display: none\"])")
+    @FindBy(css = ".row-group.jsOfferSection[id*=\"Vuelta\"][class*=\"row-group jsOfferSection\"]:not([id*=\"0\"]):not([style*=\"display: none\"])")
     public static WebElement FirstBack;
+
+    @FindBy(css = ".VAB__flights__list[id*=\"1\"] > li > div > ul > li > div > a")
+    public static WebElement FirstTO1;
+
+    @FindBy(css = ".VAB__flights__list[id*=\"2\"] > li > div > ul > li > div > a")
+    public static WebElement FirstBack2;
 
     @FindBy(css = ".nr-cart--buttons--tablet>button")
     public static WebElement SmallContinue;
@@ -23,9 +29,14 @@ public class FlightsPage {
     @FindBy(css = ".nr-cart--buttons>button")
     public static WebElement BigContinue;
 
+    @FindBy(id = "nr-cart")
+    public static WebElement Cart;
 
+    @FindBy(css = "#modal-warning-description > div > button")
+    public static WebElement OK;
 
-
+    @FindBy(css = "#modal-price-change-description > div > button")
+    public static WebElement Popup;
 
     public FlightsPage(WebDriver driver){
 

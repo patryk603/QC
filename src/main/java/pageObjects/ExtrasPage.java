@@ -17,6 +17,10 @@ public class ExtrasPage {
     @FindBy(id = "ancillaries-content")
     public static WebElement Seats;
 
+    @FindBy(id = "column-1")
+    public static WebElement Column1;
+
+
 
 
     public ExtrasPage(WebDriver driver){

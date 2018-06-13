@@ -2,12 +2,8 @@ package pageObjects;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 /**
  * Created by PTeledzinski on 04.04.2018.
@@ -56,7 +52,13 @@ public class HomePage {
     public static WebElement NextBtn;
 
     @FindBy(id = "select2-departureAirport-container")
+    public static WebElement FromListButton;
+
+    @FindBy(id = "select2-departureAirport-results")
     public static WebElement FromList;
+
+    @FindBy(id = "select2-destinationAirport-results")
+    public static WebElement ToListButton;
 
     @FindBy(id = "select2-destinationAirport-container")
     public static WebElement ToList;
@@ -64,10 +66,8 @@ public class HomePage {
     @FindBy(css = ".select2-search__field")
     public static WebElement FromToText;
 
-
     @FindBy(id = "lot")
     public static WebElement Lot;
-
 
     @FindBy(xpath = "/html//body[@id='lot']//input[@role='textbox']")
     public static WebElement ToToText;
@@ -80,7 +80,6 @@ public class HomePage {
 
     @FindBy(id = "submit-booker")
     public static WebElement Submit;
-
 
 
     public HomePage(WebDriver driver){

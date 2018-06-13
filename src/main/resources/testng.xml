@@ -1,19 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Pozdro Dla Ekipy IT:)">
+  <suite name="Bollosk Test Suit" configfailurepolicy="continue">
 
-    <listeners>
-            <listener class-name="Main.LisinerTest"></listener>
-    </listeners>
 
-    <test name="LOTests">
+    <test name="Test_BuyTickets">
         <groups>
             <run>
-                <include name="Reservation"/>
+                <include name="BuyTickets"/>
             </run>
         </groups>
         <classes>
-            <class name="LOT.Reservations"/>
+            <class name="LOT.LotBiletyEUcopy"/>
         </classes>
     </test> <!-- LOTests -->
 </suite> <!-- Default Suite -->

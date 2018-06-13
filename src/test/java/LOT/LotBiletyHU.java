@@ -71,9 +71,11 @@ public class LotBiletyHU extends MainTest{
             dat2 = dat2.substring(0, (dat2.length() - 2));
         }
 
-
+        System.out.println(departuredata);
+        System.out.println(returndata);
         System.out.println(dat1);
         System.out.println(dat2);
+
         //Given Date in String format
         String timeStamp = new SimpleDateFormat("yy.MM.dd").format(Calendar.getInstance().getTime());
         System.out.println(timeStamp);
@@ -103,7 +105,7 @@ public class LotBiletyHU extends MainTest{
         //Displaying the new Date after addition of Days
         System.out.println("Date after Addition/ Departure: "+newDate);
         System.out.println("Date after Addition/ Return: "+newDate2);
-        //TIME */
+        //TIME
 
         //TestStart
         //HomePage
@@ -124,9 +126,20 @@ public class LotBiletyHU extends MainTest{
         HomePage.ReturnDate.sendKeys(newDate2);
         HomePage.Submit.submit();
         //FlightPage
+        try {
+            FlightsPage.FirstTO.click();
+        } catch (Exception e) {
+            System.out.println("Other tickets : "+ e.getMessage());
+            FlightsPage.FirstTO1.click();
+        }
 
-        FlightsPage.FirstTO.click();
-        FlightsPage.FirstBack.click();
+        try {
+            FlightsPage.FirstBack.click();
+        } catch (Exception e) {
+            System.out.println("Other tickets : "+ e.getMessage());
+            FlightsPage.FirstBack2.click();
+        }
+
         try {
             wait.until(ExpectedConditions.visibilityOf(FlightsPage.BigContinue));
             FlightsPage.BigContinue.click();
@@ -144,17 +157,21 @@ public class LotBiletyHU extends MainTest{
         PassengersPage.Surname.sendKeys(surname);
 
         //DATE OF BIRTH
-        PassengersPage.DayOfBirth.click();
-        Select day = new Select(PassengersPage.DayOfBirth);
-        day.selectByIndex(11);
+        try {
+            PassengersPage.DayOfBirth.click();
+            Select day = new Select(PassengersPage.DayOfBirth);
+            day.selectByIndex(11);
 
-        PassengersPage.MonthOfBirth.click();
-        Select mouth = new Select(PassengersPage.MonthOfBirth);
-        mouth.selectByIndex(5);
+            PassengersPage.MonthOfBirth.click();
+            Select mouth = new Select(PassengersPage.MonthOfBirth);
+            mouth.selectByIndex(5);
 
-        PassengersPage.YearOfBirth.click();
-        Select year = new Select(PassengersPage.YearOfBirth);
-        year.selectByIndex(72);
+            PassengersPage.YearOfBirth.click();
+            Select year = new Select(PassengersPage.YearOfBirth);
+            year.selectByIndex(72);
+        } catch (Exception e) {
+            System.out.println("Short haul : "+ e.getMessage());
+        }
         //DATE OF BIRTH
 
         PassengersPage.Email.sendKeys(email);
@@ -216,7 +233,7 @@ public class LotBiletyHU extends MainTest{
             wait.until(ExpectedConditions.visibilityOf(PaymentPage.BigContinue));
             PaymentPage.BigContinue.click();
         } catch (Exception e) {
-            System.out.println("No Popup : "+ e.getMessage());
+            System.out.println("Problem with Continue button : "+ e.getMessage());
         }
 
 
