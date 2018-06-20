@@ -4,16 +4,14 @@ import DDT.ExcelDataConfig;
 import Main.GetScreenshot;
 import Main.MainTest;
 import org.apache.poi.xssf.usermodel.XSSFCell;
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.DataProvider;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import pageObjects.*;
 
 import java.io.IOException;
@@ -26,16 +24,24 @@ public class LotBiletyUS extends MainTest{
     private String baseUrl;
     private boolean acceptNextAlert = true;
     private StringBuffer verificationErrors = new StringBuffer();
+    //All Static Data
     String name = "Test";
     String surname = "Test";
     String email = "TestLot@niepodam.pl";
     String phone = "532752626";
-    //--------
+    String DayOfBirth = String.valueOf(11);
+    String MonthOfBirth = String.valueOf(05);
+    String YearOfBirth = String.valueOf(1989);
+    //--------CreditCard
     String creditcard = "41111111111111111"; //MasterCard
     String cvv= "737";
     String city = "Warsaw";
     String zipcode = "02-444";
     String street = "Obrony robotników 43";
+    String Month = String.valueOf(05);
+    String Year = String.valueOf(2020);
+    //--------CreditCard
+
 
     @BeforeTest(alwaysRun = true)
     public void setUp() throws Exception {
@@ -60,7 +66,7 @@ public class LotBiletyUS extends MainTest{
         driver.get(baseUrl + localization);
         ImplicitWait(driver);
 
-        //TIME
+        //TIME Configuration
         String dat1 = String.valueOf(departuredata);
         if (dat1.length() > 0) {
             dat1 = dat1.substring(0, (dat1.length() - 2));
@@ -71,14 +77,18 @@ public class LotBiletyUS extends MainTest{
             dat2 = dat2.substring(0, (dat2.length() - 2));
         }
 
+        /* Printing Data
         System.out.println(departuredata);
         System.out.println(returndata);
         System.out.println(dat1);
         System.out.println(dat2);
+        */
 
         //Given Date in String format
         String timeStamp = new SimpleDateFormat("MM.dd.yyyy").format(Calendar.getInstance().getTime());
-        System.out.println(timeStamp);
+
+        // Printing Data
+        //System.out.println(timeStamp);
 
         //Specifying date format that matches the given date
         SimpleDateFormat sdf = new SimpleDateFormat("MM.dd.yyyy");
@@ -99,33 +109,88 @@ public class LotBiletyUS extends MainTest{
         //Number of Days to add
         c.add(Calendar.DAY_OF_MONTH, Integer.parseInt(String.valueOf(dat1)));
         b.add(Calendar.DAY_OF_MONTH, Integer.parseInt(String.valueOf(dat2)));
+
         //Date after adding the days to the given date
         String newDate = sdf.format(c.getTime());
         String newDate2 = sdf.format(b.getTime());
+
         //Displaying the new Date after addition of Days
-        System.out.println("Date after Addition/ Departure: "+newDate);
-        System.out.println("Date after Addition/ Return: "+newDate2);
+        //System.out.println("Date after Addition/ Departure: " + newDate);
+        //System.out.println("Date after Addition/ Return: " + newDate2);
         //TIME
 
-        //TestStart
+        //TEST START
+
         //HomePage
+        //Take screenshot
         try {
-            GetScreenshot.capture("HomePage " +localization +from +to +departuredata +returndata);
+            GetScreenshot.capture("HomePage " + localization + from + to + departuredata + returndata);
         } catch (IOException e) {
             e.printStackTrace();
         }
-        HomePage.FromList.click();
-        HomePage.FromToText.sendKeys(from,Keys.ENTER);
+
+        //Selecting From Flight
+        wait.until(ExpectedConditions.elementToBeClickable(HomePage.FromListButton));
+        HomePage.FromListButton.click();
+        wait.until(ExpectedConditions.elementToBeClickable(HomePage.FromToText));
+        HomePage.FromToText.sendKeys(from);
+
+        driver.findElement(By.cssSelector(".select2-results__options > li > ul > li[id*="+from+"]")).click();
+        //Click on home page
+
+        Thread.sleep(1000);
+
+        //Selecting To Flight
+        try {
+            //wait.until(ExpectedConditions.elementToBeClickable(HomePage.ToList));
+            //HomePage.ToList.click();
+            wait.until(ExpectedConditions.elementToBeClickable(HomePage.ToToText));
+            HomePage.ToToText.sendKeys(to);
+            driver.findElement(By.cssSelector(".select2-results__options > li > ul > li[id*="+to+"]")).click();
+        } catch (Exception e) {
+            System.out.println("Need additional click : " + e.getMessage());
+            HomePage.Lot.click();
+            wait.until(ExpectedConditions.elementToBeClickable(HomePage.ToList));
+            HomePage.ToList.click();
+            wait.until(ExpectedConditions.elementToBeClickable(HomePage.ToToText));
+            HomePage.ToToText.sendKeys(to);
+            driver.findElement(By.cssSelector(".select2-results__options > li > ul > li[id*="+to+"]")).click();
+        }
+
+
+        //Click on home page
         HomePage.Lot.click();
-        HomePage.ToList.click();
-        HomePage.FromToText.sendKeys(to,Keys.ENTER);
-        HomePage.Lot.click();
+
+        //Selecting Departure Data
         HomePage.DepartureDate.clear();
         HomePage.DepartureDate.sendKeys(newDate);
+
+        //Selecting Return Date
         HomePage.ReturnDate.clear();
         HomePage.ReturnDate.sendKeys(newDate2);
+        HomePage.Lot.click();
+
+        //Submit Button go from Home Page to Flight Page
         HomePage.Submit.submit();
+
         //FlightPage
+        wait.until(ExpectedConditions.visibilityOf(FlightsPage.Cart));
+
+        //Popup handle
+        try {
+            FlightsPage.OK.click();
+        } catch (Exception e) {
+            System.out.println("Flight are available in that date : " + e.getMessage());
+        }
+        //Take screenshot
+        try {
+            GetScreenshot.capture("FlightPage " + localization + from + to + departuredata + returndata);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        //Selecting First ACTIVE Ticket TO
+
         try {
             FlightsPage.FirstTO.click();
         } catch (Exception e) {
@@ -133,26 +198,43 @@ public class LotBiletyUS extends MainTest{
             FlightsPage.FirstTO1.click();
         }
 
+        //Selecting First ACTIVE Ticket BACK
+        Thread.sleep(1000);
         try {
             FlightsPage.FirstBack.click();
         } catch (Exception e) {
             System.out.println("Other tickets : "+ e.getMessage());
             FlightsPage.FirstBack2.click();
         }
-
+        Thread.sleep(1000);
+        //Button Continue
         try {
             wait.until(ExpectedConditions.visibilityOf(FlightsPage.BigContinue));
             FlightsPage.BigContinue.click();
         } catch (Exception e) {
+            FlightsPage.Popup.click();
+            Thread.sleep(1000);
+            FlightsPage.BigContinue.click();
+            System.out.println("Accepted the alert successfully.");
             System.out.println("No Element Continue : "+ e.getMessage());
+        }
+        // Passengers Page
+        //Take screenshot
+        wait.until(ExpectedConditions.visibilityOf(PassengersPage.CheckboxAccept));
+        try {
+            GetScreenshot.capture("PassengersPage " + localization + from + to + departuredata + returndata);
+        } catch (IOException e) {
+            e.printStackTrace();
         }
 
         //Selecting title
+        wait.until(ExpectedConditions.elementToBeClickable(PassengersPage.Title));
         PassengersPage.Title.click();
         Select title = new Select(PassengersPage.Title);
         title.selectByIndex(1);
         //Selecting title
 
+        //Enter Name and Surname
         PassengersPage.FirstName.sendKeys(name);
         PassengersPage.Surname.sendKeys(surname);
 
@@ -160,34 +242,46 @@ public class LotBiletyUS extends MainTest{
         try {
             PassengersPage.DayOfBirth.click();
             Select day = new Select(PassengersPage.DayOfBirth);
-            day.selectByIndex(11);
+            day.selectByVisibleText(DayOfBirth);
 
             PassengersPage.MonthOfBirth.click();
             Select mouth = new Select(PassengersPage.MonthOfBirth);
-            mouth.selectByIndex(5);
+            mouth.selectByVisibleText(MonthOfBirth);
 
             PassengersPage.YearOfBirth.click();
             Select year = new Select(PassengersPage.YearOfBirth);
-            year.selectByIndex(72);
+            year.selectByVisibleText(YearOfBirth);
         } catch (Exception e) {
             System.out.println("Short haul : "+ e.getMessage());
         }
         //DATE OF BIRTH
 
+        //Passengers data: Email Phone
         PassengersPage.Email.sendKeys(email);
         PassengersPage.Phone.sendKeys(phone);
+
+        //Waiting and Clicking on "I have read and I accept Terms of Use, Privacy Policy and Terms and Conditions of Transportation (Excerpt from clause) *"
         wait.until(ExpectedConditions.elementToBeClickable(PassengersPage.CheckboxAccept));
         PassengersPage.CheckboxAccept.click();
+
+        //Waiting and Clicking on Big Continue Button. Next try to Click Accept User Data Popup.
         wait.until(ExpectedConditions.elementToBeClickable(PassengersPage.BigContinue));
         PassengersPage.BigContinue.click();
         try {
             PassengersPage.PopupAccept.click();
         }catch (Exception e){
-
             System.out.println("No Popup : "+ e.getMessage());
         }
+
         //Extra Page
-        //wait.until(ExpectedConditions.visibilityOf(ExtrasPage.Seats));
+        //Take screenshot
+        wait.until(ExpectedConditions.visibilityOf(ExtrasPage.Column1));
+        try {
+            GetScreenshot.capture("ExtraPage " + localization + from + to + departuredata + returndata);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        //Waiting and Clicking on Big Continue Button.
         try {
             wait.until(ExpectedConditions.visibilityOf(ExtrasPage.BigContinue));
             ExtrasPage.BigContinue.click();
@@ -197,30 +291,34 @@ public class LotBiletyUS extends MainTest{
         //Extra Page
 
         //Payment Page
+        wait.until(ExpectedConditions.visibilityOf(PaymentPage.BookNr));
+        try {
+            GetScreenshot.capture("PaymentPage " + localization + from + to + departuredata + returndata);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
         //BookingNumber
         String BookNumber = PaymentPage.BookNr.getText();
         System.out.println(BookNumber);
         //BookingNumber
 
-        //Credit Card
-        //Text
+        //Credit Card Data
         PaymentPage.CardNr.sendKeys(creditcard);
         PaymentPage.Cvc.sendKeys(cvv);
         PaymentPage.Name.sendKeys(name);
         PaymentPage.City.sendKeys(city);
         PaymentPage.PostalCode.sendKeys(zipcode);
         PaymentPage.Street.sendKeys(street);
-        //Text
 
         //DropdownLists
         PaymentPage.Month.click();
         Select mounth = new Select(PaymentPage.Month);
-        mounth.selectByIndex(5);
+        mounth.selectByVisibleText(Month);
 
         PaymentPage.Year.click();
         Select cardyear = new Select(PaymentPage.Year);
-        cardyear.selectByIndex(5);
+        cardyear.selectByVisibleText(Year);
 
         PaymentPage.Country.click();
         Select country = new Select(PaymentPage.Country);
@@ -229,19 +327,22 @@ public class LotBiletyUS extends MainTest{
         //DropdownLists
         //Credit Card
 
+        //Waiting and Clicking on Big Continue Button.
         try {
             wait.until(ExpectedConditions.visibilityOf(PaymentPage.BigContinue));
             PaymentPage.BigContinue.click();
         } catch (Exception e) {
             System.out.println("Problem with Continue button : "+ e.getMessage());
         }
+        //END OF TEST
 
 
+        //Excel configuration
     }
     @DataProvider(name ="data")
     public Object[][] passData()
     {
-        ExcelDataConfig config = new ExcelDataConfig("C:\\Users\\30001236\\IdeaProjects\\LOTests\\testData\\LOT.xlsx");
+        ExcelDataConfig config = new ExcelDataConfig("C:\\Users\\Public\\LOT\\LOT.xlsx");
         int rows = config.getRowCount(1);
         Object[][] data=new Object[rows][5];
 
@@ -254,11 +355,20 @@ public class LotBiletyUS extends MainTest{
         }
         return data;
     }
+    //Excel configuration
 
-    @AfterClass(alwaysRun = true)
-    public void tearDown() throws Exception {
+    //After and of Class test
+
+    //After and of Class test
+    @AfterTest(alwaysRun = true)
+    public void tearDown1() throws Exception {
         driver.manage().deleteAllCookies();
         driver.quit();
+    }
+    @AfterClass(alwaysRun = true)
+    public void tearDown2() throws Exception {
+        //driver.manage().deleteAllCookies();
+        //driver.quit();
     }
 
 }
