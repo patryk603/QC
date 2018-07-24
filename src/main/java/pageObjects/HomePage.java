@@ -87,6 +87,18 @@ public class HomePage {
     @FindBy(id = "numOfAdults-listener")
     public static WebElement Adults;
 
+    @FindBy(id = "select2-ticketClass-container")
+    public static WebElement TicketClass;
+
+    @FindBy(css = ".select2-results>ul>li[id*=\"ECONO\"]")
+    public static WebElement Economy;
+
+    @FindBy(css = ".select2-results>ul>li[id*=\"PREMIUM\"]")
+    public static WebElement Premium;
+
+    @FindBy(css = ".select2-results>ul>li[id*=\"BUSINESS\"]")
+    public static WebElement Business;
+
 
     public HomePage(WebDriver driver){
 
