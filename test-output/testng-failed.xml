@@ -1,19 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Pozdro Dla Ekipy IT]" guice-stage="DEVELOPMENT">
-  <test name="Test_BuyTickets(failed)">
-    <groups>
-      <run>
-        <include name="BuyTickets"/>
-      </run>
-    </groups>
+<suite name="Failed suite [Default Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="LOTests(failed)">
     <classes>
-      <class name="LOT.LotBiletyEUcopy">
+      <class name="LOT.LotBiletyAll">
         <methods>
+          <include name="tearDown2"/>
+          <include name="tearDown1"/>
+          <include name="Test_BuyTicketsHU" invocation-numbers="1 2"/>
           <include name="setUp"/>
-          <include name="Test_BuyTickets"/>
+          <include name="Test_BuyTicketsEU" invocation-numbers="7 37 39 78"/>
         </methods>
-      </class> <!-- LOT.LotBiletyEUcopy -->
+      </class> <!-- LOT.LotBiletyAll -->
     </classes>
-  </test> <!-- Test_BuyTickets(failed) -->
-</suite> <!-- Failed suite [Pozdro Dla Ekipy IT] -->
+  </test> <!-- LOTests(failed) -->
+</suite> <!-- Failed suite [Default Suite] -->

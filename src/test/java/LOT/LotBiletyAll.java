@@ -620,22 +620,7 @@ public class LotBiletyAll extends MainTest{
 
         //Excel configuration
     }
-    @DataProvider(name ="dataHU")
-    public Object[][] passDataHU()
-    {
-        ExcelDataConfig config = new ExcelDataConfig("C:\\Users\\Public\\LOT\\LOT.xlsx");
-        int rows = config.getRowCount(2);
-        Object[][] data=new Object[rows][5];
 
-        for(int i=0;i<rows;i++){
-            data[i][0]=config.getData(2,i,0);
-            data[i][1]=config.getData(2,i,1);
-            data[i][2]=config.getData(2,i,2);
-            data[i][3]=config.getNumber(2,i,3);
-            data[i][4]=config.getNumber(2,i,4);
-        }
-        return data;
-    }
 
     @Test(dataProvider = "dataUS",groups=("BuyTickets"))
     public void Test_BuyTicketsUS(String localization, String from, String to, XSSFCell departuredata, XSSFCell returndata) throws Exception {
@@ -944,6 +929,22 @@ public class LotBiletyAll extends MainTest{
             data[i][2]=config.getData(1,i,2);
             data[i][3]=config.getNumber(1,i,3);
             data[i][4]=config.getNumber(1,i,4);
+        }
+        return data;
+    }
+    @DataProvider(name ="dataHU")
+    public Object[][] passDataHU()
+    {
+        ExcelDataConfig config = new ExcelDataConfig("C:\\Users\\Public\\LOT\\LOT.xlsx");
+        int rows = config.getRowCount(2);
+        Object[][] data=new Object[rows][5];
+
+        for(int i=0;i<rows;i++){
+            data[i][0]=config.getData(2,i,0);
+            data[i][1]=config.getData(2,i,1);
+            data[i][2]=config.getData(2,i,2);
+            data[i][3]=config.getNumber(2,i,3);
+            data[i][4]=config.getNumber(2,i,4);
         }
         return data;
     }

@@ -81,6 +81,12 @@ public class HomePage {
     @FindBy(id = "submit-booker")
     public static WebElement Submit;
 
+    @FindBy(id = "passenger-switch")
+    public static WebElement Passengers;
+
+    @FindBy(id = "numOfAdults-listener")
+    public static WebElement Adults;
+
 
     public HomePage(WebDriver driver){
 

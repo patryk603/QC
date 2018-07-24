@@ -12,6 +12,7 @@ public class LisinerTest implements ITestListener {
     @Override
     public void onTestStart(ITestResult iTestResult) {
 
+
     }
     @Override
     public void onTestSuccess(ITestResult iTestResult) {
@@ -43,6 +44,7 @@ public class LisinerTest implements ITestListener {
     }
     @Override
     public void onFinish(ITestContext iTestContext) {
+
 
     }
 }
