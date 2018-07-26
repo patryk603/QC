@@ -81,9 +81,6 @@ public class HomePage {
     @FindBy(id = "submit-booker")
     public static WebElement Submit;
 
-    @FindBy(id = "passenger-switch")
-    public static WebElement Passengers;
-
     @FindBy(id = "numOfAdults-listener")
     public static WebElement Adults;
 
@@ -98,6 +95,24 @@ public class HomePage {
 
     @FindBy(css = ".select2-results>ul>li[id*=\"BUSINESS\"]")
     public static WebElement Business;
+
+    @FindBy(id = "passenger-switch")
+    public static WebElement Passengers;
+
+    @FindBy(id = "numOfAdults")
+    public static WebElement NumberOfAdults;
+
+    @FindBy(id = "numOfYouths")
+    public static WebElement NumberOfYouths;
+
+    @FindBy(id = "numOfInfants")
+    public static WebElement NumberOfInfants;
+
+    @FindBy(id = "numOfChildren")
+    public static WebElement NumberOfChildrens;
+
+
+
 
 
     public HomePage(WebDriver driver){
