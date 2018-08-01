@@ -47,8 +47,8 @@ public class LotMultiTickets extends MainTest{
     //--------CreditCard
 
 
-    @BeforeTest(alwaysRun = true)
-    public void setUp() throws Exception {
+    @BeforeMethod(alwaysRun = true)
+    public void setUp1() throws Exception {
         driver = new ChromeDriver();
         driver.manage().deleteAllCookies();
         driver.manage().window().maximize();
@@ -364,6 +364,7 @@ public class LotMultiTickets extends MainTest{
         } catch (Exception e) {
             System.out.println("Problem with Continue button : "+ e.getMessage());
         }
+
         //END OF TEST
     }
 
@@ -3010,13 +3011,17 @@ public class LotMultiTickets extends MainTest{
     //Excel configuration
 
     //After and of Class test
-
-    //After and of Class test
-    @AfterTest(alwaysRun = true)
+    @AfterMethod(alwaysRun = true)
     public void tearDown1() throws Exception {
         driver.manage().deleteAllCookies();
-      //  driver.quit();
+        driver.quit();
     }
+
+    @AfterTest(alwaysRun = true)
+    public void tearDown3() throws Exception {
+        driver.quit();
+    }
+
     @AfterClass(alwaysRun = true)
     public void tearDown2() throws Exception {
         driver.manage().deleteAllCookies();

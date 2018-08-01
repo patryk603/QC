@@ -20,7 +20,23 @@ public class ExtrasPage {
     @FindBy(id = "column-1")
     public static WebElement Column1;
 
+    @FindBy(css = ".nr-anc__seats__content__right>div>table>tbody>tr>th>table>tbody>tr>td[id*=\"tdSeat_flight_1\"]:not([class*=\"disabled\"])")
+    public static WebElement SeatsOnPlain;
 
+    @FindBy(css = ".popover>div>div>a[class$=add]")
+    public static WebElement AddSeatsButton;
+
+    @FindBy(css = ".nr-anc__seats__content__right>div>table>tbody>tr>th>table>tbody>tr>td[id*=\"tdSeat_flight_1\"]:not([class*=\"disabled\"])")
+    public static WebElement Flight1;
+
+    @FindBy(css = ".nr-anc__seats__content__right>div>table>tbody>tr>th>table>tbody>tr>td[id*=\"tdSeat_flight_2\"]:not([class*=\"disabled\"])")
+    public static WebElement Flight2;
+
+    @FindBy(css = ".nr-anc__seats__content__right>div>table>tbody>tr>th>table>tbody>tr>td[id*=\"tdSeat_flight_3\"]:not([class*=\"disabled\"])")
+    public static WebElement Flight3;
+
+    @FindBy(css = ".nr-anc__seats__content__right>div>table>tbody>tr>th>table>tbody>tr>td[id*=\"tdSeat_flight_4\"]:not([class*=\"disabled\"])")
+    public static WebElement Flight4;
 
 
     public ExtrasPage(WebDriver driver){

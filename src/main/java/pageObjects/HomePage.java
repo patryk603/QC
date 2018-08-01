@@ -111,6 +111,9 @@ public class HomePage {
     @FindBy(id = "numOfChildren")
     public static WebElement NumberOfChildrens;
 
+    @FindBy(css = ".flight-type>.booker-label[class*=\"margin\"]")
+    public static WebElement OneWayFlight;
+
 
 
 
