@@ -5,6 +5,7 @@ import Main.GetScreenshot;
 import Main.MainTest;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -17,9 +18,11 @@ import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.List;
+import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
-public class LotTicketsBusiness extends MainTest{
+public class LotBiletyAllSelectPlacesAndEquipment extends MainTest{
     private String baseUrl;
     private boolean acceptNextAlert = true;
     private StringBuffer verificationErrors = new StringBuffer();
@@ -163,12 +166,6 @@ public class LotTicketsBusiness extends MainTest{
         HomePage.ReturnDate.sendKeys(newDate2);
         HomePage.Lot.click();
 
-        //Selecting Class
-        Thread.sleep(1000);
-        HomePage.TicketClass.click();
-        HomePage.Business.click();
-        Thread.sleep(1000);
-
         //Submit Button go from Home Page to Flight Page
         HomePage.Submit.submit();
 
@@ -178,6 +175,7 @@ public class LotTicketsBusiness extends MainTest{
         } catch (Exception e) {
             System.out.println("Zbyt długi czas oczekiwania przejścia z bookera na step 2- flights : "+ e.getMessage());
         }
+
 
         //Popup handle
         try {
@@ -277,21 +275,120 @@ public class LotTicketsBusiness extends MainTest{
         }
 
         //Extra Page
+        wait.until(ExpectedConditions.visibilityOf(ExtrasPage.Column1));
+        //Popup handle
+        try {
+            ExtrasPage.OK.click();
+        } catch (Exception e) {
+            System.out.println("Popup handle : " + e.getMessage());
+        }
+
+        //Selecting random seats TO destination
+        try {
+            List<WebElement> listings = driver.findElements(By.cssSelector(".nr-anc__seats__content__right>div>table>tbody>tr>th>table>tbody>tr>td[id*=\"flight_1_segment_1\"]:not([class*=\"disabled\"])"));
+            Random r = new Random();
+            int randomValue = r.nextInt(listings.size()); //Getting a random value that is between 0 and (list's size)-1
+            listings.get(randomValue).click(); //Clicking on the random item in the list.
+            //Click on add button
+            wait.until(ExpectedConditions.elementToBeClickable(ExtrasPage.AddSeatsButton));
+            ExtrasPage.AddSeatsButton.click();
+        } catch (Exception e) {
+            System.out.println("No Element additional TO : "+ e.getMessage());
+        }
+
+        //Popup handle
+        try {
+            ExtrasPage.OK.click();
+        } catch (Exception e) {
+            System.out.println("Popup handle : " + e.getMessage());
+        }
+
+        //Try selecting additional TO
+        try {
+            List<WebElement> listings3 = driver.findElements(By.cssSelector(".nr-anc__seats__content__right>div>table>tbody>tr>th>table>tbody>tr>td[id*=\"flight_1_segment_2\"]:not([class*=\"disabled\"])"));
+            Random r3 = new Random();
+            int randomValue3 = r3.nextInt(listings3.size()); //Getting a random value that is between 0 and (list's size)-1
+            listings3.get(randomValue3).click(); //Clicking on the random item in the list.
+            //Click on add button
+            wait.until(ExpectedConditions.elementToBeClickable(ExtrasPage.AddSeatsButton));
+            ExtrasPage.AddSeatsButton.click();
+        } catch (Exception e) {
+            System.out.println("No Element additional TO : "+ e.getMessage());
+        }
+
+        //Popup handle
+        try {
+            ExtrasPage.OK.click();
+        } catch (Exception e) {
+            System.out.println("Popup handle : " + e.getMessage());
+        }
+
+
+        //Selecting random seats BACK from destination
+        try {
+            wait.until(ExpectedConditions.elementToBeClickable(ExtrasPage.Flight2));
+            List<WebElement> listings2 = driver.findElements(By.cssSelector(".nr-anc__seats__content__right>div>table>tbody>tr>th>table>tbody>tr>td[id*=\"flight_2_segment_1\"]:not([class*=\"disabled\"])"));
+            Random r2 = new Random();
+            int randomValue2 = r2.nextInt(listings2.size()); //Getting a random value that is between 0 and (list's size)-1
+            listings2.get(randomValue2).click(); //Clicking on the random item in the list.
+            //Click on add button
+            wait.until(ExpectedConditions.elementToBeClickable(ExtrasPage.AddSeatsButton));
+            ExtrasPage.AddSeatsButton.click();
+        } catch (Exception e) {
+            System.out.println("No Element additional TO : "+ e.getMessage());
+        }
+
+        //Popup handle
+        try {
+            ExtrasPage.OK.click();
+        } catch (Exception e) {
+            System.out.println("Popup handle : " + e.getMessage());
+        }
+
+        //Try selecting additional BACK
+        try {
+            List<WebElement> listings3 = driver.findElements(By.cssSelector(".nr-anc__seats__content__right>div>table>tbody>tr>th>table>tbody>tr>td[id*=\"flight_2_segment_2\"]:not([class*=\"disabled\"])"));
+            Random r3 = new Random();
+            int randomValue3 = r3.nextInt(listings3.size()); //Getting a random value that is between 0 and (list's size)-1
+            listings3.get(randomValue3).click(); //Clicking on the random item in the list.
+            //Click on add button
+            wait.until(ExpectedConditions.elementToBeClickable(ExtrasPage.AddSeatsButton));
+            ExtrasPage.AddSeatsButton.click();
+        } catch (Exception e) {
+            System.out.println("No Element additional BACK : "+ e.getMessage());
+        }
+
         //Take screenshot
-                wait.until(ExpectedConditions.visibilityOf(ExtrasPage.Column1));
         try {
             GetScreenshot.capture("ExtraPage " + localization + from + to + departuredata + returndata);
         } catch (IOException e) {
             e.printStackTrace();
         }
-        //Waiting and Clicking on Big Continue Button.
+
+
+        //Adding extra equipment
+        wait.until(ExpectedConditions.elementToBeClickable(ExtrasPage.BuyNowSpecialEquipment));
+        ExtrasPage.BuyNowSpecialEquipment.click();
+
+        wait.until(ExpectedConditions.elementToBeClickable(ExtrasPage.SpecialEquipmentSameForAllButton));
+        ExtrasPage.SpecialEquipmentSameForAllButton.click();
+        ExtrasPage.SpecialEquipmentPassanger1.click();
+        //Selecting random Equipment for Passanger1
+        List<WebElement> equipment = driver.findElements(By.cssSelector(".nr-anc__passenger-selector__segments>div>div>div>div>div>div>div>div>select[id$=\"pass_1_eq_1\"]>option[aria-label$=\"updated\"]"));
+        Random eq1 = new Random();
+        int randomEquipment = eq1.nextInt(equipment.size()); //Getting a random value that is between 0 and (list's size)-1
+        equipment.get(randomEquipment).click(); //Clicking on the random item in the list.
+
+
         try {
             wait.until(ExpectedConditions.visibilityOf(ExtrasPage.BigContinue));
             ExtrasPage.BigContinue.click();
         } catch (Exception e) {
             System.out.println("No Element Continue : "+ e.getMessage());
         }
-        //Extra Page
+
+
+        //Extra Page End
 
         //Payment Page
         wait.until(ExpectedConditions.visibilityOf(PaymentPage.BookNr));
@@ -361,6 +458,13 @@ public class LotTicketsBusiness extends MainTest{
             dat2 = dat2.substring(0, (dat2.length() - 2));
         }
 
+        /* Printing Data
+        System.out.println(departuredata);
+        System.out.println(returndata);
+        System.out.println(dat1);
+        System.out.println(dat2);
+        */
+
         //Given Date in String format
         String timeStamp = new SimpleDateFormat("yy.MM.dd").format(Calendar.getInstance().getTime());
 
@@ -390,6 +494,11 @@ public class LotTicketsBusiness extends MainTest{
         //Date after adding the days to the given date
         String newDate = sdf.format(c.getTime());
         String newDate2 = sdf.format(b.getTime());
+
+        //Displaying the new Date after addition of Days
+        //System.out.println("Date after Addition/ Departure: " + newDate);
+        //System.out.println("Date after Addition/ Return: " + newDate2);
+        //TIME
 
         //TEST START
 
@@ -442,12 +551,6 @@ public class LotTicketsBusiness extends MainTest{
         HomePage.ReturnDate.sendKeys(newDate2);
         HomePage.Lot.click();
 
-        //Selecting Class
-        Thread.sleep(1000);
-        HomePage.TicketClass.click();
-        HomePage.Business.click();
-        Thread.sleep(1000);
-
         //Submit Button go from Home Page to Flight Page
         HomePage.Submit.submit();
 
@@ -457,6 +560,7 @@ public class LotTicketsBusiness extends MainTest{
         } catch (Exception e) {
             System.out.println("Zbyt długi czas oczekiwania przejścia z bookera na step 2- flights : "+ e.getMessage());
         }
+
 
         //Popup handle
         try {
@@ -556,8 +660,90 @@ public class LotTicketsBusiness extends MainTest{
         }
 
         //Extra Page
-        //Take screenshot
         wait.until(ExpectedConditions.visibilityOf(ExtrasPage.Column1));
+        //Popup handle
+        try {
+            ExtrasPage.OK.click();
+        } catch (Exception e) {
+            System.out.println("Popup handle : " + e.getMessage());
+        }
+
+        //Selecting random seats TO destination
+        try {
+            List<WebElement> listings = driver.findElements(By.cssSelector(".nr-anc__seats__content__right>div>table>tbody>tr>th>table>tbody>tr>td[id*=\"flight_1_segment_1\"]:not([class*=\"disabled\"])"));
+            Random r = new Random();
+            int randomValue = r.nextInt(listings.size()); //Getting a random value that is between 0 and (list's size)-1
+            listings.get(randomValue).click(); //Clicking on the random item in the list.
+            //Click on add button
+            wait.until(ExpectedConditions.elementToBeClickable(ExtrasPage.AddSeatsButton));
+            ExtrasPage.AddSeatsButton.click();
+        } catch (Exception e) {
+            System.out.println("No Element additional TO : "+ e.getMessage());
+        }
+
+        //Popup handle
+        try {
+            ExtrasPage.OK.click();
+        } catch (Exception e) {
+            System.out.println("Popup handle : " + e.getMessage());
+        }
+
+        //Try selecting additional TO
+        try {
+            List<WebElement> listings3 = driver.findElements(By.cssSelector(".nr-anc__seats__content__right>div>table>tbody>tr>th>table>tbody>tr>td[id*=\"flight_1_segment_2\"]:not([class*=\"disabled\"])"));
+            Random r3 = new Random();
+            int randomValue3 = r3.nextInt(listings3.size()); //Getting a random value that is between 0 and (list's size)-1
+            listings3.get(randomValue3).click(); //Clicking on the random item in the list.
+            //Click on add button
+            wait.until(ExpectedConditions.elementToBeClickable(ExtrasPage.AddSeatsButton));
+            ExtrasPage.AddSeatsButton.click();
+        } catch (Exception e) {
+            System.out.println("No Element additional TO : "+ e.getMessage());
+        }
+
+        //Popup handle
+        try {
+            ExtrasPage.OK.click();
+        } catch (Exception e) {
+            System.out.println("Popup handle : " + e.getMessage());
+        }
+
+
+        //Selecting random seats BACK from destination
+        try {
+            wait.until(ExpectedConditions.elementToBeClickable(ExtrasPage.Flight2));
+            List<WebElement> listings2 = driver.findElements(By.cssSelector(".nr-anc__seats__content__right>div>table>tbody>tr>th>table>tbody>tr>td[id*=\"flight_2_segment_1\"]:not([class*=\"disabled\"])"));
+            Random r2 = new Random();
+            int randomValue2 = r2.nextInt(listings2.size()); //Getting a random value that is between 0 and (list's size)-1
+            listings2.get(randomValue2).click(); //Clicking on the random item in the list.
+            //Click on add button
+            wait.until(ExpectedConditions.elementToBeClickable(ExtrasPage.AddSeatsButton));
+            ExtrasPage.AddSeatsButton.click();
+        } catch (Exception e) {
+            System.out.println("No Element additional TO : "+ e.getMessage());
+        }
+
+        //Popup handle
+        try {
+            ExtrasPage.OK.click();
+        } catch (Exception e) {
+            System.out.println("Popup handle : " + e.getMessage());
+        }
+
+        //Try selecting additional BACK
+        try {
+            List<WebElement> listings3 = driver.findElements(By.cssSelector(".nr-anc__seats__content__right>div>table>tbody>tr>th>table>tbody>tr>td[id*=\"flight_2_segment_2\"]:not([class*=\"disabled\"])"));
+            Random r3 = new Random();
+            int randomValue3 = r3.nextInt(listings3.size()); //Getting a random value that is between 0 and (list's size)-1
+            listings3.get(randomValue3).click(); //Clicking on the random item in the list.
+            //Click on add button
+            wait.until(ExpectedConditions.elementToBeClickable(ExtrasPage.AddSeatsButton));
+            ExtrasPage.AddSeatsButton.click();
+        } catch (Exception e) {
+            System.out.println("No Element additional BACK : "+ e.getMessage());
+        }
+
+        //Take screenshot
         try {
             GetScreenshot.capture("ExtraPage " + localization + from + to + departuredata + returndata);
         } catch (IOException e) {
@@ -734,12 +920,6 @@ public class LotTicketsBusiness extends MainTest{
         HomePage.ReturnDate.sendKeys(newDate2);
         HomePage.Lot.click();
 
-        //Selecting Class
-        Thread.sleep(1000);
-        HomePage.TicketClass.click();
-        HomePage.Business.click();
-        Thread.sleep(1000);
-
         //Submit Button go from Home Page to Flight Page
         HomePage.Submit.submit();
 
@@ -749,6 +929,7 @@ public class LotTicketsBusiness extends MainTest{
         } catch (Exception e) {
             System.out.println("Zbyt długi czas oczekiwania przejścia z bookera na step 2- flights : "+ e.getMessage());
         }
+
 
         //Popup handle
         try {
@@ -848,8 +1029,90 @@ public class LotTicketsBusiness extends MainTest{
         }
 
         //Extra Page
-        //Take screenshot
         wait.until(ExpectedConditions.visibilityOf(ExtrasPage.Column1));
+        //Popup handle
+        try {
+            ExtrasPage.OK.click();
+        } catch (Exception e) {
+            System.out.println("Popup handle : " + e.getMessage());
+        }
+
+        //Selecting random seats TO destination
+        try {
+            List<WebElement> listings = driver.findElements(By.cssSelector(".nr-anc__seats__content__right>div>table>tbody>tr>th>table>tbody>tr>td[id*=\"flight_1_segment_1\"]:not([class*=\"disabled\"])"));
+            Random r = new Random();
+            int randomValue = r.nextInt(listings.size()); //Getting a random value that is between 0 and (list's size)-1
+            listings.get(randomValue).click(); //Clicking on the random item in the list.
+            //Click on add button
+            wait.until(ExpectedConditions.elementToBeClickable(ExtrasPage.AddSeatsButton));
+            ExtrasPage.AddSeatsButton.click();
+        } catch (Exception e) {
+            System.out.println("No Element additional TO : "+ e.getMessage());
+        }
+
+        //Popup handle
+        try {
+            ExtrasPage.OK.click();
+        } catch (Exception e) {
+            System.out.println("Popup handle : " + e.getMessage());
+        }
+
+        //Try selecting additional TO
+        try {
+            List<WebElement> listings3 = driver.findElements(By.cssSelector(".nr-anc__seats__content__right>div>table>tbody>tr>th>table>tbody>tr>td[id*=\"flight_1_segment_2\"]:not([class*=\"disabled\"])"));
+            Random r3 = new Random();
+            int randomValue3 = r3.nextInt(listings3.size()); //Getting a random value that is between 0 and (list's size)-1
+            listings3.get(randomValue3).click(); //Clicking on the random item in the list.
+            //Click on add button
+            wait.until(ExpectedConditions.elementToBeClickable(ExtrasPage.AddSeatsButton));
+            ExtrasPage.AddSeatsButton.click();
+        } catch (Exception e) {
+            System.out.println("No Element additional TO : "+ e.getMessage());
+        }
+
+        //Popup handle
+        try {
+            ExtrasPage.OK.click();
+        } catch (Exception e) {
+            System.out.println("Popup handle : " + e.getMessage());
+        }
+
+
+        //Selecting random seats BACK from destination
+        try {
+            wait.until(ExpectedConditions.elementToBeClickable(ExtrasPage.Flight2));
+            List<WebElement> listings2 = driver.findElements(By.cssSelector(".nr-anc__seats__content__right>div>table>tbody>tr>th>table>tbody>tr>td[id*=\"flight_2_segment_1\"]:not([class*=\"disabled\"])"));
+            Random r2 = new Random();
+            int randomValue2 = r2.nextInt(listings2.size()); //Getting a random value that is between 0 and (list's size)-1
+            listings2.get(randomValue2).click(); //Clicking on the random item in the list.
+            //Click on add button
+            wait.until(ExpectedConditions.elementToBeClickable(ExtrasPage.AddSeatsButton));
+            ExtrasPage.AddSeatsButton.click();
+        } catch (Exception e) {
+            System.out.println("No Element additional TO : "+ e.getMessage());
+        }
+
+        //Popup handle
+        try {
+            ExtrasPage.OK.click();
+        } catch (Exception e) {
+            System.out.println("Popup handle : " + e.getMessage());
+        }
+
+        //Try selecting additional BACK
+        try {
+            List<WebElement> listings3 = driver.findElements(By.cssSelector(".nr-anc__seats__content__right>div>table>tbody>tr>th>table>tbody>tr>td[id*=\"flight_2_segment_2\"]:not([class*=\"disabled\"])"));
+            Random r3 = new Random();
+            int randomValue3 = r3.nextInt(listings3.size()); //Getting a random value that is between 0 and (list's size)-1
+            listings3.get(randomValue3).click(); //Clicking on the random item in the list.
+            //Click on add button
+            wait.until(ExpectedConditions.elementToBeClickable(ExtrasPage.AddSeatsButton));
+            ExtrasPage.AddSeatsButton.click();
+        } catch (Exception e) {
+            System.out.println("No Element additional BACK : "+ e.getMessage());
+        }
+
+        //Take screenshot
         try {
             GetScreenshot.capture("ExtraPage " + localization + from + to + departuredata + returndata);
         } catch (IOException e) {
@@ -860,7 +1123,7 @@ public class LotTicketsBusiness extends MainTest{
             wait.until(ExpectedConditions.visibilityOf(ExtrasPage.BigContinue));
             ExtrasPage.BigContinue.click();
         } catch (Exception e) {
-            System.out.println("No Element Continue : " + e.getMessage());
+            System.out.println("No Element Continue : "+ e.getMessage());
         }
         //Extra Page
 

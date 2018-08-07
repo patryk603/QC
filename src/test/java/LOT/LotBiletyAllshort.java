@@ -174,7 +174,11 @@ public class LotBiletyAllshort extends MainTest{
         HomePage.Submit.submit();
 
         //FlightPage
-        wait.until(ExpectedConditions.visibilityOf(FlightsPage.Cart));
+        try {
+            wait.until(ExpectedConditions.visibilityOf(FlightsPage.Cart));
+        } catch (Exception e) {
+            System.out.println("Zbyt długi czas oczekiwania przejścia z bookera na step 2- flights : "+ e.getMessage());
+        }
 
         //Popup handle
         try {
@@ -316,7 +320,11 @@ public class LotBiletyAllshort extends MainTest{
         HomePage.Submit.submit();
 
         //FlightPage
-        wait.until(ExpectedConditions.visibilityOf(FlightsPage.Cart));
+        try {
+            wait.until(ExpectedConditions.visibilityOf(FlightsPage.Cart));
+        } catch (Exception e) {
+            System.out.println("Zbyt długi czas oczekiwania przejścia z bookera na step 2- flights : "+ e.getMessage());
+        }
 
         //Popup handle
         try {
@@ -461,7 +469,11 @@ public class LotBiletyAllshort extends MainTest{
         HomePage.Submit.submit();
 
         //FlightPage
-        wait.until(ExpectedConditions.visibilityOf(FlightsPage.Cart));
+        try {
+            wait.until(ExpectedConditions.visibilityOf(FlightsPage.Cart));
+        } catch (Exception e) {
+            System.out.println("Zbyt długi czas oczekiwania przejścia z bookera na step 2- flights : "+ e.getMessage());
+        }
 
         //Popup handle
         try {

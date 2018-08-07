@@ -12,6 +12,18 @@ public class HomePage {
 
     final WebDriver driver;
 
+    //MMB
+    @FindBy(css = "#lastName")
+    public static WebElement MMBLastName;
+
+    @FindBy(css = "#bookingNumber")
+    public static WebElement MMBBookingNumber;
+
+    @FindBy(css = "[type=\"submit\"]")
+    public static WebElement MMBSubmit;
+
+    //MMB END
+
     @FindBy(xpath = "//*[@id='menu-settings']/a/span")
     public static WebElement login;
 

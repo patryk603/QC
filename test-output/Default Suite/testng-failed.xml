@@ -3,14 +3,13 @@
 <suite name="Failed suite [Default Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="LOTests(failed)">
     <classes>
-      <class name="LOT.LotBiletyAllSelectPlaces">
+      <class name="LOT.LotMMB">
         <methods>
-          <include name="Test_BuyTicketsEU" invocation-numbers="0"/>
+          <include name="Test_BuyTickets" invocation-numbers="0"/>
+          <include name="tearDown"/>
           <include name="setUp"/>
-          <include name="tearDown1"/>
-          <include name="tearDown2"/>
         </methods>
-      </class> <!-- LOT.LotBiletyAllSelectPlaces -->
+      </class> <!-- LOT.LotMMB -->
     </classes>
   </test> <!-- LOTests(failed) -->
 </suite> <!-- Failed suite [Default Suite] -->
