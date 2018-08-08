@@ -1177,7 +1177,7 @@ public class LotBiletyAllSelectPlacesAndEquipment extends MainTest{
     @DataProvider(name ="dataEU")
     public Object[][] passDataEU()
     {
-        ExcelDataConfig config = new ExcelDataConfig("C:\\Users\\Public\\LOT\\LOT.xlsx");
+        ExcelDataConfig config = new ExcelDataConfig("C:\\Users\\Public\\LOT\\PlacesAndEquipment.xlsx");
         int rows = config.getRowCount(0);
         Object[][] data=new Object[rows][5];
 
@@ -1193,7 +1193,7 @@ public class LotBiletyAllSelectPlacesAndEquipment extends MainTest{
     @DataProvider(name ="dataUS")
     public Object[][] passDataUS()
     {
-        ExcelDataConfig config = new ExcelDataConfig("C:\\Users\\Public\\LOT\\LOT.xlsx");
+        ExcelDataConfig config = new ExcelDataConfig("C:\\Users\\Public\\LOT\\PlacesAndEquipment.xlsx");
         int rows = config.getRowCount(1);
         Object[][] data=new Object[rows][5];
 
@@ -1209,7 +1209,7 @@ public class LotBiletyAllSelectPlacesAndEquipment extends MainTest{
     @DataProvider(name ="dataHU")
     public Object[][] passDataHU()
     {
-        ExcelDataConfig config = new ExcelDataConfig("C:\\Users\\Public\\LOT\\LOT.xlsx");
+        ExcelDataConfig config = new ExcelDataConfig("C:\\Users\\Public\\LOT\\PlacesAndEquipment.xlsx");
         int rows = config.getRowCount(2);
         Object[][] data=new Object[rows][5];
 

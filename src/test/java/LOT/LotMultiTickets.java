@@ -3030,7 +3030,7 @@ public class LotMultiTickets extends MainTest{
     @DataProvider(name ="dataEU")
     public Object[][] passDataEU()
     {
-        ExcelDataConfig config = new ExcelDataConfig("C:\\Users\\Public\\LOT\\LOT.xlsx");
+        ExcelDataConfig config = new ExcelDataConfig("C:\\Users\\Public\\LOT\\MultiTickets.xlsx");
         int rows = config.getRowCount(0);
         Object[][] data=new Object[rows][5];
 
