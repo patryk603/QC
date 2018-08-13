@@ -5,7 +5,7 @@
     <classes>
       <class name="LOT.LotMMB">
         <methods>
-          <include name="Test_BuyTickets" invocation-numbers="0"/>
+          <include name="MMB"/>
           <include name="tearDown"/>
           <include name="setUp"/>
         </methods>

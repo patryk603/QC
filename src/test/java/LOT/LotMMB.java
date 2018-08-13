@@ -11,10 +11,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.DataProvider;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import pageObjects.*;
 
 import java.text.ParseException;
@@ -36,8 +33,6 @@ public class LotMMB extends MainTest {
         driver.manage().deleteAllCookies();
         driver.manage().window().maximize();
         baseUrl = "http://www.lot.com/";
-        driver.manage().timeouts().implicitlyWait(23, SECONDS);
-        driver.manage().timeouts().pageLoadTimeout(22,SECONDS);
         PageFactory.initElements(driver, HomePage.class);
         PageFactory.initElements(driver, FlightsPage.class);
         PageFactory.initElements(driver, PassengersPage.class);
@@ -46,7 +41,7 @@ public class LotMMB extends MainTest {
 
 
     @Test(dataProvider = "data",groups=("MMB"))
-    public void Test_BuyTickets(String lastname, String bookinrexcel) throws Exception {
+    public void MMB(String lastname, String bookinrexcel) throws Exception {
 
         WebDriverWait wait = new WebDriverWait(driver, 20);
         driver.get(baseUrl + "/pl/pl/moja-rezerwacja");
@@ -60,19 +55,23 @@ public class LotMMB extends MainTest {
         WebElement book = HomePage.MMBBookingNumber;
         book.sendKeys(bookinrexcel);
         HomePage.MMBSubmit.click();
-        //Thread.sleep(7000);
-        String bookingnr = driver.findElement(By.cssSelector(".confirmation-your-ticket-code strong")).getText();
-        String bookinrexcel2 = bookinrexcel;
-        System.out.println(bookingnr);
-        System.out.println(bookinrexcel);
-        //Booking Number check
-        assertEquals(bookinrexcel2, bookingnr);
-        if (Objects.equals(bookinrexcel2, bookingnr)) {
-            System.out.println("Booking Number is ok:" + bookinrexcel);
-        } else {
-            System.out.println("Booking Number not found");
+        //Waiting and Clicking on Big Continue Button.
+        try {
+            String bookingnr = driver.findElement(By.cssSelector(".confirmation-your-ticket-code strong")).getText();
+            String bookinrexcel2 = bookinrexcel;
+            System.out.println("PNR from Excel: " + bookinrexcel);
+            System.out.println("PNR from MMB page: " +bookingnr);
+            //Booking Number check
+            assertEquals(bookinrexcel2, bookingnr);
+            if (Objects.equals(bookinrexcel2, bookingnr)) {
+                System.out.println("Booking Number is ok: " + bookinrexcel);
+            } else {
+                System.out.println("Booking Number not found: ");
+            }
+        } catch (Exception e) {
+            System.out.println("Nie znaleziono rezerwacji : " + bookinrexcel + e.getMessage());
         }
-
+        driver.navigate().refresh();
     }
 
 
@@ -91,10 +90,10 @@ public class LotMMB extends MainTest {
         return data;
     }
 
-    @AfterClass(alwaysRun = true)
+    @AfterTest(alwaysRun = true)
     public void tearDown() throws Exception {
-        //driver.quit();
-        //driver.manage().deleteAllCookies();
+        driver.quit();
+        driver.manage().deleteAllCookies();
     }
 
 }
