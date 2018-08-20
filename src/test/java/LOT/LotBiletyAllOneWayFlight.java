@@ -6,6 +6,9 @@ import Main.MainTest;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
@@ -45,9 +48,11 @@ public class LotBiletyAllOneWayFlight extends MainTest{
 
     @BeforeTest(alwaysRun = true)
     public void setUp() throws Exception {
-        driver = new ChromeDriver();
+        //DesiredCapabilities caps = DesiredCapabilities.internetExplorer();
+        //caps.setCapability("ignoreZoomSetting", true);
+        driver = new InternetExplorerDriver();
         driver.manage().deleteAllCookies();
-        driver.manage().window().maximize();
+        //driver.manage().window().maximize();
         baseUrl = "http://www.lot.com/";
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
