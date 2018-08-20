@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Default_Suite" class="navigator-link">
-              <span class="suite-name border-failed">Default Suite</span>
+              <span class="suite-name border-passed">Default Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -59,7 +59,7 @@
                 </li>
                 <li>
                   <a href="#" panel-name="group-Default_Suite" class="navigator-link ">
-                    <span>0 groups</span>
+                    <span>1 group</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,21 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method, 1 failed,   </span>
+                    <span class="method-stats">1 method,   1 passed</span>
                   </li>
                   <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Default_Suite" class="hide-methods failed suite-Default_Suite"> (hide)</a> <!-- hide-methods failed suite-Default_Suite -->
-                      <a href="#" panel-name="suite-Default_Suite" class="show-methods failed suite-Default_Suite"> (show)</a> <!-- show-methods failed suite-Default_Suite -->
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Default_Suite" class="hide-methods passed suite-Default_Suite"> (hide)</a> <!-- hide-methods passed suite-Default_Suite -->
+                      <a href="#" panel-name="suite-Default_Suite" class="show-methods passed suite-Default_Suite"> (show)</a> <!-- show-methods passed suite-Default_Suite -->
                     </span>
-                    <div class="method-list-content failed suite-Default_Suite">
+                    <div class="method-list-content passed suite-Default_Suite">
                       <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_Suite" title="LOT.LotMMBtest" class="method navigator-link" hash-for-method="MMB">MMB</a> <!-- method navigator-link -->
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_Suite" title="LOT.LotLuggageComplaint" class="method navigator-link" hash-for-method="MMB">MMB</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content failed suite-Default_Suite -->
+                    </div> <!-- method-list-content passed suite-Default_Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -117,10 +117,10 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_Suite" class="panel Default_Suite">
-          <div class="suite-Default_Suite-class-failed">
+          <div class="suite-Default_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">LOT.LotMMBtest</span>
+              <img src="passed.png"/>
+              <span class="class-name">LOT.LotLuggageComplaint</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
@@ -128,21 +128,10 @@
                   <a name="MMB">
                   </a> <!-- MMB -->
                   <span class="method-name">MMB</span>
-                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for title to contain &quot;jQuery&quot;. Current title: &quot;Polskie Linie Lotnicze LOT | Rezerwuj na Oficjalnej Stronie | lot.com&quot; (tried for 20 second(s) with 500 MILLISECONDS interval)
-Build info: version: &apos;3.9.1&apos;, revision: &apos;63f7b50&apos;, time: &apos;2018-02-07T22:25:02.294Z&apos;
-System info: host: &apos;N-5CG7492PHQ&apos;, ip: &apos;192.168.13.5&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;10.0.1&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.41.578737 (49da6702b16031..., userDataDir: C:\Users\30001236\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:62529}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 67.0.3396.87, webStorageEnabled: true}
-Session ID: faf5166147e78e265be9737810ed1e99
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:82)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
-	at LOT.LotMMBtest.MMB(LotMMBtest.java:73)
-... Removed 24 stack frames
-</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_Suite-class-failed -->
+          </div> <!-- suite-Default_Suite-class-passed -->
         </div> <!-- panel Default_Suite -->
         <div panel-name="test-xml-Default_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -155,7 +144,11 @@ Session ID: faf5166147e78e265be9737810ed1e99
 &lt;suite name=&quot;Default Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;LOTests&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;LOT.LotMMBtest&quot;/&gt;
+      &lt;class name=&quot;LOT.LotLuggageComplaint&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;MMB&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- LOT.LotLuggageComplaint --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- LOTests --&gt;
 &lt;/suite&gt; &lt;!-- Default Suite --&gt;
@@ -179,6 +172,14 @@ Session ID: faf5166147e78e265be9737810ed1e99
             <span class="header-content">Groups for Default Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="test-group">
+              <span class="test-group-name">Complaint</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">MMB</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="times-Default_Suite" class="panel">
@@ -198,13 +199,13 @@ data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'MMB')
-data.setCell(0, 2, 'LOT.LotMMBtest')
-data.setCell(0, 3, 25634);
+data.setCell(0, 2, 'LOT.LotLuggageComplaint')
+data.setCell(0, 3, 14617);
 window.suiteTableData['Default_Suite']= { tableData: data, tableDiv: 'times-div-Default_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 25 seconds</span>
+              <span class="suite-total-time">Total running time: 14 seconds</span>
               <div id="times-div-Default_Suite">
               </div> <!-- times-div-Default_Suite -->
             </div> <!-- times-div -->
@@ -218,7 +219,7 @@ return data;
             <div class="reporter-method-div">
               <span class="reporter-method-name">MMB</span>
               <div class="reporter-method-output-div">
-                <span class="reporter-method-output"><a href='C:\LOTests\ErrorScreenshot\MMB20180817_133210.jpg'> <img src='C:\LOTests\ErrorScreenshot\MMB20180817_133210.jpg' height='400' width='600'/> </a><br>20180817_133210</span>
+                <span class="reporter-method-output"><a href='C:\LOTests\ErrorScreenshot\MMB20180820_161944.jpg'> <img src='C:\LOTests\ErrorScreenshot\MMB20180820_161944.jpg' height='400' width='600'/> </a><br>20180820_161944</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -236,20 +237,18 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">LOT.LotMMBtest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">LOT.LotLuggageComplaint</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">setUp</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">MMB</span>
-                <span class="method-start">2663 ms</span>
+                <span class="method-start">2667 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">29577 ms</span>
+                <span class="method-start">17716 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="LOTests(failed)">
     <classes>
-      <class name="LOT.LotMMBtest">
+      <class name="LOT.LotLuggageComplaint">
         <methods>
+          <include name="MMB"/>
           <include name="setUp"/>
           <include name="tearDown"/>
-          <include name="MMB"/>
         </methods>
-      </class> <!-- LOT.LotMMBtest -->
+      </class> <!-- LOT.LotLuggageComplaint -->
     </classes>
   </test> <!-- LOTests(failed) -->
 </suite> <!-- Failed suite [Default Suite] -->
