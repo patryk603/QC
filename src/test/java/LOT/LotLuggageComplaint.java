@@ -358,7 +358,6 @@ public class LotLuggageComplaint extends MainTest {
         JavascriptExecutor js = (JavascriptExecutor) driver;
 
         //TestStart
-        LuggageComplaintPage.CloseCoockieSpam.click();
         //Step 1 from 2
         LuggageComplaintPage.Gender.click();
         LuggageComplaintPage.GenderL.click();
