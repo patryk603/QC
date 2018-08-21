@@ -38,7 +38,7 @@ public class LotLuggageComplaint extends MainTest {
 
 
     @Test(groups=("Complaint"))
-    public void LuggageComplaint() throws Exception {
+    public void LuggageComplaintPLPL() throws Exception {
 
         WebDriverWait wait = new WebDriverWait(driver, 20);
         driver.get(baseUrl + "/pl/pl/reklamacje-bagazowe");
@@ -46,20 +46,19 @@ public class LotLuggageComplaint extends MainTest {
         JavascriptExecutor js = (JavascriptExecutor) driver;
 
         //TestStart
-        LuggageComplaintPage.CloseCoockieSpam.click();
         //Step 1 from 2
         LuggageComplaintPage.Gender.click();
         LuggageComplaintPage.GenderL.click();
         LuggageComplaintPage.Name.sendKeys("Test");
         LuggageComplaintPage.Surname.sendKeys("Test");
-        LuggageComplaintPage.City.sendKeys("Warsaw");
-        LuggageComplaintPage.ZipCode.sendKeys("02-000");
+        LuggageComplaintPage.City.sendKeys("Test");
+        LuggageComplaintPage.ZipCode.sendKeys("00000");
         LuggageComplaintPage.Street.sendKeys("Street");
         LuggageComplaintPage.Number.sendKeys("+48");
         LuggageComplaintPage.PhoneNumber.sendKeys("666666666");
         LuggageComplaintPage.Email.sendKeys("lotest787@gmail.com");
         LuggageComplaintPage.Route.sendKeys("Warszawa-Budapeszt");
-        LuggageComplaintPage.FlightNumber.sendKeys("696");
+        LuggageComplaintPage.FlightNumber.sendKeys("WAW LO 34567");
         LuggageComplaintPage.FlightDate.click();
         LuggageComplaintPage.MilesAndMore.click();
         LuggageComplaintPage.MilesAndMoreNo.click();
@@ -81,15 +80,325 @@ public class LotLuggageComplaint extends MainTest {
         // This  will scroll down the page by  1000 pixel vertical
         js.executeScript("window.scrollBy(0,1000)");
         LuggageComplaintPage.NextStep2.click();
-
     }
 
+    @Test(groups=("Complaint"))
+    public void LuggageComplaintPLEN() throws Exception {
 
+        WebDriverWait wait = new WebDriverWait(driver, 20);
+        driver.get(baseUrl + "/pl/en/luggage-complaint");
+        ImplicitWait(driver);
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+
+        //TestStart
+        //Step 1 from 2
+        LuggageComplaintPage.Gender.click();
+        LuggageComplaintPage.GenderL.click();
+        LuggageComplaintPage.Name.sendKeys("Test");
+        LuggageComplaintPage.Surname.sendKeys("Test");
+        LuggageComplaintPage.City.sendKeys("Test");
+        LuggageComplaintPage.ZipCode.sendKeys("00000");
+        LuggageComplaintPage.Street.sendKeys("Street");
+        LuggageComplaintPage.Number.sendKeys("+48");
+        LuggageComplaintPage.PhoneNumber.sendKeys("666666666");
+        LuggageComplaintPage.Email.sendKeys("lotest787@gmail.com");
+        LuggageComplaintPage.Route.sendKeys("Warszawa-Budapeszt");
+        LuggageComplaintPage.FlightNumber.sendKeys("WAW LO 34567");
+        LuggageComplaintPage.FlightDate.click();
+        LuggageComplaintPage.MilesAndMore.click();
+        LuggageComplaintPage.MilesAndMoreNo.click();
+
+        // This  will scroll down the page by  1000 pixel vertical
+        js.executeScript("window.scrollBy(0,1000)");
+        LuggageComplaintPage.NextStep1.click();
+
+        //Step 2 from 2
+        LuggageComplaintPage.LuggageQuantityPosted.sendKeys("1");
+        LuggageComplaintPage.LuggageQuantityComplaint.sendKeys("1");
+        Thread.sleep(1000);
+        LuggageComplaintPage.LuggagePenalty.click();
+        wait.until(ExpectedConditions.elementToBeClickable(LuggageComplaintPage.LuggagePenaltyNo));
+        LuggageComplaintPage.LuggagePenaltyNo.click();
+        LuggageComplaintPage.LuggageDelay.click();
+        LuggageComplaintPage.DamageDetails.sendKeys("Kot wypadł nad Atlantykiem");
+
+        // This  will scroll down the page by  1000 pixel vertical
+        js.executeScript("window.scrollBy(0,1000)");
+        LuggageComplaintPage.NextStep2.click();
+    }
+    @Test(groups=("Complaint"))
+    public void LuggageComplaintDEDE() throws Exception {
+
+        WebDriverWait wait = new WebDriverWait(driver, 20);
+        driver.get(baseUrl + "/de/de/gepackreklamationen");
+        ImplicitWait(driver);
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+
+        //TestStart
+        LuggageComplaintPage.CloseCoockieSpam.click();
+        //Step 1 from 2
+        LuggageComplaintPage.Gender.click();
+        LuggageComplaintPage.GenderL.click();
+        LuggageComplaintPage.Name.sendKeys("Test");
+        LuggageComplaintPage.Surname.sendKeys("Test");
+        LuggageComplaintPage.City.sendKeys("Test");
+        LuggageComplaintPage.ZipCode.sendKeys("00000");
+        LuggageComplaintPage.Street.sendKeys("Street");
+        LuggageComplaintPage.Number.sendKeys("+48");
+        LuggageComplaintPage.PhoneNumber.sendKeys("666666666");
+        LuggageComplaintPage.Email.sendKeys("lotest787@gmail.com");
+        LuggageComplaintPage.Route.sendKeys("Warszawa-Budapeszt");
+        LuggageComplaintPage.FlightNumber.sendKeys("WAW LO 34567");
+        LuggageComplaintPage.FlightDate.click();
+        LuggageComplaintPage.MilesAndMore.click();
+        LuggageComplaintPage.MilesAndMoreNo.click();
+
+        // This  will scroll down the page by  1000 pixel vertical
+        js.executeScript("window.scrollBy(0,1000)");
+        LuggageComplaintPage.NextStep1.click();
+
+        //Step 2 from 2
+        LuggageComplaintPage.LuggageQuantityPosted.sendKeys("1");
+        LuggageComplaintPage.LuggageQuantityComplaint.sendKeys("1");
+        Thread.sleep(1000);
+        LuggageComplaintPage.LuggagePenalty.click();
+        wait.until(ExpectedConditions.elementToBeClickable(LuggageComplaintPage.LuggagePenaltyNo));
+        LuggageComplaintPage.LuggagePenaltyNo.click();
+        LuggageComplaintPage.LuggageDelay.click();
+        LuggageComplaintPage.DamageDetails.sendKeys("Kot wypadł nad Atlantykiem");
+
+        // This  will scroll down the page by  1000 pixel vertical
+        js.executeScript("window.scrollBy(0,1000)");
+        LuggageComplaintPage.NextStep2.click();
+    }
+
+    @Test(groups=("Complaint"))
+    public void LuggageComplaintFRFR() throws Exception {
+
+        WebDriverWait wait = new WebDriverWait(driver, 20);
+        driver.get(baseUrl + "/fr/fr/reclamations-bagages ");
+        ImplicitWait(driver);
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+
+        //TestStart
+        //Step 1 from 2
+        LuggageComplaintPage.Gender.click();
+        LuggageComplaintPage.GenderL.click();
+        LuggageComplaintPage.Name.sendKeys("Test");
+        LuggageComplaintPage.Surname.sendKeys("Test");
+        LuggageComplaintPage.City.sendKeys("Test");
+        LuggageComplaintPage.ZipCode.sendKeys("00000");
+        LuggageComplaintPage.Street.sendKeys("Street");
+        LuggageComplaintPage.Number.sendKeys("+48");
+        LuggageComplaintPage.PhoneNumber.sendKeys("666666666");
+        LuggageComplaintPage.Email.sendKeys("lotest787@gmail.com");
+        LuggageComplaintPage.Route.sendKeys("Warszawa-Budapeszt");
+        LuggageComplaintPage.FlightNumber.sendKeys("WAW LO 34567");
+        LuggageComplaintPage.FlightDate.click();
+        LuggageComplaintPage.MilesAndMore.click();
+        LuggageComplaintPage.MilesAndMoreNo.click();
+
+        // This  will scroll down the page by  1000 pixel vertical
+        js.executeScript("window.scrollBy(0,1000)");
+        LuggageComplaintPage.NextStep1.click();
+
+        //Step 2 from 2
+        LuggageComplaintPage.LuggageQuantityPosted.sendKeys("1");
+        LuggageComplaintPage.LuggageQuantityComplaint.sendKeys("1");
+        Thread.sleep(1000);
+        LuggageComplaintPage.LuggagePenalty.click();
+        wait.until(ExpectedConditions.elementToBeClickable(LuggageComplaintPage.LuggagePenaltyNo));
+        LuggageComplaintPage.LuggagePenaltyNo.click();
+        LuggageComplaintPage.LuggageDelay.click();
+        LuggageComplaintPage.DamageDetails.sendKeys("Kot wypadł nad Atlantykiem");
+
+        // This  will scroll down the page by  1000 pixel vertical
+        js.executeScript("window.scrollBy(0,1000)");
+        LuggageComplaintPage.NextStep2.click();
+    }
+    @Test(groups=("Complaint"))
+    public void LuggageComplaintESES() throws Exception {
+
+        WebDriverWait wait = new WebDriverWait(driver, 20);
+        driver.get(baseUrl + "/es/es/reclamaciones-equipaje");
+        ImplicitWait(driver);
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+
+        //TestStart
+        //Step 1 from 2
+        LuggageComplaintPage.Gender.click();
+        LuggageComplaintPage.GenderL.click();
+        LuggageComplaintPage.Name.sendKeys("Test");
+        LuggageComplaintPage.Surname.sendKeys("Test");
+        LuggageComplaintPage.City.sendKeys("Test");
+        LuggageComplaintPage.ZipCode.sendKeys("00000");
+        LuggageComplaintPage.Street.sendKeys("Street");
+        LuggageComplaintPage.Number.sendKeys("+48");
+        LuggageComplaintPage.PhoneNumber.sendKeys("666666666");
+        LuggageComplaintPage.Email.sendKeys("lotest787@gmail.com");
+        LuggageComplaintPage.Route.sendKeys("Warszawa-Budapeszt");
+        LuggageComplaintPage.FlightNumber.sendKeys("WAW LO 34567");
+        LuggageComplaintPage.FlightDate.click();
+        LuggageComplaintPage.MilesAndMore.click();
+        LuggageComplaintPage.MilesAndMoreNo.click();
+
+        // This  will scroll down the page by  1000 pixel vertical
+        js.executeScript("window.scrollBy(0,1000)");
+        LuggageComplaintPage.NextStep1.click();
+
+        //Step 2 from 2
+        LuggageComplaintPage.LuggageQuantityPosted.sendKeys("1");
+        LuggageComplaintPage.LuggageQuantityComplaint.sendKeys("1");
+        Thread.sleep(1000);
+        LuggageComplaintPage.LuggagePenalty.click();
+        wait.until(ExpectedConditions.elementToBeClickable(LuggageComplaintPage.LuggagePenaltyNo));
+        LuggageComplaintPage.LuggagePenaltyNo.click();
+        LuggageComplaintPage.LuggageDelay.click();
+        LuggageComplaintPage.DamageDetails.sendKeys("Kot wypadł nad Atlantykiem");
+
+        // This  will scroll down the page by  1000 pixel vertical
+        js.executeScript("window.scrollBy(0,1000)");
+        LuggageComplaintPage.NextStep2.click();
+    }
+    @Test(groups=("Complaint"))
+    public void LuggageComplaintITIT() throws Exception {
+
+        WebDriverWait wait = new WebDriverWait(driver, 20);
+        driver.get(baseUrl + "/it/it/reclami-bagaglio ");
+        ImplicitWait(driver);
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+
+        //TestStart
+        //Step 1 from 2
+        LuggageComplaintPage.Gender.click();
+        LuggageComplaintPage.GenderL.click();
+        LuggageComplaintPage.Name.sendKeys("Test");
+        LuggageComplaintPage.Surname.sendKeys("Test");
+        LuggageComplaintPage.City.sendKeys("Test");
+        LuggageComplaintPage.ZipCode.sendKeys("00000");
+        LuggageComplaintPage.Street.sendKeys("Street");
+        LuggageComplaintPage.Number.sendKeys("+48");
+        LuggageComplaintPage.PhoneNumber.sendKeys("666666666");
+        LuggageComplaintPage.Email.sendKeys("lotest787@gmail.com");
+        LuggageComplaintPage.Route.sendKeys("Warszawa-Budapeszt");
+        LuggageComplaintPage.FlightNumber.sendKeys("WAW LO 34567");
+        LuggageComplaintPage.FlightDate.click();
+        LuggageComplaintPage.MilesAndMore.click();
+        LuggageComplaintPage.MilesAndMoreNo.click();
+
+        // This  will scroll down the page by  1000 pixel vertical
+        js.executeScript("window.scrollBy(0,1000)");
+        LuggageComplaintPage.NextStep1.click();
+
+        //Step 2 from 2
+        LuggageComplaintPage.LuggageQuantityPosted.sendKeys("1");
+        LuggageComplaintPage.LuggageQuantityComplaint.sendKeys("1");
+        Thread.sleep(1000);
+        LuggageComplaintPage.LuggagePenalty.click();
+        wait.until(ExpectedConditions.elementToBeClickable(LuggageComplaintPage.LuggagePenaltyNo));
+        LuggageComplaintPage.LuggagePenaltyNo.click();
+        LuggageComplaintPage.LuggageDelay.click();
+        LuggageComplaintPage.DamageDetails.sendKeys("Kot wypadł nad Atlantykiem");
+
+        // This  will scroll down the page by  1000 pixel vertical
+        js.executeScript("window.scrollBy(0,1000)");
+        LuggageComplaintPage.NextStep2.click();
+    }
+    @Test(groups=("Complaint"))
+    public void LuggageComplaintRURU() throws Exception {
+
+        WebDriverWait wait = new WebDriverWait(driver, 20);
+        driver.get(baseUrl + "/ru/ru/luggage-complaint ");
+        ImplicitWait(driver);
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+
+        //TestStart
+        //Step 1 from 2
+        LuggageComplaintPage.Gender.click();
+        LuggageComplaintPage.GenderL.click();
+        LuggageComplaintPage.Name.sendKeys("Test");
+        LuggageComplaintPage.Surname.sendKeys("Test");
+        LuggageComplaintPage.City.sendKeys("Test");
+        LuggageComplaintPage.ZipCode.sendKeys("00000");
+        LuggageComplaintPage.Street.sendKeys("Street");
+        LuggageComplaintPage.Number.sendKeys("+48");
+        LuggageComplaintPage.PhoneNumber.sendKeys("666666666");
+        LuggageComplaintPage.Email.sendKeys("lotest787@gmail.com");
+        LuggageComplaintPage.Route.sendKeys("Warszawa-Budapeszt");
+        LuggageComplaintPage.FlightNumber.sendKeys("WAW LO 34567");
+        LuggageComplaintPage.FlightDate.click();
+        LuggageComplaintPage.MilesAndMore.click();
+        LuggageComplaintPage.MilesAndMoreNo.click();
+
+        // This  will scroll down the page by  1000 pixel vertical
+        js.executeScript("window.scrollBy(0,1000)");
+        LuggageComplaintPage.NextStep1.click();
+
+        //Step 2 from 2
+        LuggageComplaintPage.LuggageQuantityPosted.sendKeys("1");
+        LuggageComplaintPage.LuggageQuantityComplaint.sendKeys("1");
+        Thread.sleep(1000);
+        LuggageComplaintPage.LuggagePenalty.click();
+        wait.until(ExpectedConditions.elementToBeClickable(LuggageComplaintPage.LuggagePenaltyNo));
+        LuggageComplaintPage.LuggagePenaltyNo.click();
+        LuggageComplaintPage.LuggageDelay.click();
+        LuggageComplaintPage.DamageDetails.sendKeys("Kot wypadł nad Atlantykiem");
+
+        // This  will scroll down the page by  1000 pixel vertical
+        js.executeScript("window.scrollBy(0,1000)");
+        LuggageComplaintPage.NextStep2.click();
+    }
+
+    @Test(groups=("Complaint"))
+    public void LuggageComplaintKRKO() throws Exception {
+
+        WebDriverWait wait = new WebDriverWait(driver, 20);
+        driver.get(baseUrl + "/kr/ko/luggage-complaint ");
+        ImplicitWait(driver);
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+
+        //TestStart
+        LuggageComplaintPage.CloseCoockieSpam.click();
+        //Step 1 from 2
+        LuggageComplaintPage.Gender.click();
+        LuggageComplaintPage.GenderL.click();
+        LuggageComplaintPage.Name.sendKeys("Test");
+        LuggageComplaintPage.Surname.sendKeys("Test");
+        LuggageComplaintPage.City.sendKeys("Test");
+        LuggageComplaintPage.ZipCode.sendKeys("00000");
+        LuggageComplaintPage.Street.sendKeys("Street");
+        LuggageComplaintPage.Number.sendKeys("+48");
+        LuggageComplaintPage.PhoneNumber.sendKeys("666666666");
+        LuggageComplaintPage.Email.sendKeys("lotest787@gmail.com");
+        LuggageComplaintPage.Route.sendKeys("Warszawa-Budapeszt");
+        LuggageComplaintPage.FlightNumber.sendKeys("WAW LO 34567");
+        LuggageComplaintPage.FlightDate.click();
+        LuggageComplaintPage.MilesAndMore.click();
+        LuggageComplaintPage.MilesAndMoreNo.click();
+
+        // This  will scroll down the page by  1000 pixel vertical
+        js.executeScript("window.scrollBy(0,1000)");
+        LuggageComplaintPage.NextStep1.click();
+
+        //Step 2 from 2
+        LuggageComplaintPage.LuggageQuantityPosted.sendKeys("1");
+        LuggageComplaintPage.LuggageQuantityComplaint.sendKeys("1");
+        Thread.sleep(1000);
+        LuggageComplaintPage.LuggagePenalty.click();
+        wait.until(ExpectedConditions.elementToBeClickable(LuggageComplaintPage.LuggagePenaltyNo));
+        LuggageComplaintPage.LuggagePenaltyNo.click();
+        LuggageComplaintPage.LuggageDelay.click();
+        LuggageComplaintPage.DamageDetails.sendKeys("Kot wypadł nad Atlantykiem");
+
+        // This  will scroll down the page by  1000 pixel vertical
+        js.executeScript("window.scrollBy(0,1000)");
+        LuggageComplaintPage.NextStep2.click();
+    }
 
     @AfterTest(alwaysRun = true)
     public void tearDown() throws Exception {
-        //driver.manage().deleteAllCookies();
-        //driver.quit();
+        driver.manage().deleteAllCookies();
+        driver.quit();
     }
 
 }

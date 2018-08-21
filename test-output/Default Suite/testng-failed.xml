@@ -5,8 +5,8 @@
     <classes>
       <class name="LOT.LotLuggageComplaint">
         <methods>
-          <include name="MMB"/>
           <include name="setUp"/>
+          <include name="LuggageComplaintKRKO"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- LOT.LotLuggageComplaint -->
