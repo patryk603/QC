@@ -64,6 +64,13 @@ public class LuggageComplaintPage {
     @FindBy(id = "flightNumber")
     public static WebElement FlightNumber;
 
+    @FindBy(id = "bookingNumber")
+    public static WebElement BookingNumber;
+
+    @FindBy(id = "flightClass")
+    public static WebElement FlightClass;
+
+
     //Step 2
 
     @FindBy(id = "postedLuggageQuantity")
@@ -87,8 +94,14 @@ public class LuggageComplaintPage {
     @FindBy(id = "luggageDamageDetails0")
     public static WebElement DamageDetails;
 
+    @FindBy(id = "luggageWeight")
+    public static WebElement LuggageWeight;
 
+    @FindBy(id = "pirNumber")
+    public static WebElement PIRNumber1;
 
+    @FindBy(id = "pirNumberSecond")
+    public static WebElement PIRNumber2;
 
     public LuggageComplaintPage(WebDriver driver){
 

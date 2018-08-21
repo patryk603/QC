@@ -6,7 +6,7 @@
       <class name="LOT.LotLuggageComplaint">
         <methods>
           <include name="setUp"/>
-          <include name="LuggageComplaintKRKO"/>
+          <include name="LuggageComplaintPLPL"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- LOT.LotLuggageComplaint -->

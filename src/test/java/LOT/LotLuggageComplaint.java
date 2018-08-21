@@ -24,6 +24,7 @@ public class LotLuggageComplaint extends MainTest {
     private String baseUrl;
     private boolean acceptNextAlert = true;
     private StringBuffer verificationErrors = new StringBuffer();
+    private String Test = "Test";
 
     @BeforeTest(alwaysRun = true)
     public void setUp() throws Exception {
@@ -31,7 +32,6 @@ public class LotLuggageComplaint extends MainTest {
         driver.manage().deleteAllCookies();
         driver.manage().window().maximize();
         baseUrl = "http://www.lot.com/";
-
         PageFactory.initElements(driver, LuggageComplaintPage.class);
 
     }
@@ -49,22 +49,26 @@ public class LotLuggageComplaint extends MainTest {
         //Step 1 from 2
         LuggageComplaintPage.Gender.click();
         LuggageComplaintPage.GenderL.click();
-        LuggageComplaintPage.Name.sendKeys("Test");
-        LuggageComplaintPage.Surname.sendKeys("Test");
-        LuggageComplaintPage.City.sendKeys("Test");
+        LuggageComplaintPage.Name.sendKeys(Test);
+        LuggageComplaintPage.Surname.sendKeys(Test);
+        LuggageComplaintPage.City.sendKeys(Test);
         LuggageComplaintPage.ZipCode.sendKeys("00000");
-        LuggageComplaintPage.Street.sendKeys("Street");
-        LuggageComplaintPage.Number.sendKeys("+48");
-        LuggageComplaintPage.PhoneNumber.sendKeys("666666666");
+        LuggageComplaintPage.Street.sendKeys(Test);
+        LuggageComplaintPage.Number.sendKeys("0");
+        LuggageComplaintPage.PhoneNumber.sendKeys("000000000");
         LuggageComplaintPage.Email.sendKeys("lotest787@gmail.com");
         LuggageComplaintPage.Route.sendKeys("Warszawa-Budapeszt");
         LuggageComplaintPage.FlightNumber.sendKeys("WAW LO 34567");
+        LuggageComplaintPage.BookingNumber.sendKeys("XYZ111");
         LuggageComplaintPage.FlightDate.click();
         LuggageComplaintPage.MilesAndMore.click();
         LuggageComplaintPage.MilesAndMoreNo.click();
 
         // This  will scroll down the page by  1000 pixel vertical
         js.executeScript("window.scrollBy(0,1000)");
+        //LuggageComplaintPage.FlightClass.click();
+        Select flightClass = new Select(LuggageComplaintPage.FlightClass);
+        flightClass.selectByIndex(1);
         LuggageComplaintPage.NextStep1.click();
 
         //Step 2 from 2
@@ -75,7 +79,10 @@ public class LotLuggageComplaint extends MainTest {
         wait.until(ExpectedConditions.elementToBeClickable(LuggageComplaintPage.LuggagePenaltyNo));
         LuggageComplaintPage.LuggagePenaltyNo.click();
         LuggageComplaintPage.LuggageDelay.click();
-        LuggageComplaintPage.DamageDetails.sendKeys("Kot wypadł nad Atlantykiem");
+        LuggageComplaintPage.DamageDetails.sendKeys(Test);
+        LuggageComplaintPage.LuggageWeight.sendKeys("23");
+        LuggageComplaintPage.PIRNumber1.sendKeys("WAW");
+        LuggageComplaintPage.PIRNumber2.sendKeys("34567");
 
         // This  will scroll down the page by  1000 pixel vertical
         js.executeScript("window.scrollBy(0,1000)");
@@ -94,22 +101,26 @@ public class LotLuggageComplaint extends MainTest {
         //Step 1 from 2
         LuggageComplaintPage.Gender.click();
         LuggageComplaintPage.GenderL.click();
-        LuggageComplaintPage.Name.sendKeys("Test");
-        LuggageComplaintPage.Surname.sendKeys("Test");
-        LuggageComplaintPage.City.sendKeys("Test");
+        LuggageComplaintPage.Name.sendKeys(Test);
+        LuggageComplaintPage.Surname.sendKeys(Test);
+        LuggageComplaintPage.City.sendKeys(Test);
         LuggageComplaintPage.ZipCode.sendKeys("00000");
-        LuggageComplaintPage.Street.sendKeys("Street");
-        LuggageComplaintPage.Number.sendKeys("+48");
-        LuggageComplaintPage.PhoneNumber.sendKeys("666666666");
+        LuggageComplaintPage.Street.sendKeys(Test);
+        LuggageComplaintPage.Number.sendKeys("0");
+        LuggageComplaintPage.PhoneNumber.sendKeys("000000000");
         LuggageComplaintPage.Email.sendKeys("lotest787@gmail.com");
         LuggageComplaintPage.Route.sendKeys("Warszawa-Budapeszt");
         LuggageComplaintPage.FlightNumber.sendKeys("WAW LO 34567");
+        LuggageComplaintPage.BookingNumber.sendKeys("XYZ111");
         LuggageComplaintPage.FlightDate.click();
         LuggageComplaintPage.MilesAndMore.click();
         LuggageComplaintPage.MilesAndMoreNo.click();
 
         // This  will scroll down the page by  1000 pixel vertical
         js.executeScript("window.scrollBy(0,1000)");
+        //LuggageComplaintPage.FlightClass.click();
+        Select flightClass = new Select(LuggageComplaintPage.FlightClass);
+        flightClass.selectByIndex(1);
         LuggageComplaintPage.NextStep1.click();
 
         //Step 2 from 2
@@ -120,12 +131,16 @@ public class LotLuggageComplaint extends MainTest {
         wait.until(ExpectedConditions.elementToBeClickable(LuggageComplaintPage.LuggagePenaltyNo));
         LuggageComplaintPage.LuggagePenaltyNo.click();
         LuggageComplaintPage.LuggageDelay.click();
-        LuggageComplaintPage.DamageDetails.sendKeys("Kot wypadł nad Atlantykiem");
+        LuggageComplaintPage.DamageDetails.sendKeys(Test);
+        LuggageComplaintPage.LuggageWeight.sendKeys("23");
+        LuggageComplaintPage.PIRNumber1.sendKeys("WAW");
+        LuggageComplaintPage.PIRNumber2.sendKeys("34567");
 
         // This  will scroll down the page by  1000 pixel vertical
         js.executeScript("window.scrollBy(0,1000)");
         LuggageComplaintPage.NextStep2.click();
     }
+
     @Test(groups=("Complaint"))
     public void LuggageComplaintDEDE() throws Exception {
 
@@ -139,22 +154,26 @@ public class LotLuggageComplaint extends MainTest {
         //Step 1 from 2
         LuggageComplaintPage.Gender.click();
         LuggageComplaintPage.GenderL.click();
-        LuggageComplaintPage.Name.sendKeys("Test");
-        LuggageComplaintPage.Surname.sendKeys("Test");
-        LuggageComplaintPage.City.sendKeys("Test");
+        LuggageComplaintPage.Name.sendKeys(Test);
+        LuggageComplaintPage.Surname.sendKeys(Test);
+        LuggageComplaintPage.City.sendKeys(Test);
         LuggageComplaintPage.ZipCode.sendKeys("00000");
-        LuggageComplaintPage.Street.sendKeys("Street");
-        LuggageComplaintPage.Number.sendKeys("+48");
-        LuggageComplaintPage.PhoneNumber.sendKeys("666666666");
+        LuggageComplaintPage.Street.sendKeys(Test);
+        LuggageComplaintPage.Number.sendKeys("0");
+        LuggageComplaintPage.PhoneNumber.sendKeys("000000000");
         LuggageComplaintPage.Email.sendKeys("lotest787@gmail.com");
         LuggageComplaintPage.Route.sendKeys("Warszawa-Budapeszt");
         LuggageComplaintPage.FlightNumber.sendKeys("WAW LO 34567");
+        LuggageComplaintPage.BookingNumber.sendKeys("XYZ111");
         LuggageComplaintPage.FlightDate.click();
         LuggageComplaintPage.MilesAndMore.click();
         LuggageComplaintPage.MilesAndMoreNo.click();
 
         // This  will scroll down the page by  1000 pixel vertical
         js.executeScript("window.scrollBy(0,1000)");
+        //LuggageComplaintPage.FlightClass.click();
+        Select flightClass = new Select(LuggageComplaintPage.FlightClass);
+        flightClass.selectByIndex(1);
         LuggageComplaintPage.NextStep1.click();
 
         //Step 2 from 2
@@ -165,7 +184,10 @@ public class LotLuggageComplaint extends MainTest {
         wait.until(ExpectedConditions.elementToBeClickable(LuggageComplaintPage.LuggagePenaltyNo));
         LuggageComplaintPage.LuggagePenaltyNo.click();
         LuggageComplaintPage.LuggageDelay.click();
-        LuggageComplaintPage.DamageDetails.sendKeys("Kot wypadł nad Atlantykiem");
+        LuggageComplaintPage.DamageDetails.sendKeys(Test);
+        LuggageComplaintPage.LuggageWeight.sendKeys("23");
+        LuggageComplaintPage.PIRNumber1.sendKeys("WAW");
+        LuggageComplaintPage.PIRNumber2.sendKeys("34567");
 
         // This  will scroll down the page by  1000 pixel vertical
         js.executeScript("window.scrollBy(0,1000)");
@@ -184,22 +206,26 @@ public class LotLuggageComplaint extends MainTest {
         //Step 1 from 2
         LuggageComplaintPage.Gender.click();
         LuggageComplaintPage.GenderL.click();
-        LuggageComplaintPage.Name.sendKeys("Test");
-        LuggageComplaintPage.Surname.sendKeys("Test");
-        LuggageComplaintPage.City.sendKeys("Test");
+        LuggageComplaintPage.Name.sendKeys(Test);
+        LuggageComplaintPage.Surname.sendKeys(Test);
+        LuggageComplaintPage.City.sendKeys(Test);
         LuggageComplaintPage.ZipCode.sendKeys("00000");
-        LuggageComplaintPage.Street.sendKeys("Street");
-        LuggageComplaintPage.Number.sendKeys("+48");
-        LuggageComplaintPage.PhoneNumber.sendKeys("666666666");
+        LuggageComplaintPage.Street.sendKeys(Test);
+        LuggageComplaintPage.Number.sendKeys("0");
+        LuggageComplaintPage.PhoneNumber.sendKeys("000000000");
         LuggageComplaintPage.Email.sendKeys("lotest787@gmail.com");
         LuggageComplaintPage.Route.sendKeys("Warszawa-Budapeszt");
         LuggageComplaintPage.FlightNumber.sendKeys("WAW LO 34567");
+        LuggageComplaintPage.BookingNumber.sendKeys("XYZ111");
         LuggageComplaintPage.FlightDate.click();
         LuggageComplaintPage.MilesAndMore.click();
         LuggageComplaintPage.MilesAndMoreNo.click();
 
         // This  will scroll down the page by  1000 pixel vertical
         js.executeScript("window.scrollBy(0,1000)");
+        //LuggageComplaintPage.FlightClass.click();
+        Select flightClass = new Select(LuggageComplaintPage.FlightClass);
+        flightClass.selectByIndex(1);
         LuggageComplaintPage.NextStep1.click();
 
         //Step 2 from 2
@@ -210,7 +236,10 @@ public class LotLuggageComplaint extends MainTest {
         wait.until(ExpectedConditions.elementToBeClickable(LuggageComplaintPage.LuggagePenaltyNo));
         LuggageComplaintPage.LuggagePenaltyNo.click();
         LuggageComplaintPage.LuggageDelay.click();
-        LuggageComplaintPage.DamageDetails.sendKeys("Kot wypadł nad Atlantykiem");
+        LuggageComplaintPage.DamageDetails.sendKeys(Test);
+        LuggageComplaintPage.LuggageWeight.sendKeys("23");
+        LuggageComplaintPage.PIRNumber1.sendKeys("WAW");
+        LuggageComplaintPage.PIRNumber2.sendKeys("34567");
 
         // This  will scroll down the page by  1000 pixel vertical
         js.executeScript("window.scrollBy(0,1000)");
@@ -228,22 +257,26 @@ public class LotLuggageComplaint extends MainTest {
         //Step 1 from 2
         LuggageComplaintPage.Gender.click();
         LuggageComplaintPage.GenderL.click();
-        LuggageComplaintPage.Name.sendKeys("Test");
-        LuggageComplaintPage.Surname.sendKeys("Test");
-        LuggageComplaintPage.City.sendKeys("Test");
+        LuggageComplaintPage.Name.sendKeys(Test);
+        LuggageComplaintPage.Surname.sendKeys(Test);
+        LuggageComplaintPage.City.sendKeys(Test);
         LuggageComplaintPage.ZipCode.sendKeys("00000");
-        LuggageComplaintPage.Street.sendKeys("Street");
-        LuggageComplaintPage.Number.sendKeys("+48");
-        LuggageComplaintPage.PhoneNumber.sendKeys("666666666");
+        LuggageComplaintPage.Street.sendKeys(Test);
+        LuggageComplaintPage.Number.sendKeys("0");
+        LuggageComplaintPage.PhoneNumber.sendKeys("000000000");
         LuggageComplaintPage.Email.sendKeys("lotest787@gmail.com");
         LuggageComplaintPage.Route.sendKeys("Warszawa-Budapeszt");
         LuggageComplaintPage.FlightNumber.sendKeys("WAW LO 34567");
+        LuggageComplaintPage.BookingNumber.sendKeys("XYZ111");
         LuggageComplaintPage.FlightDate.click();
         LuggageComplaintPage.MilesAndMore.click();
         LuggageComplaintPage.MilesAndMoreNo.click();
 
         // This  will scroll down the page by  1000 pixel vertical
         js.executeScript("window.scrollBy(0,1000)");
+        //LuggageComplaintPage.FlightClass.click();
+        Select flightClass = new Select(LuggageComplaintPage.FlightClass);
+        flightClass.selectByIndex(1);
         LuggageComplaintPage.NextStep1.click();
 
         //Step 2 from 2
@@ -254,7 +287,10 @@ public class LotLuggageComplaint extends MainTest {
         wait.until(ExpectedConditions.elementToBeClickable(LuggageComplaintPage.LuggagePenaltyNo));
         LuggageComplaintPage.LuggagePenaltyNo.click();
         LuggageComplaintPage.LuggageDelay.click();
-        LuggageComplaintPage.DamageDetails.sendKeys("Kot wypadł nad Atlantykiem");
+        LuggageComplaintPage.DamageDetails.sendKeys(Test);
+        LuggageComplaintPage.LuggageWeight.sendKeys("23");
+        LuggageComplaintPage.PIRNumber1.sendKeys("WAW");
+        LuggageComplaintPage.PIRNumber2.sendKeys("34567");
 
         // This  will scroll down the page by  1000 pixel vertical
         js.executeScript("window.scrollBy(0,1000)");
@@ -272,22 +308,26 @@ public class LotLuggageComplaint extends MainTest {
         //Step 1 from 2
         LuggageComplaintPage.Gender.click();
         LuggageComplaintPage.GenderL.click();
-        LuggageComplaintPage.Name.sendKeys("Test");
-        LuggageComplaintPage.Surname.sendKeys("Test");
-        LuggageComplaintPage.City.sendKeys("Test");
+        LuggageComplaintPage.Name.sendKeys(Test);
+        LuggageComplaintPage.Surname.sendKeys(Test);
+        LuggageComplaintPage.City.sendKeys(Test);
         LuggageComplaintPage.ZipCode.sendKeys("00000");
-        LuggageComplaintPage.Street.sendKeys("Street");
-        LuggageComplaintPage.Number.sendKeys("+48");
-        LuggageComplaintPage.PhoneNumber.sendKeys("666666666");
+        LuggageComplaintPage.Street.sendKeys(Test);
+        LuggageComplaintPage.Number.sendKeys("0");
+        LuggageComplaintPage.PhoneNumber.sendKeys("000000000");
         LuggageComplaintPage.Email.sendKeys("lotest787@gmail.com");
         LuggageComplaintPage.Route.sendKeys("Warszawa-Budapeszt");
         LuggageComplaintPage.FlightNumber.sendKeys("WAW LO 34567");
+        LuggageComplaintPage.BookingNumber.sendKeys("XYZ111");
         LuggageComplaintPage.FlightDate.click();
         LuggageComplaintPage.MilesAndMore.click();
         LuggageComplaintPage.MilesAndMoreNo.click();
 
         // This  will scroll down the page by  1000 pixel vertical
         js.executeScript("window.scrollBy(0,1000)");
+        //LuggageComplaintPage.FlightClass.click();
+        Select flightClass = new Select(LuggageComplaintPage.FlightClass);
+        flightClass.selectByIndex(1);
         LuggageComplaintPage.NextStep1.click();
 
         //Step 2 from 2
@@ -298,7 +338,10 @@ public class LotLuggageComplaint extends MainTest {
         wait.until(ExpectedConditions.elementToBeClickable(LuggageComplaintPage.LuggagePenaltyNo));
         LuggageComplaintPage.LuggagePenaltyNo.click();
         LuggageComplaintPage.LuggageDelay.click();
-        LuggageComplaintPage.DamageDetails.sendKeys("Kot wypadł nad Atlantykiem");
+        LuggageComplaintPage.DamageDetails.sendKeys(Test);
+        LuggageComplaintPage.LuggageWeight.sendKeys("23");
+        LuggageComplaintPage.PIRNumber1.sendKeys("WAW");
+        LuggageComplaintPage.PIRNumber2.sendKeys("34567");
 
         // This  will scroll down the page by  1000 pixel vertical
         js.executeScript("window.scrollBy(0,1000)");
@@ -316,22 +359,26 @@ public class LotLuggageComplaint extends MainTest {
         //Step 1 from 2
         LuggageComplaintPage.Gender.click();
         LuggageComplaintPage.GenderL.click();
-        LuggageComplaintPage.Name.sendKeys("Test");
-        LuggageComplaintPage.Surname.sendKeys("Test");
-        LuggageComplaintPage.City.sendKeys("Test");
+        LuggageComplaintPage.Name.sendKeys(Test);
+        LuggageComplaintPage.Surname.sendKeys(Test);
+        LuggageComplaintPage.City.sendKeys(Test);
         LuggageComplaintPage.ZipCode.sendKeys("00000");
-        LuggageComplaintPage.Street.sendKeys("Street");
-        LuggageComplaintPage.Number.sendKeys("+48");
-        LuggageComplaintPage.PhoneNumber.sendKeys("666666666");
+        LuggageComplaintPage.Street.sendKeys(Test);
+        LuggageComplaintPage.Number.sendKeys("0");
+        LuggageComplaintPage.PhoneNumber.sendKeys("000000000");
         LuggageComplaintPage.Email.sendKeys("lotest787@gmail.com");
         LuggageComplaintPage.Route.sendKeys("Warszawa-Budapeszt");
         LuggageComplaintPage.FlightNumber.sendKeys("WAW LO 34567");
+        LuggageComplaintPage.BookingNumber.sendKeys("XYZ111");
         LuggageComplaintPage.FlightDate.click();
         LuggageComplaintPage.MilesAndMore.click();
         LuggageComplaintPage.MilesAndMoreNo.click();
 
         // This  will scroll down the page by  1000 pixel vertical
         js.executeScript("window.scrollBy(0,1000)");
+        //LuggageComplaintPage.FlightClass.click();
+        Select flightClass = new Select(LuggageComplaintPage.FlightClass);
+        flightClass.selectByIndex(1);
         LuggageComplaintPage.NextStep1.click();
 
         //Step 2 from 2
@@ -342,7 +389,10 @@ public class LotLuggageComplaint extends MainTest {
         wait.until(ExpectedConditions.elementToBeClickable(LuggageComplaintPage.LuggagePenaltyNo));
         LuggageComplaintPage.LuggagePenaltyNo.click();
         LuggageComplaintPage.LuggageDelay.click();
-        LuggageComplaintPage.DamageDetails.sendKeys("Kot wypadł nad Atlantykiem");
+        LuggageComplaintPage.DamageDetails.sendKeys(Test);
+        LuggageComplaintPage.LuggageWeight.sendKeys("23");
+        LuggageComplaintPage.PIRNumber1.sendKeys("WAW");
+        LuggageComplaintPage.PIRNumber2.sendKeys("34567");
 
         // This  will scroll down the page by  1000 pixel vertical
         js.executeScript("window.scrollBy(0,1000)");
@@ -361,22 +411,26 @@ public class LotLuggageComplaint extends MainTest {
         //Step 1 from 2
         LuggageComplaintPage.Gender.click();
         LuggageComplaintPage.GenderL.click();
-        LuggageComplaintPage.Name.sendKeys("Test");
-        LuggageComplaintPage.Surname.sendKeys("Test");
-        LuggageComplaintPage.City.sendKeys("Test");
+        LuggageComplaintPage.Name.sendKeys(Test);
+        LuggageComplaintPage.Surname.sendKeys(Test);
+        LuggageComplaintPage.City.sendKeys(Test);
         LuggageComplaintPage.ZipCode.sendKeys("00000");
-        LuggageComplaintPage.Street.sendKeys("Street");
-        LuggageComplaintPage.Number.sendKeys("+48");
-        LuggageComplaintPage.PhoneNumber.sendKeys("666666666");
+        LuggageComplaintPage.Street.sendKeys(Test);
+        LuggageComplaintPage.Number.sendKeys("0");
+        LuggageComplaintPage.PhoneNumber.sendKeys("000000000");
         LuggageComplaintPage.Email.sendKeys("lotest787@gmail.com");
         LuggageComplaintPage.Route.sendKeys("Warszawa-Budapeszt");
         LuggageComplaintPage.FlightNumber.sendKeys("WAW LO 34567");
+        LuggageComplaintPage.BookingNumber.sendKeys("XYZ111");
         LuggageComplaintPage.FlightDate.click();
         LuggageComplaintPage.MilesAndMore.click();
         LuggageComplaintPage.MilesAndMoreNo.click();
 
         // This  will scroll down the page by  1000 pixel vertical
         js.executeScript("window.scrollBy(0,1000)");
+        //LuggageComplaintPage.FlightClass.click();
+        Select flightClass = new Select(LuggageComplaintPage.FlightClass);
+        flightClass.selectByIndex(1);
         LuggageComplaintPage.NextStep1.click();
 
         //Step 2 from 2
@@ -387,7 +441,10 @@ public class LotLuggageComplaint extends MainTest {
         wait.until(ExpectedConditions.elementToBeClickable(LuggageComplaintPage.LuggagePenaltyNo));
         LuggageComplaintPage.LuggagePenaltyNo.click();
         LuggageComplaintPage.LuggageDelay.click();
-        LuggageComplaintPage.DamageDetails.sendKeys("Kot wypadł nad Atlantykiem");
+        LuggageComplaintPage.DamageDetails.sendKeys(Test);
+        LuggageComplaintPage.LuggageWeight.sendKeys("23");
+        LuggageComplaintPage.PIRNumber1.sendKeys("WAW");
+        LuggageComplaintPage.PIRNumber2.sendKeys("34567");
 
         // This  will scroll down the page by  1000 pixel vertical
         js.executeScript("window.scrollBy(0,1000)");
