@@ -10,7 +10,7 @@
             </run>
         </groups>
         <classes>
-            <class name="LOT.LuggageComplaint"/>
+            <class name="LOT.LotLuggageComplaint"/>
         </classes>
     </test> <!-- LOTests -->
 </suite> <!-- Default Suite -->
