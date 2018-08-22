@@ -70,6 +70,9 @@ public class LuggageComplaintPage {
     @FindBy(id = "flightClass")
     public static WebElement FlightClass;
 
+    @FindBy(css = ".ui-datepicker-calendar > tbody > tr > td:not([class*=\"disabled\"]")
+    public static WebElement CalendarData;
+
 
     //Step 2
 

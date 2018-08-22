@@ -61,6 +61,7 @@ public class LotLuggageComplaint extends MainTest {
         LuggageComplaintPage.FlightNumber.sendKeys("WAW LO 34567");
         LuggageComplaintPage.BookingNumber.sendKeys("XYZ111");
         LuggageComplaintPage.FlightDate.click();
+        LuggageComplaintPage.CalendarData.click();
         LuggageComplaintPage.MilesAndMore.click();
         LuggageComplaintPage.MilesAndMoreNo.click();
 
@@ -113,6 +114,7 @@ public class LotLuggageComplaint extends MainTest {
         LuggageComplaintPage.FlightNumber.sendKeys("WAW LO 34567");
         LuggageComplaintPage.BookingNumber.sendKeys("XYZ111");
         LuggageComplaintPage.FlightDate.click();
+        LuggageComplaintPage.CalendarData.click();
         LuggageComplaintPage.MilesAndMore.click();
         LuggageComplaintPage.MilesAndMoreNo.click();
 
@@ -166,6 +168,7 @@ public class LotLuggageComplaint extends MainTest {
         LuggageComplaintPage.FlightNumber.sendKeys("WAW LO 34567");
         LuggageComplaintPage.BookingNumber.sendKeys("XYZ111");
         LuggageComplaintPage.FlightDate.click();
+        LuggageComplaintPage.CalendarData.click();
         LuggageComplaintPage.MilesAndMore.click();
         LuggageComplaintPage.MilesAndMoreNo.click();
 
@@ -218,6 +221,7 @@ public class LotLuggageComplaint extends MainTest {
         LuggageComplaintPage.FlightNumber.sendKeys("WAW LO 34567");
         LuggageComplaintPage.BookingNumber.sendKeys("XYZ111");
         LuggageComplaintPage.FlightDate.click();
+        LuggageComplaintPage.CalendarData.click();
         LuggageComplaintPage.MilesAndMore.click();
         LuggageComplaintPage.MilesAndMoreNo.click();
 
@@ -269,6 +273,7 @@ public class LotLuggageComplaint extends MainTest {
         LuggageComplaintPage.FlightNumber.sendKeys("WAW LO 34567");
         LuggageComplaintPage.BookingNumber.sendKeys("XYZ111");
         LuggageComplaintPage.FlightDate.click();
+        LuggageComplaintPage.CalendarData.click();
         LuggageComplaintPage.MilesAndMore.click();
         LuggageComplaintPage.MilesAndMoreNo.click();
 
@@ -320,6 +325,7 @@ public class LotLuggageComplaint extends MainTest {
         LuggageComplaintPage.FlightNumber.sendKeys("WAW LO 34567");
         LuggageComplaintPage.BookingNumber.sendKeys("XYZ111");
         LuggageComplaintPage.FlightDate.click();
+        LuggageComplaintPage.CalendarData.click();
         LuggageComplaintPage.MilesAndMore.click();
         LuggageComplaintPage.MilesAndMoreNo.click();
 
@@ -371,6 +377,7 @@ public class LotLuggageComplaint extends MainTest {
         LuggageComplaintPage.FlightNumber.sendKeys("WAW LO 34567");
         LuggageComplaintPage.BookingNumber.sendKeys("XYZ111");
         LuggageComplaintPage.FlightDate.click();
+        LuggageComplaintPage.CalendarData.click();
         LuggageComplaintPage.MilesAndMore.click();
         LuggageComplaintPage.MilesAndMoreNo.click();
 
@@ -423,6 +430,7 @@ public class LotLuggageComplaint extends MainTest {
         LuggageComplaintPage.FlightNumber.sendKeys("WAW LO 34567");
         LuggageComplaintPage.BookingNumber.sendKeys("XYZ111");
         LuggageComplaintPage.FlightDate.click();
+        LuggageComplaintPage.CalendarData.click();
         LuggageComplaintPage.MilesAndMore.click();
         LuggageComplaintPage.MilesAndMoreNo.click();
 
