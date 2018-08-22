@@ -36,60 +36,6 @@ public class LotLuggageComplaint extends MainTest {
 
     }
 
-
-    @Test(groups=("Complaint"))
-    public void LuggageComplaintPLPL() throws Exception {
-
-        WebDriverWait wait = new WebDriverWait(driver, 20);
-        driver.get(baseUrl + "/pl/pl/reklamacje-bagazowe");
-        ImplicitWait(driver);
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-
-        //TestStart
-        //Step 1 from 2
-        LuggageComplaintPage.Gender.click();
-        LuggageComplaintPage.GenderL.click();
-        LuggageComplaintPage.Name.sendKeys(Test);
-        LuggageComplaintPage.Surname.sendKeys(Test);
-        LuggageComplaintPage.City.sendKeys(Test);
-        LuggageComplaintPage.ZipCode.sendKeys("00000");
-        LuggageComplaintPage.Street.sendKeys(Test);
-        LuggageComplaintPage.Number.sendKeys("0");
-        LuggageComplaintPage.PhoneNumber.sendKeys("000000000");
-        LuggageComplaintPage.Email.sendKeys("lotest787@gmail.com");
-        LuggageComplaintPage.Route.sendKeys("Warszawa-Budapeszt");
-        LuggageComplaintPage.FlightNumber.sendKeys("WAW LO 34567");
-        LuggageComplaintPage.BookingNumber.sendKeys("XYZ111");
-        LuggageComplaintPage.FlightDate.click();
-        LuggageComplaintPage.CalendarData.click();
-        LuggageComplaintPage.MilesAndMore.click();
-        LuggageComplaintPage.MilesAndMoreNo.click();
-
-        // This  will scroll down the page by  1000 pixel vertical
-        js.executeScript("window.scrollBy(0,1000)");
-        //LuggageComplaintPage.FlightClass.click();
-        Select flightClass = new Select(LuggageComplaintPage.FlightClass);
-        flightClass.selectByIndex(1);
-        LuggageComplaintPage.NextStep1.click();
-
-        //Step 2 from 2
-        LuggageComplaintPage.LuggageQuantityPosted.sendKeys("1");
-        LuggageComplaintPage.LuggageQuantityComplaint.sendKeys("1");
-        Thread.sleep(1000);
-        LuggageComplaintPage.LuggagePenalty.click();
-        wait.until(ExpectedConditions.elementToBeClickable(LuggageComplaintPage.LuggagePenaltyNo));
-        LuggageComplaintPage.LuggagePenaltyNo.click();
-        LuggageComplaintPage.LuggageDelay.click();
-        LuggageComplaintPage.DamageDetails.sendKeys(Test);
-        LuggageComplaintPage.LuggageWeight.sendKeys("23");
-        LuggageComplaintPage.PIRNumber1.sendKeys("WAW");
-        LuggageComplaintPage.PIRNumber2.sendKeys("34567");
-
-        // This  will scroll down the page by  1000 pixel vertical
-        js.executeScript("window.scrollBy(0,1000)");
-        LuggageComplaintPage.NextStep2.click();
-    }
-
     @Test(groups=("Complaint"))
     public void LuggageComplaintPLEN() throws Exception {
 
