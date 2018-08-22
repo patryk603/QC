@@ -381,7 +381,7 @@ public class LotLuggageComplaint extends MainTest {
         LuggageComplaintPage.MilesAndMore.click();
         LuggageComplaintPage.MilesAndMoreNo.click();
 
-        // This  will scroll down the page by  1000 pixel vertical
+        // This  will scroll down the page by  1000 pixel verticall
         js.executeScript("window.scrollBy(0,1000)");
         //LuggageComplaintPage.FlightClass.click();
         Select flightClass = new Select(LuggageComplaintPage.FlightClass);
