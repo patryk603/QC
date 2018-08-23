@@ -29,7 +29,7 @@ public class LotLuggageComplaintPLPL extends MainTest {
     }
 
 
-    @Test(groups=("Complaint"))
+    @Test(invocationCount = 3,groups=("Complaint"))
     public void LuggageComplaintPLPL() throws Exception {
 
         WebDriverWait wait = new WebDriverWait(driver, 20);

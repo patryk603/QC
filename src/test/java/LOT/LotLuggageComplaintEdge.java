@@ -39,6 +39,7 @@ public class LotLuggageComplaintEdge extends MainTest {
         JavascriptExecutor js = (JavascriptExecutor) driver;
 
         //TestStart
+        LuggageComplaintPage.CloseCoockieSpam.click();
         //Step 1 from 2
         LuggageComplaintPage.Gender.click();
         LuggageComplaintPage.GenderL.click();
@@ -60,9 +61,7 @@ public class LotLuggageComplaintEdge extends MainTest {
 
         // This  will scroll down the page by  1000 pixel vertical
         js.executeScript("window.scrollBy(0,1000)");
-        //LuggageComplaintPage.FlightClass.click();
-        Select flightClass = new Select(LuggageComplaintPage.FlightClass);
-        flightClass.selectByIndex(1);
+        Thread.sleep(1000);
         LuggageComplaintPage.NextStep1.click();
 
         //Step 2 from 2
@@ -92,6 +91,7 @@ public class LotLuggageComplaintEdge extends MainTest {
         JavascriptExecutor js = (JavascriptExecutor) driver;
 
         //TestStart
+        LuggageComplaintPage.CloseCoockieSpam.click();
         //Step 1 from 2
         LuggageComplaintPage.Gender.click();
         LuggageComplaintPage.GenderL.click();
@@ -113,9 +113,7 @@ public class LotLuggageComplaintEdge extends MainTest {
 
         // This  will scroll down the page by  1000 pixel vertical
         js.executeScript("window.scrollBy(0,1000)");
-        //LuggageComplaintPage.FlightClass.click();
-        Select flightClass = new Select(LuggageComplaintPage.FlightClass);
-        flightClass.selectByIndex(1);
+        Thread.sleep(1000);
         LuggageComplaintPage.NextStep1.click();
 
         //Step 2 from 2
@@ -167,9 +165,7 @@ public class LotLuggageComplaintEdge extends MainTest {
 
         // This  will scroll down the page by  1000 pixel vertical
         js.executeScript("window.scrollBy(0,1000)");
-        //LuggageComplaintPage.FlightClass.click();
-        Select flightClass = new Select(LuggageComplaintPage.FlightClass);
-        flightClass.selectByIndex(1);
+        Thread.sleep(1000);
         LuggageComplaintPage.NextStep1.click();
 
         //Step 2 from 2
@@ -199,6 +195,7 @@ public class LotLuggageComplaintEdge extends MainTest {
         JavascriptExecutor js = (JavascriptExecutor) driver;
 
         //TestStart
+        LuggageComplaintPage.CloseCoockieSpam.click();
         //Step 1 from 2
         LuggageComplaintPage.Gender.click();
         LuggageComplaintPage.GenderL.click();
@@ -220,9 +217,7 @@ public class LotLuggageComplaintEdge extends MainTest {
 
         // This  will scroll down the page by  1000 pixel vertical
         js.executeScript("window.scrollBy(0,1000)");
-        //LuggageComplaintPage.FlightClass.click();
-        Select flightClass = new Select(LuggageComplaintPage.FlightClass);
-        flightClass.selectByIndex(1);
+        Thread.sleep(1000);
         LuggageComplaintPage.NextStep1.click();
 
         //Step 2 from 2
@@ -242,6 +237,7 @@ public class LotLuggageComplaintEdge extends MainTest {
         js.executeScript("window.scrollBy(0,1000)");
         LuggageComplaintPage.NextStep2.click();
     }
+
     @Test(groups=("Complaint"))
     public void LuggageComplaintESES() throws Exception {
 
@@ -251,6 +247,7 @@ public class LotLuggageComplaintEdge extends MainTest {
         JavascriptExecutor js = (JavascriptExecutor) driver;
 
         //TestStart
+        LuggageComplaintPage.CloseCoockieSpam.click();
         //Step 1 from 2
         LuggageComplaintPage.Gender.click();
         LuggageComplaintPage.GenderL.click();
@@ -272,9 +269,7 @@ public class LotLuggageComplaintEdge extends MainTest {
 
         // This  will scroll down the page by  1000 pixel vertical
         js.executeScript("window.scrollBy(0,1000)");
-        //LuggageComplaintPage.FlightClass.click();
-        Select flightClass = new Select(LuggageComplaintPage.FlightClass);
-        flightClass.selectByIndex(1);
+        Thread.sleep(1000);
         LuggageComplaintPage.NextStep1.click();
 
         //Step 2 from 2
@@ -294,6 +289,7 @@ public class LotLuggageComplaintEdge extends MainTest {
         js.executeScript("window.scrollBy(0,1000)");
         LuggageComplaintPage.NextStep2.click();
     }
+
     @Test(groups=("Complaint"))
     public void LuggageComplaintITIT() throws Exception {
 
@@ -303,6 +299,7 @@ public class LotLuggageComplaintEdge extends MainTest {
         JavascriptExecutor js = (JavascriptExecutor) driver;
 
         //TestStart
+        LuggageComplaintPage.CloseCoockieSpam.click();
         //Step 1 from 2
         LuggageComplaintPage.Gender.click();
         LuggageComplaintPage.GenderL.click();
@@ -324,9 +321,7 @@ public class LotLuggageComplaintEdge extends MainTest {
 
         // This  will scroll down the page by  1000 pixel vertical
         js.executeScript("window.scrollBy(0,1000)");
-        //LuggageComplaintPage.FlightClass.click();
-        Select flightClass = new Select(LuggageComplaintPage.FlightClass);
-        flightClass.selectByIndex(1);
+        Thread.sleep(1000);
         LuggageComplaintPage.NextStep1.click();
 
         //Step 2 from 2
@@ -346,6 +341,7 @@ public class LotLuggageComplaintEdge extends MainTest {
         js.executeScript("window.scrollBy(0,1000)");
         LuggageComplaintPage.NextStep2.click();
     }
+
     @Test(groups=("Complaint"))
     public void LuggageComplaintRURU() throws Exception {
 
@@ -355,6 +351,7 @@ public class LotLuggageComplaintEdge extends MainTest {
         JavascriptExecutor js = (JavascriptExecutor) driver;
 
         //TestStart
+        LuggageComplaintPage.CloseCoockieSpam.click();
         //Step 1 from 2
         LuggageComplaintPage.Gender.click();
         LuggageComplaintPage.GenderL.click();
@@ -376,9 +373,7 @@ public class LotLuggageComplaintEdge extends MainTest {
 
         // This  will scroll down the page by  1000 pixel vertical
         js.executeScript("window.scrollBy(0,1000)");
-        //LuggageComplaintPage.FlightClass.click();
-        Select flightClass = new Select(LuggageComplaintPage.FlightClass);
-        flightClass.selectByIndex(1);
+        Thread.sleep(1000);
         LuggageComplaintPage.NextStep1.click();
 
         //Step 2 from 2
@@ -408,6 +403,7 @@ public class LotLuggageComplaintEdge extends MainTest {
         JavascriptExecutor js = (JavascriptExecutor) driver;
 
         //TestStart
+        LuggageComplaintPage.CloseCoockieSpam.click();
         //Step 1 from 2
         LuggageComplaintPage.Gender.click();
         LuggageComplaintPage.GenderL.click();
@@ -429,9 +425,7 @@ public class LotLuggageComplaintEdge extends MainTest {
 
         // This  will scroll down the page by  1000 pixel vertical
         js.executeScript("window.scrollBy(0,1000)");
-        //LuggageComplaintPage.FlightClass.click();
-        Select flightClass = new Select(LuggageComplaintPage.FlightClass);
-        flightClass.selectByIndex(1);
+        Thread.sleep(1000);
         LuggageComplaintPage.NextStep1.click();
 
         //Step 2 from 2
