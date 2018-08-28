@@ -3,6 +3,7 @@ package LOT;
 import DDT.ExcelDataConfig;
 import Main.GetScreenshot;
 import Main.MainTest;
+import atu.testrecorder.ATUTestRecorder;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -14,15 +15,24 @@ import org.testng.annotations.*;
 import pageObjects.*;
 
 import java.io.IOException;
+import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
 public class LotBiletyAll extends MainTest{
     private String baseUrl;
     private boolean acceptNextAlert = true;
     private StringBuffer verificationErrors = new StringBuffer();
+
+    //Record
+    DateFormat dateFormat  =  new  SimpleDateFormat("yy-MM-dd  HH-mm-ss");
+    Date  date  =  new Date();
+    ATUTestRecorder recorder;
+    String videoFolder = "C:\\LOTests\\TestVideo";
+    String videoFile = "TestVideo"+ dateFormat.format(date);
 
     //All Static Data
     String name = "Test";
@@ -45,6 +55,7 @@ public class LotBiletyAll extends MainTest{
 
     @BeforeTest(alwaysRun = true)
     public void setUp() throws Exception {
+        recorder = new ATUTestRecorder(videoFolder,videoFile, false);
         driver = new ChromeDriver();
         driver.manage().deleteAllCookies();
         driver.manage().window().maximize();
@@ -120,7 +131,7 @@ public class LotBiletyAll extends MainTest{
         //TIME
 
         //TEST START
-
+        recorder.start();
         //HomePage
         //Take screenshot
         try {
@@ -339,7 +350,7 @@ public class LotBiletyAll extends MainTest{
             System.out.println("Problem with Continue button : "+ e.getMessage());
         }
         //END OF TEST
-
+        recorder.stop();
 
         //Excel configuration
     }
@@ -405,7 +416,7 @@ public class LotBiletyAll extends MainTest{
         //TIME
 
         //TEST START
-
+        recorder.start();
         //HomePage
         //Take screenshot
         try {
@@ -624,7 +635,7 @@ public class LotBiletyAll extends MainTest{
             System.out.println("Problem with Continue button : "+ e.getMessage());
         }
         //END OF TEST
-
+        recorder.stop();
 
         //Excel configuration
     }
@@ -691,7 +702,7 @@ public class LotBiletyAll extends MainTest{
         //TIME
 
         //TEST START
-
+        recorder.start();
         //HomePage
         //Take screenshot
         try {
@@ -910,6 +921,7 @@ public class LotBiletyAll extends MainTest{
             System.out.println("Problem with Continue button : " + e.getMessage());
         }
         //END OF TEST
+        recorder.stop();
     }
 
     @DataProvider(name ="dataEU")

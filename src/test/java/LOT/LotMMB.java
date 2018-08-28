@@ -11,7 +11,6 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
 import org.testng.annotations.*;
 import pageObjects.*;
 
@@ -70,7 +69,7 @@ public class LotMMB extends MainTest {
                 System.out.println("Booking Number not found: ");
             }
         } catch (Exception e) {
-            Assert.fail("Nie znaleziono rezerwacji : " + bookinrexcel + e.getMessage());
+            System.out.println("Nie znaleziono rezerwacji : " + bookinrexcel + e.getMessage());
         }
         driver.navigate().refresh();
     }
@@ -93,9 +92,8 @@ public class LotMMB extends MainTest {
 
     @AfterTest(alwaysRun = true)
     public void tearDown() throws Exception {
-        driver.manage().deleteAllCookies();
         driver.quit();
-
+        driver.manage().deleteAllCookies();
     }
 
 }
