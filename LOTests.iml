@@ -193,6 +193,14 @@
     <orderEntry type="library" name="Maven: stax:stax-api:1.0.1" level="project" />
     <orderEntry type="library" name="Maven: com.github.virtuald:curvesapi:1.04" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: joda-time:joda-time:2.2" level="project" />
-    <orderEntry type="library" scope="TEST" name="Maven: atu.testng.reports.ATUReports:atu-reports:1.0" level="project" />
+    <orderEntry type="module-library">
+      <library name="Maven: atu.testng.reports.ATUReports:atu-reports:1.0">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/ATUTestRecorder_2.1.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
   </component>
 </module>

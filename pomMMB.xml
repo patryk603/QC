@@ -51,7 +51,7 @@
         <dependency>
         <groupId>org.testng</groupId>
         <artifactId>testng</artifactId>
-        <version>6.14.2</version>
+        <version>6.14.3</version>
         <scope>test</scope>
         </dependency>
 
@@ -59,7 +59,7 @@
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-chrome-driver</artifactId>
-            <version>3.9.1</version>
+            <version>3.14.0</version>
         </dependency>
 
         <dependency>
@@ -71,7 +71,7 @@
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-remote-driver</artifactId>
-            <version>3.9.1</version>
+            <version>3.14.0</version>
         </dependency>
 
         <dependency>
@@ -82,7 +82,7 @@
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
-            <version>6.14.2</version>
+            <version>6.14.3</version>
             <scope>compile</scope>
         </dependency>
 
@@ -97,6 +97,16 @@
             <version>2.2</version>
             <scope>test</scope>
         </dependency>
+
+        <!-- Dodane ręcznie  -->
+        <dependency>
+            <groupId>atu.testng.reports.ATUReports</groupId>
+            <artifactId>atu-reports</artifactId>
+            <version>1.0</version>
+            <scope>test</scope>
+            <systemPath>${basedir}/lib/ATUTestRecorder_2.1.jar</systemPath>
+        </dependency>
+
 
     </dependencies>
 

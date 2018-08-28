@@ -103,7 +103,7 @@
             <groupId>atu.testng.reports.ATUReports</groupId>
             <artifactId>atu-reports</artifactId>
             <version>1.0</version>
-            <scope>test</scope>
+            <scope>system</scope>
             <systemPath>${basedir}/lib/ATUTestRecorder_2.1.jar</systemPath>
         </dependency>
 
