@@ -70,6 +70,7 @@ public class LotMMB extends MainTest {
             }
         } catch (Exception e) {
             System.out.println("Nie znaleziono rezerwacji : " + bookinrexcel + e.getMessage());
+
         }
         driver.navigate().refresh();
     }
@@ -92,8 +93,8 @@ public class LotMMB extends MainTest {
 
     @AfterTest(alwaysRun = true)
     public void tearDown() throws Exception {
-        driver.quit();
         driver.manage().deleteAllCookies();
+        driver.quit();
     }
 
 }

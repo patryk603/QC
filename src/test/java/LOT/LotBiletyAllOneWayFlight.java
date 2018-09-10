@@ -50,9 +50,9 @@ public class LotBiletyAllOneWayFlight extends MainTest{
     public void setUp() throws Exception {
         //DesiredCapabilities caps = DesiredCapabilities.internetExplorer();
         //caps.setCapability("ignoreZoomSetting", true);
-        driver = new InternetExplorerDriver();
+        driver = new ChromeDriver();
         driver.manage().deleteAllCookies();
-        //driver.manage().window().maximize();
+        driver.manage().window().maximize();
         baseUrl = "http://www.lot.com/";
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
