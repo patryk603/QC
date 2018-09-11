@@ -23,6 +23,9 @@ public class HomePage {
     @FindBy(css = "#_bookingportlet_WAR_lotairwaysportlet_INSTANCE_wl9jlWyYLKBg_departingPicker > div > div > button > img")
     public static WebElement Departure;
 
+    @FindBy(css = "a.ui-state-default")
+    public static WebElement DepartureData;
+
     @FindBy(css = "#_bookingportlet_WAR_lotairwaysportlet_INSTANCE_wl9jlWyYLKBg_returningPicker > div > div > button")
     public static WebElement Return;
 

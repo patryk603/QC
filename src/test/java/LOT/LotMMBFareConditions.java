@@ -1,28 +1,28 @@
 package LOT;
 
 import DDT.ExcelDataConfig;
+import Main.GetScreenshot;
 import Main.MainTest;
-import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.*;
-import pageObjects.*;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+import pageObjects.FlightsPage;
+import pageObjects.HomePage;
+import pageObjects.MMBPage;
+import pageObjects.PassengersPage;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
+import java.io.IOException;
 import java.util.Objects;
 
-import static java.util.concurrent.TimeUnit.SECONDS;
 import static org.testng.Assert.assertEquals;
 
-public class LotMMB extends MainTest {
+public class LotMMBFareConditions extends MainTest {
     private String baseUrl;
     private boolean acceptNextAlert = true;
     private StringBuffer verificationErrors = new StringBuffer();
@@ -70,7 +70,11 @@ public class LotMMB extends MainTest {
             System.out.println("Nie znaleziono rezerwacji : " + bookinrexcel + e.getMessage());
 
         }
-        driver.navigate().refresh();
+
+        MMBPage.FareConditions.click();
+
+        Thread.sleep(2000);
+
     }
 
 
@@ -78,7 +82,7 @@ public class LotMMB extends MainTest {
     @DataProvider(name ="data")
     public Object[][] passData()
     {
-        ExcelDataConfig config = new ExcelDataConfig("C:\\Users\\Public\\LOT\\MMB.xlsx");
+        ExcelDataConfig config = new ExcelDataConfig("C:\\Users\\Public\\LOT\\MMBFare.xlsx");
         int rows = config.getRowCount(0);
         Object[][] data=new Object[rows][2];
 

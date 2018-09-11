@@ -131,7 +131,6 @@ public class LotBiletyAll extends MainTest{
         //TIME
 
         //TEST START
-        recorder.start();
         //HomePage
         //Take screenshot
         try {
@@ -350,7 +349,7 @@ public class LotBiletyAll extends MainTest{
             System.out.println("Problem with Continue button : "+ e.getMessage());
         }
         //END OF TEST
-        recorder.stop();
+
 
         //Excel configuration
     }
@@ -416,7 +415,7 @@ public class LotBiletyAll extends MainTest{
         //TIME
 
         //TEST START
-        recorder.start();
+
         //HomePage
         //Take screenshot
         try {
@@ -635,7 +634,7 @@ public class LotBiletyAll extends MainTest{
             System.out.println("Problem with Continue button : "+ e.getMessage());
         }
         //END OF TEST
-        recorder.stop();
+
 
         //Excel configuration
     }
@@ -702,7 +701,7 @@ public class LotBiletyAll extends MainTest{
         //TIME
 
         //TEST START
-        recorder.start();
+
         //HomePage
         //Take screenshot
         try {
@@ -921,7 +920,7 @@ public class LotBiletyAll extends MainTest{
             System.out.println("Problem with Continue button : " + e.getMessage());
         }
         //END OF TEST
-        recorder.stop();
+
     }
 
     @DataProvider(name ="dataEU")

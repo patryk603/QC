@@ -1,5 +1,7 @@
 package PRE2LOT;
 
+import DDT.ExcelDataConfig;
+import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
@@ -16,7 +18,7 @@ public class Booking {
     private boolean acceptNextAlert = true;
     private StringBuffer verificationErrors = new StringBuffer();
 
-    @BeforeClass(alwaysRun = true)
+    @BeforeTest(alwaysRun = true)
     public void setUp() throws Exception {
         driver = new ChromeDriver();
         driver.get("https://prodcopy-pre2:MHXozAuh4eeCgK4x6ww6@pre2.book.lot.com/");
@@ -24,123 +26,40 @@ public class Booking {
         HomePage HomePage =PageFactory.initElements(driver, HomePage.class);
     }
 
-    @BeforeMethod(alwaysRun = true)
-    public void BeforeMethod() throws Exception {
-        driver.get("https://prodcopy-pre2:MHXozAuh4eeCgK4x6ww6@pre2.book.lot.com/");
 
-    }
+    @Test(dataProvider = "dataEU")
+    public void Test_Pr2ShortEU(String localization, String from, String to, XSSFCell departuredata, XSSFCell returndata) throws Exception {
 
-    @AfterMethod(alwaysRun = true)
-    public void browserSetUp() {
-        driver.manage().deleteAllCookies();
-    }
-    @AfterClass(alwaysRun = true)
-    public void shutDownSelenium() {
-        driver.close();
-    }
-
-    @Test//(groups=("p1"))
-    public void Test_From_WAW_TO_JFK_prices() throws Exception {
-
-        driver.get("https://pre2.book.lot.com/");
+        //driver.get("https://pre2.book.lot.com/");
+        /*
         HomePage.Departure.click();
         HomePage.Today.click();
         HomePage.Return.click();
         HomePage.FirsOfNextMounth.click();
-        HomePage.From.sendKeys("Waw");
+        HomePage.From.sendKeys(from);
         HomePage.ListFrom.click();
-        HomePage.To.sendKeys("JFK",Keys.ARROW_DOWN,Keys.ENTER);
-
-        //Lista cen
-        List<String> Ceny = new ArrayList<String>();
-        List<WebElement> Cena = driver.findElements(
-                By.name("precio"));
-        for (WebElement w : Cena) {
-            Ceny.add(w.getAttribute("value"));
-        }
-        System.out.println(Ceny);
-        Reporter.log(String.valueOf(Ceny));
-        Reporter.getCurrentTestResult();
-        //Lista cen
+        HomePage.To.sendKeys(to,Keys.ARROW_DOWN,Keys.ENTER);
+*/
 
     }
 
-    @Test//(groups=("p1"))
-    public void Test_From_WAW_TO_ICN_prices() throws Exception {
+    @DataProvider(name ="dataEU")
+    public Object[][] passDataEU()
+    {
+        ExcelDataConfig config = new ExcelDataConfig("C:\\Users\\Public\\LOT\\PRE2Short.xlsx");
+        int rows = config.getRowCount(0);
+        Object[][] data=new Object[rows][5];
 
-        driver.get("https://pre2.book.lot.com/");
-        HomePage.Departure.click();
-        HomePage.Today.click();
-        HomePage.Return.click();
-        HomePage.FirsOfNextMounth.click();
-        HomePage.From.sendKeys("Waw");
-        HomePage.ListFrom.click();
-        HomePage.To.sendKeys("ICN",Keys.ARROW_DOWN,Keys.ENTER);
-
-        //Lista cen
-        List<String> Ceny = new ArrayList<String>();
-        List<WebElement> Cena = driver.findElements(
-                By.name("precio"));
-        for (WebElement w : Cena) {
-            Ceny.add(w.getAttribute("value"));
+        for(int i=0;i<rows;i++){
+            data[i][0]=config.getData(0,i,0);
+            data[i][1]=config.getData(0,i,1);
+            data[i][2]=config.getData(0,i,2);
+            data[i][3]=config.getNumber(0,i,3);
+            data[i][4]=config.getNumber(0,i,4);
         }
-        System.out.println(Ceny);
-        Reporter.log(String.valueOf(Ceny));
-        Reporter.getCurrentTestResult();
-        //Lista cen
-
+        return data;
     }
 
-    @Test//(groups=("p1"))
-    public void Test_From_WAW_TO_LUX_prices() throws Exception {
 
-        driver.get("https://pre2.book.lot.com/");
-        HomePage.Departure.click();
-        HomePage.Today.click();
-        HomePage.Return.click();
-        HomePage.FirsOfNextMounth.click();
-        HomePage.From.sendKeys("Waw");
-        HomePage.ListFrom.click();
-        HomePage.To.sendKeys("LUX",Keys.ARROW_DOWN,Keys.ENTER);
-
-        //Lista cen
-        List<String> Ceny = new ArrayList<String>();
-        List<WebElement> Cena = driver.findElements(
-                By.name("precio"));
-        for (WebElement w : Cena) {
-            Ceny.add(w.getAttribute("value"));
-        }
-        System.out.println(Ceny);
-        Reporter.log(String.valueOf(Ceny));
-        Reporter.getCurrentTestResult();
-        //Lista cen
-
-    }
-
-    @Test//(groups=("p1"))
-    public void Test_From_WAW_TO_BCN_prices() throws Exception {
-
-        driver.get("https://pre2.book.lot.com/");
-        HomePage.Departure.click();
-        HomePage.Today.click();
-        HomePage.Return.click();
-        HomePage.FirsOfNextMounth.click();
-        HomePage.From.sendKeys("Waw");
-        HomePage.ListFrom.click();
-        HomePage.To.sendKeys("BCN",Keys.ARROW_DOWN,Keys.ENTER);
-
-        //Lista cen
-        List<String> Ceny = new ArrayList<String>();
-        List<WebElement> Cena = driver.findElements(
-                By.name("precio"));
-        for (WebElement w : Cena) {
-            Ceny.add(w.getAttribute("value"));
-        }
-        System.out.println(Ceny);
-        Reporter.log(String.valueOf(Ceny));
-        Reporter.getCurrentTestResult();
-        //Lista cen
-
-    }
 
 }

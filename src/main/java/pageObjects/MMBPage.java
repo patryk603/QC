@@ -15,7 +15,17 @@ public class MMBPage {
     @FindBy(css = ".confirmation-your-ticket-code strong")
     public static WebElement MMBNumber;
 
+    @FindBy(css = "#lastName")
+    public static WebElement MMBLastName;
 
+    @FindBy(css = "#bookingNumber")
+    public static WebElement MMBBookingNumber;
+
+    @FindBy(css = "[type=\"submit\"]")
+    public static WebElement MMBSubmit;
+
+    @FindBy(css = ".nr-managemybooking__conditions > p > a")
+    public static WebElement FareConditions;
 
     public MMBPage(WebDriver driver){
 
