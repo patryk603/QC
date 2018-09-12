@@ -223,7 +223,7 @@ public class LotBiletyTTT extends MainTest{
     @DataProvider(name ="dataEU")
     public Object[][] passDataEU()
     {
-        ExcelDataConfig config = new ExcelDataConfig("C:\\Users\\Public\\LOT\\Short.xlsx");
+        ExcelDataConfig config = new ExcelDataConfig("C:\\Users\\Public\\LOT\\TTT.xlsx");
         int rows = config.getRowCount(0);
         Object[][] data=new Object[rows][5];
 
