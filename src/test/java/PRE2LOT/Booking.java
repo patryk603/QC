@@ -27,37 +27,20 @@ public class Booking {
     }
 
 
-    @Test(dataProvider = "dataEU")
-    public void Test_Pr2ShortEU(String localization, String from, String to, XSSFCell departuredata, XSSFCell returndata) throws Exception {
+    @Test()
+    public void Test_Pr2ShortEU() throws Exception {
 
         //driver.get("https://pre2.book.lot.com/");
-        /*
+
         HomePage.Departure.click();
         HomePage.Today.click();
         HomePage.Return.click();
         HomePage.FirsOfNextMounth.click();
-        HomePage.From.sendKeys(from);
+        HomePage.From.sendKeys("WAW");
         HomePage.ListFrom.click();
-        HomePage.To.sendKeys(to,Keys.ARROW_DOWN,Keys.ENTER);
-*/
+        HomePage.To.sendKeys("FRA",Keys.ARROW_DOWN,Keys.ENTER);
 
-    }
 
-    @DataProvider(name ="dataEU")
-    public Object[][] passDataEU()
-    {
-        ExcelDataConfig config = new ExcelDataConfig("C:\\Users\\Public\\LOT\\PRE2Short.xlsx");
-        int rows = config.getRowCount(0);
-        Object[][] data=new Object[rows][5];
-
-        for(int i=0;i<rows;i++){
-            data[i][0]=config.getData(0,i,0);
-            data[i][1]=config.getData(0,i,1);
-            data[i][2]=config.getData(0,i,2);
-            data[i][3]=config.getNumber(0,i,3);
-            data[i][4]=config.getNumber(0,i,4);
-        }
-        return data;
     }
 
 

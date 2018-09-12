@@ -78,9 +78,10 @@ public class PRE2Short {
         } catch (Exception e) {
             System.out.println("No Element additional TO : "+ e.getMessage());
         }
-
+        Thread.sleep(2000);
         HomePage.From.clear();
         HomePage.From.sendKeys(from);
+        Thread.sleep(2000);
         HomePage.ListFrom.click();
         HomePage.To.clear();
         HomePage.To.sendKeys(to,Keys.ARROW_DOWN,Keys.ENTER);

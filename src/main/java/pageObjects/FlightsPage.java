@@ -38,6 +38,10 @@ public class FlightsPage {
     @FindBy(css = "#modal-price-change-description > div > button")
     public static WebElement Popup;
 
+    @FindBy(css = ".timeToThink__link")
+    public static WebElement TTT;
+
+
     public FlightsPage(WebDriver driver){
 
         this.driver = driver;

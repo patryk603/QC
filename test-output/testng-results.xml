@@ -2,45 +2,76 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
     <line>
-      <![CDATA[<a href='C:\LOTests\ErrorScreenshot\MMB20180911_132236.jpg'> <img src='C:\LOTests\ErrorScreenshot\MMB20180911_132236.jpg' height='400' width='600'/> </a><br>20180911_132236]]>
+      <![CDATA[<a href='C:\LOTests\ErrorScreenshot\FlightPageTTT pl\plWAWAMS13.020.020180912_155020.jpg'> <img src='C:\LOTests\ErrorScreenshot\FlightPageTTT pl\plWAWAMS13.020.020180912_155020.jpg' height='400' width='600'/> </a><br>20180912_155020]]>
+    </line>
+    <line>
+      <![CDATA[<a href='C:\LOTests\ErrorScreenshot\FlightPageTTT pl\plWAWAMS13.020.020180912_155026.jpg'> <img src='C:\LOTests\ErrorScreenshot\FlightPageTTT pl\plWAWAMS13.020.020180912_155026.jpg' height='400' width='600'/> </a><br>20180912_155026]]>
+    </line>
+    <line>
+      <![CDATA[<a href='C:\LOTests\ErrorScreenshot\Test_BuyTicketsEU20180912_155026.jpg'> <img src='C:\LOTests\ErrorScreenshot\Test_BuyTicketsEU20180912_155026.jpg' height='400' width='600'/> </a><br>20180912_155026]]>
     </line>
   </reporter-output>
-  <suite started-at="2018-09-11T11:22:10Z" name="Default Suite" finished-at="2018-09-11T11:22:37Z" duration-ms="26907">
+  <suite started-at="2018-09-12T13:49:04Z" name="Default Suite" finished-at="2018-09-12T13:50:28Z" duration-ms="83430">
     <groups>
-      <group name="MMB">
-        <method signature="LotMMBFareConditions.MMB(java.lang.String, java.lang.String)[pri:0, instance:LOT.LotMMBFareConditions@157853da]" name="MMB" class="LOT.LotMMBFareConditions"/>
-      </group> <!-- MMB -->
+      <group name="BuyTickets">
+        <method signature="LotBiletyTTT.Test_BuyTicketsEU(java.lang.String, java.lang.String, java.lang.String, org.apache.poi.xssf.usermodel.XSSFCell, org.apache.poi.xssf.usermodel.XSSFCell)[pri:0, instance:LOT.LotBiletyTTT@78ffe6dc]" name="Test_BuyTicketsEU" class="LOT.LotBiletyTTT"/>
+      </group> <!-- BuyTickets -->
     </groups>
-    <test started-at="2018-09-11T11:22:10Z" name="LOTests" finished-at="2018-09-11T11:22:37Z" duration-ms="26907">
-      <class name="LOT.LotMMBFareConditions">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:LOT.LotMMBFareConditions@157853da]" started-at="2018-09-11T11:22:10Z" name="setUp" finished-at="2018-09-11T11:22:13Z" duration-ms="2610" status="PASS">
+    <test started-at="2018-09-12T13:49:04Z" name="LOTests" finished-at="2018-09-12T13:50:28Z" duration-ms="83430">
+      <class name="LOT.LotBiletyTTT">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:LOT.LotBiletyTTT@78ffe6dc]" started-at="2018-09-12T13:49:04Z" name="setUp" finished-at="2018-09-12T13:49:07Z" duration-ms="2814" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="MMB(java.lang.String, java.lang.String)[pri:0, instance:LOT.LotMMBFareConditions@157853da]" started-at="2018-09-11T11:22:13Z" name="MMB" data-provider="data" finished-at="2018-09-11T11:22:35Z" duration-ms="21956" status="PASS">
+        <test-method signature="Test_BuyTicketsEU(java.lang.String, java.lang.String, java.lang.String, org.apache.poi.xssf.usermodel.XSSFCell, org.apache.poi.xssf.usermodel.XSSFCell)[pri:0, instance:LOT.LotBiletyTTT@78ffe6dc]" started-at="2018-09-12T13:49:08Z" name="Test_BuyTicketsEU" data-provider="dataEU" finished-at="2018-09-12T13:50:26Z" duration-ms="78174" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[MUSIAL]]>
+                <![CDATA[pl/pl]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[L4I6AL]]>
+                <![CDATA[WAW]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[AMS]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[13.0]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[20.0]]>
               </value>
             </param>
           </params>
           <reporter-output>
             <line>
-              <![CDATA[<a href='C:\LOTests\ErrorScreenshot\MMB20180911_132236.jpg'> <img src='C:\LOTests\ErrorScreenshot\MMB20180911_132236.jpg' height='400' width='600'/> </a><br>20180911_132236]]>
+              <![CDATA[<a href='C:\LOTests\ErrorScreenshot\FlightPageTTT pl\plWAWAMS13.020.020180912_155020.jpg'> <img src='C:\LOTests\ErrorScreenshot\FlightPageTTT pl\plWAWAMS13.020.020180912_155020.jpg' height='400' width='600'/> </a><br>20180912_155020]]>
+            </line>
+            <line>
+              <![CDATA[<a href='C:\LOTests\ErrorScreenshot\FlightPageTTT pl\plWAWAMS13.020.020180912_155026.jpg'> <img src='C:\LOTests\ErrorScreenshot\FlightPageTTT pl\plWAWAMS13.020.020180912_155026.jpg' height='400' width='600'/> </a><br>20180912_155026]]>
+            </line>
+            <line>
+              <![CDATA[<a href='C:\LOTests\ErrorScreenshot\Test_BuyTicketsEU20180912_155026.jpg'> <img src='C:\LOTests\ErrorScreenshot\Test_BuyTicketsEU20180912_155026.jpg' height='400' width='600'/> </a><br>20180912_155026]]>
             </line>
           </reporter-output>
-        </test-method> <!-- MMB -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:LOT.LotMMBFareConditions@157853da]" started-at="2018-09-11T11:22:36Z" name="tearDown" finished-at="2018-09-11T11:22:37Z" duration-ms="1141" status="PASS">
+        </test-method> <!-- Test_BuyTicketsEU -->
+        <test-method is-config="true" signature="tearDown2()[pri:0, instance:LOT.LotBiletyTTT@78ffe6dc]" started-at="2018-09-12T13:50:26Z" name="tearDown2" finished-at="2018-09-12T13:50:26Z" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- LOT.LotMMBFareConditions -->
+        </test-method> <!-- tearDown2 -->
+        <test-method is-config="true" signature="tearDown1()[pri:0, instance:LOT.LotBiletyTTT@78ffe6dc]" started-at="2018-09-12T13:50:26Z" name="tearDown1" finished-at="2018-09-12T13:50:28Z" duration-ms="1229" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown1 -->
+      </class> <!-- LOT.LotBiletyTTT -->
     </test> <!-- LOTests -->
   </suite> <!-- Default Suite -->
 </testng-results>

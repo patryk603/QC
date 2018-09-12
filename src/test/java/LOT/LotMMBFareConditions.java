@@ -82,7 +82,7 @@ public class LotMMBFareConditions extends MainTest {
     @DataProvider(name ="data")
     public Object[][] passData()
     {
-        ExcelDataConfig config = new ExcelDataConfig("C:\\Users\\Public\\LOT\\MMBFare.xlsx");
+        ExcelDataConfig config = new ExcelDataConfig("C:\\Users\\Public\\LOT\\MMBFareConditions.xlsx");
         int rows = config.getRowCount(0);
         Object[][] data=new Object[rows][2];
 
