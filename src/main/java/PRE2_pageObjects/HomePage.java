@@ -41,11 +41,8 @@ public class HomePage {
     @FindBy(css = "body > header > div > div > div.b-column.four.g-text-right.fontresizer-eight.o-header-controls.right > ul:nth-child(4) > li > a > span")
     public static WebElement Login;
 
-
-
-
-
-
+    @FindBy(id = "buttonSearchFlights")
+    public static WebElement FindFlights;
 
 
 

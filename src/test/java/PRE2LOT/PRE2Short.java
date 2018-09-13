@@ -36,7 +36,7 @@ public class PRE2Short {
         driver.manage().window().maximize();
         baseUrl = "https://prodcopy-pre2:MHXozAuh4eeCgK4x6ww6@pre2.book.lot.com/";
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-        driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().pageLoadTimeout(50, TimeUnit.SECONDS);
         PageFactory.initElements(driver, HomePage.class);
     }
 
@@ -79,12 +79,28 @@ public class PRE2Short {
             System.out.println("No Element additional TO : "+ e.getMessage());
         }
         Thread.sleep(2000);
+
+
+
+        //Selecting From Flight
+        wait.until(ExpectedConditions.elementToBeClickable(HomePage.From));
         HomePage.From.clear();
         HomePage.From.sendKeys(from);
-        Thread.sleep(2000);
-        HomePage.ListFrom.click();
+        driver.findElement(By.cssSelector(".yui3-aclist.yui3-widget-positioned > div > ul > li[data-text="+from+"]")).click();
+        //Click on home page
+
+        Thread.sleep(1000);
+
+        //Selecting To Flight
+
+        wait.until(ExpectedConditions.elementToBeClickable(HomePage.To));
         HomePage.To.clear();
-        HomePage.To.sendKeys(to,Keys.ARROW_DOWN,Keys.ENTER);
+        HomePage.To.sendKeys(to);
+        wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".yui3-aclist.yui3-widget-positioned > div > ul > li[data-text="+to+"]")));
+        driver.findElement(By.cssSelector(".yui3-aclist.yui3-widget-positioned > div > ul > li[data-text="+to+"]")).click();
+
+        HomePage.FindFlights.submit();
+
         //END OF TEST
 
     }
