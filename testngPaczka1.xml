@@ -15,7 +15,11 @@
       </classes>
    </test>
    
-
+   <test name = "MultiTickets">
+      <classes>
+         <class name = "LOT.LotMultiTickets" />
+      </classes>
+   </test>
    
    <test name = "Short">
       <classes>
