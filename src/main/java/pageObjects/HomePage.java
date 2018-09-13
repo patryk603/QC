@@ -96,7 +96,7 @@ public class HomePage {
     @FindBy(css = ".select2-results>ul>li[id*=\"BUSINESS\"]")
     public static WebElement Business;
 
-    @FindBy(css = "#passenger-switch > span.passenger-text")
+    @FindBy(css = "div.booker-column-2 > div:nth-child(1)")
     public static WebElement Passengers;
 
     @FindBy(id = "numOfAdults")

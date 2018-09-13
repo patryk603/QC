@@ -8,6 +8,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -54,7 +55,7 @@ public class LotMultiTickets extends MainTest{
         driver.manage().window().maximize();
         baseUrl = "http://www.lot.com/";
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-        driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().pageLoadTimeout(50, TimeUnit.SECONDS);
         PageFactory.initElements(driver, HomePage.class);
         PageFactory.initElements(driver, FlightsPage.class);
         PageFactory.initElements(driver, PassengersPage.class);
