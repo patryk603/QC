@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>LOTests</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/0/1</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Sep 12 15:49:04 CEST 2018</td>
+<td>Started on:</td><td>Wed Sep 12 16:05:36 CEST 2018</td>
 </tr>
-<tr><td>Total time:</td><td>83 seconds (83430 ms)</td>
+<tr><td>Total time:</td><td>3 seconds (3991 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,27 +67,58 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='LOT.LotBiletyTTT.Test_BuyTicketsEU()'><b>Test_BuyTicketsEU</b><br>Test class: LOT.LotBiletyTTT<br>Parameters: pl/pl, WAW, AMS, 13.0, 20.0<br/>
-<a href="#Output-159562640" onClick='toggleBox("Output-159562640", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-159562640" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-159562640">
-<a href='C:\LOTests\ErrorScreenshot\FlightPageTTT pl\plWAWAMS13.020.020180912_155020.jpg'> <img src='C:\LOTests\ErrorScreenshot\FlightPageTTT pl\plWAWAMS13.020.020180912_155020.jpg' height='400' width='600'/> </a><br>20180912_155020<br/>
-<a href='C:\LOTests\ErrorScreenshot\FlightPageTTT pl\plWAWAMS13.020.020180912_155026.jpg'> <img src='C:\LOTests\ErrorScreenshot\FlightPageTTT pl\plWAWAMS13.020.020180912_155026.jpg' height='400' width='600'/> </a><br>20180912_155026<br/>
-<a href='C:\LOTests\ErrorScreenshot\Test_BuyTicketsEU20180912_155026.jpg'> <img src='C:\LOTests\ErrorScreenshot\Test_BuyTicketsEU20180912_155026.jpg' height='400' width='600'/> </a><br>20180912_155026<br/>
-</div>
-</td>
-<td></td>
-<td>78</td>
-<td>LOT.LotBiletyTTT@78ffe6dc</td></tr>
+<td title='LOT.LotBiletyTTT.Test_BuyTicketsEU()'><b>Test_BuyTicketsEU</b><br>Test class: LOT.LotBiletyTTT</td>
+<td><div><pre>java.lang.RuntimeException: java.lang.NullPointerException
+Caused by: java.lang.NullPointerException
+	at DDT.ExcelDataConfig.getRowCount(ExcelDataConfig.java:47)
+	at LOT.LotBiletyTTT.passDataEU(LotBiletyTTT.java:227)
+	... 21 more
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1856093404", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1856093404'><pre>java.lang.RuntimeException: java.lang.NullPointerException
+	at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:49)
+	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:131)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:706)
+	at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:49)
+	at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:37)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:924)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:72)
+	at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:123)
+Caused by: java.lang.NullPointerException
+	at DDT.ExcelDataConfig.getRowCount(ExcelDataConfig.java:47)
+	at LOT.LotBiletyTTT.passDataEU(LotBiletyTTT.java:227)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:74)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:45)
+	... 21 more
+</pre></div></td>
+<td>0</td>
+<td>LOT.LotBiletyTTT@41c2284a</td></tr>
 </table><p>
 </body>
 </html>

@@ -5,7 +5,7 @@
     <classes>
       <class name="LOT.LotBiletyTTT">
         <methods>
-          <include name="Test_BuyTicketsEU" invocation-numbers="0"/>
+          <include name="Test_BuyTicketsEU"/>
           <include name="setUp"/>
           <include name="tearDown2"/>
           <include name="tearDown1"/>

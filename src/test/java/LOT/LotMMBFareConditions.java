@@ -74,7 +74,12 @@ public class LotMMBFareConditions extends MainTest {
         MMBPage.FareConditions.click();
 
         Thread.sleep(2000);
-
+        //Take screenshot
+        try {
+            GetScreenshot.capture("FareConditions ");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 

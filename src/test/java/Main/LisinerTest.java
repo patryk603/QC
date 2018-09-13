@@ -32,7 +32,11 @@ public class LisinerTest implements ITestListener {
     }
     @Override
     public void onTestSkipped(ITestResult iTestResult) {
-
+        try {
+            GetScreenshot.capture(iTestResult.getName());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
     @Override
     public void onTestFailedButWithinSuccessPercentage(ITestResult iTestResult) {
