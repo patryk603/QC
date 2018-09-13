@@ -1353,13 +1353,13 @@ public class LotBiletyAllSelectPlacesAndEquipmentAndBaggage extends MainTest{
     //After and of Class test
     @AfterTest(alwaysRun = true)
     public void tearDown1() throws Exception {
-        driver.manage().deleteAllCookies();
-        driver.quit();
-    }
-    @AfterClass(alwaysRun = true)
-    public void tearDown2() throws Exception {
         //driver.manage().deleteAllCookies();
         //driver.quit();
+    }
+    @AfterTest(alwaysRun = true)
+    public void tearDown2() throws Exception {
+        driver.manage().deleteAllCookies();
+        driver.quit();
     }
 
 }

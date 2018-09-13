@@ -553,7 +553,7 @@ public class LotBiletyAllshort extends MainTest{
     //After and of Class test
 
     //After and of Class test
-    @AfterTest(alwaysRun = true)
+    @AfterGroups(alwaysRun = true)
     public void tearDown1() throws Exception {
         driver.manage().deleteAllCookies();
         driver.quit();
