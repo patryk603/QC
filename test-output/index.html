@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Default_Suite" class="navigator-link">
-              <span class="suite-name border-passed">Default Suite</span>
+              <span class="suite-name border-failed">Default Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,26 +91,26 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">2 methods, 2 failed,   </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Default_Suite" class="hide-methods passed suite-Default_Suite"> (hide)</a> <!-- hide-methods passed suite-Default_Suite -->
-                      <a href="#" panel-name="suite-Default_Suite" class="show-methods passed suite-Default_Suite"> (show)</a> <!-- show-methods passed suite-Default_Suite -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Default_Suite" class="hide-methods failed suite-Default_Suite"> (hide)</a> <!-- hide-methods failed suite-Default_Suite -->
+                      <a href="#" panel-name="suite-Default_Suite" class="show-methods failed suite-Default_Suite"> (show)</a> <!-- show-methods failed suite-Default_Suite -->
                     </span>
-                    <div class="method-list-content passed suite-Default_Suite">
+                    <div class="method-list-content failed suite-Default_Suite">
                       <span>
-                        <img src="passed.png" width="3%"/>
+                        <img src="failed.png" width="3%"/>
                         <a href="#" panel-name="suite-Default_Suite" title="PRE2LOT.PRE2Short" class="method navigator-link" hash-for-method="Test_Pr2ShortEU(WAW, KRK)">Test_Pr2ShortEU(WAW, KRK)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img src="passed.png" width="3%"/>
+                        <img src="failed.png" width="3%"/>
                         <a href="#" panel-name="suite-Default_Suite" title="PRE2LOT.PRE2Short" class="method navigator-link" hash-for-method="Test_Pr2ShortEU(WAW, KRK)">Test_Pr2ShortEU(WAW, KRK)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-Default_Suite -->
+                    </div> <!-- method-list-content failed suite-Default_Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -122,9 +122,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_Suite" class="panel Default_Suite">
-          <div class="suite-Default_Suite-class-passed">
+          <div class="suite-Default_Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="failed.png"/>
               <span class="class-name">PRE2LOT.PRE2Short</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -134,6 +134,11 @@
                   </a> <!-- Test_Pr2ShortEU(WAW, KRK) -->
                   <span class="method-name">Test_Pr2ShortEU</span>
                   <span class="parameters">(WAW, KRK)</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at Main.GetScreenshot.capture(GetScreenshot.java:17)
+	at PRE2LOT.PRE2Short.Test_Pr2ShortEU(PRE2Short.java:108)
+... Removed 24 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -142,10 +147,15 @@
                   </a> <!-- Test_Pr2ShortEU(WAW, KRK) -->
                   <span class="method-name">Test_Pr2ShortEU</span>
                   <span class="parameters">(WAW, KRK)</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at Main.GetScreenshot.capture(GetScreenshot.java:17)
+	at PRE2LOT.PRE2Short.Test_Pr2ShortEU(PRE2Short.java:108)
+... Removed 24 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_Suite-class-passed -->
+          </div> <!-- suite-Default_Suite-class-failed -->
         </div> <!-- panel Default_Suite -->
         <div panel-name="test-xml-Default_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -214,16 +224,16 @@ data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'Test_Pr2ShortEU')
 data.setCell(0, 2, 'PRE2LOT.PRE2Short')
-data.setCell(0, 3, 28573);
+data.setCell(0, 3, 20943);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'Test_Pr2ShortEU')
 data.setCell(1, 2, 'PRE2LOT.PRE2Short')
-data.setCell(1, 3, 20006);
+data.setCell(1, 3, 14792);
 window.suiteTableData['Default_Suite']= { tableData: data, tableDiv: 'times-div-Default_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 48 seconds</span>
+              <span class="suite-total-time">Total running time: 35 seconds</span>
               <div id="times-div-Default_Suite">
               </div> <!-- times-div-Default_Suite -->
             </div> <!-- times-div -->
@@ -255,16 +265,20 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">Test_Pr2ShortEU(WAW, KRK)</span>
-                <span class="method-start">3423 ms</span>
+                <span class="method-start">4223 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">Test_Pr2ShortEU(WAW, KRK)</span>
-                <span class="method-start">31997 ms</span>
+                <span class="method-start">25171 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">tearDown1</span>
-                <span class="method-start">52004 ms</span>
+                <span class="method-start">39965 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

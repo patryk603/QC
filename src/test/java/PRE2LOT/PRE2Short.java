@@ -1,6 +1,7 @@
 package PRE2LOT;
 
 import DDT.ExcelDataConfig;
+import Main.GetScreenshot;
 import PRE2_pageObjects.HomePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -15,6 +16,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
@@ -100,7 +102,13 @@ public class PRE2Short {
         driver.findElement(By.cssSelector(".yui3-aclist.yui3-widget-positioned > div > ul > li[data-text="+to+"]")).click();
 
         HomePage.FindFlights.submit();
-
+        Thread.sleep(2000);
+        //Take screenshot
+        try {
+            GetScreenshot.capture("FlightPage " + from + to );
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         //END OF TEST
 
     }

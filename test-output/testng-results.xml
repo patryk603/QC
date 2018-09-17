@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="0" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2018-09-13T14:44:19Z" name="Default Suite" finished-at="2018-09-13T14:45:12Z" duration-ms="52957">
+  <suite started-at="2018-09-17T13:09:49Z" name="Default Suite" finished-at="2018-09-17T13:10:30Z" duration-ms="41128">
     <groups>
       <group name="BuyTickets">
-        <method signature="PRE2Short.Test_Pr2ShortEU(java.lang.String, java.lang.String)[pri:0, instance:PRE2LOT.PRE2Short@671a5887]" name="Test_Pr2ShortEU" class="PRE2LOT.PRE2Short"/>
+        <method signature="PRE2Short.Test_Pr2ShortEU(java.lang.String, java.lang.String)[pri:0, instance:PRE2LOT.PRE2Short@46fa7c39]" name="Test_Pr2ShortEU" class="PRE2LOT.PRE2Short"/>
       </group> <!-- BuyTickets -->
     </groups>
-    <test started-at="2018-09-13T14:44:19Z" name="LOTests" finished-at="2018-09-13T14:45:12Z" duration-ms="52957">
+    <test started-at="2018-09-17T13:09:49Z" name="LOTests" finished-at="2018-09-17T13:10:30Z" duration-ms="41128">
       <class name="PRE2LOT.PRE2Short">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:PRE2LOT.PRE2Short@671a5887]" started-at="2018-09-13T14:44:19Z" name="setUp" finished-at="2018-09-13T14:44:22Z" duration-ms="2659" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:PRE2LOT.PRE2Short@46fa7c39]" started-at="2018-09-17T13:09:49Z" name="setUp" finished-at="2018-09-17T13:09:52Z" duration-ms="3304" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="Test_Pr2ShortEU(java.lang.String, java.lang.String)[pri:0, instance:PRE2LOT.PRE2Short@671a5887]" started-at="2018-09-13T14:44:23Z" name="Test_Pr2ShortEU" data-provider="dataEU" finished-at="2018-09-13T14:44:51Z" duration-ms="28573" status="PASS">
+        <test-method signature="Test_Pr2ShortEU(java.lang.String, java.lang.String)[pri:0, instance:PRE2LOT.PRE2Short@46fa7c39]" started-at="2018-09-17T13:09:53Z" name="Test_Pr2ShortEU" data-provider="dataEU" finished-at="2018-09-17T13:10:14Z" duration-ms="20943" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -27,10 +27,42 @@
               </value>
             </param>
           </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+at Main.GetScreenshot.capture(GetScreenshot.java:17)
+at PRE2LOT.PRE2Short.Test_Pr2ShortEU(PRE2Short.java:108)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:72)
+at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:123)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Test_Pr2ShortEU -->
-        <test-method signature="Test_Pr2ShortEU(java.lang.String, java.lang.String)[pri:0, instance:PRE2LOT.PRE2Short@671a5887]" started-at="2018-09-13T14:44:51Z" name="Test_Pr2ShortEU" data-provider="dataEU" finished-at="2018-09-13T14:45:11Z" duration-ms="20006" status="PASS">
+        <test-method signature="Test_Pr2ShortEU(java.lang.String, java.lang.String)[pri:0, instance:PRE2LOT.PRE2Short@46fa7c39]" started-at="2018-09-17T13:10:14Z" name="Test_Pr2ShortEU" data-provider="dataEU" finished-at="2018-09-17T13:10:29Z" duration-ms="14792" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -43,10 +75,42 @@
               </value>
             </param>
           </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+at Main.GetScreenshot.capture(GetScreenshot.java:17)
+at PRE2LOT.PRE2Short.Test_Pr2ShortEU(PRE2Short.java:108)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:72)
+at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:123)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Test_Pr2ShortEU -->
-        <test-method is-config="true" signature="tearDown1()[pri:0, instance:PRE2LOT.PRE2Short@671a5887]" started-at="2018-09-13T14:45:11Z" name="tearDown1" finished-at="2018-09-13T14:45:12Z" duration-ms="953" status="PASS">
+        <test-method is-config="true" signature="tearDown1()[pri:0, instance:PRE2LOT.PRE2Short@46fa7c39]" started-at="2018-09-17T13:10:29Z" name="tearDown1" finished-at="2018-09-17T13:10:30Z" duration-ms="1163" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown1 -->
