@@ -1,15 +1,11 @@
 package PRE2LOT;
 
-import DDT.ExcelDataConfig;
-import org.apache.poi.xssf.usermodel.XSSFCell;
+import PRE2_pageObjects.HomePagePRE2;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.Reporter;
 import org.testng.annotations.*;
-import PRE2_pageObjects.HomePage;
-import java.util.ArrayList;
-import java.util.List;
+
 import java.util.concurrent.TimeUnit;
 
 public class Booking {
@@ -23,7 +19,7 @@ public class Booking {
         driver = new ChromeDriver();
         driver.get("https://prodcopy-pre2:MHXozAuh4eeCgK4x6ww6@pre2.book.lot.com/");
         driver.manage().timeouts().implicitlyWait(220, TimeUnit.SECONDS);
-        HomePage HomePage =PageFactory.initElements(driver, HomePage.class);
+        HomePagePRE2 HomePage =PageFactory.initElements(driver, HomePagePRE2.class);
     }
 
 
@@ -32,13 +28,13 @@ public class Booking {
 
         //driver.get("https://pre2.book.lot.com/");
 
-        HomePage.Departure.click();
-        HomePage.Today.click();
-        HomePage.Return.click();
-        HomePage.FirsOfNextMounth.click();
-        HomePage.From.sendKeys("WAW");
-        HomePage.ListFrom.click();
-        HomePage.To.sendKeys("FRA",Keys.ARROW_DOWN,Keys.ENTER);
+        HomePagePRE2.Departure.click();
+        HomePagePRE2.Today.click();
+        HomePagePRE2.Return.click();
+        HomePagePRE2.FirsOfNextMounth.click();
+        HomePagePRE2.From.sendKeys("WAW");
+        HomePagePRE2.ListFrom.click();
+        HomePagePRE2.To.sendKeys("FRA",Keys.ARROW_DOWN,Keys.ENTER);
 
 
     }

@@ -116,7 +116,7 @@ public class LotBiletyTimeIndra extends MainTest{
 
         //TEST START
 
-        //HomePage
+        //HomePagePRE2
 
 
         //Selecting From Flight
@@ -132,8 +132,8 @@ public class LotBiletyTimeIndra extends MainTest{
 
         //Selecting To Flight
         try {
-            //wait.until(ExpectedConditions.elementToBeClickable(HomePage.ToList));
-            //HomePage.ToList.click();
+            //wait.until(ExpectedConditions.elementToBeClickable(HomePagePRE2.ToList));
+            //HomePagePRE2.ToList.click();
             wait.until(ExpectedConditions.elementToBeClickable(HomePage.ToToText));
 
             HomePage.ToToText.sendKeys(to);

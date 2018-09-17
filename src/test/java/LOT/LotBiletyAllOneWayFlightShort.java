@@ -106,10 +106,10 @@ public class LotBiletyAllOneWayFlightShort extends MainTest{
 
         //TEST START
 
-        //HomePage
+        //HomePagePRE2
         //Take screenshot
         try {
-            GetScreenshot.capture("HomePage " + localization + from + to + departuredata);
+            GetScreenshot.capture("HomePagePRE2 " + localization + from + to + departuredata);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -127,8 +127,8 @@ public class LotBiletyAllOneWayFlightShort extends MainTest{
 
         //Selecting To Flight
         try {
-            //wait.until(ExpectedConditions.elementToBeClickable(HomePage.ToList));
-            //HomePage.ToList.click();
+            //wait.until(ExpectedConditions.elementToBeClickable(HomePagePRE2.ToList));
+            //HomePagePRE2.ToList.click();
             wait.until(ExpectedConditions.elementToBeClickable(HomePage.ToToText));
             HomePage.ToToText.sendKeys(to);
             driver.findElement(By.cssSelector(".select2-results__options > li > ul > li[id*="+to+"]")).click();
@@ -231,10 +231,10 @@ public class LotBiletyAllOneWayFlightShort extends MainTest{
 
         //TEST START
 
-        //HomePage
+        //HomePagePRE2
         //Take screenshot
         try {
-            GetScreenshot.capture("HomePage " + localization + from + to + departuredata);
+            GetScreenshot.capture("HomePagePRE2 " + localization + from + to + departuredata);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -252,8 +252,8 @@ public class LotBiletyAllOneWayFlightShort extends MainTest{
 
         //Selecting To Flight
         try {
-            //wait.until(ExpectedConditions.elementToBeClickable(HomePage.ToList));
-            //HomePage.ToList.click();
+            //wait.until(ExpectedConditions.elementToBeClickable(HomePagePRE2.ToList));
+            //HomePagePRE2.ToList.click();
             wait.until(ExpectedConditions.elementToBeClickable(HomePage.ToToText));
             HomePage.ToToText.sendKeys(to);
             driver.findElement(By.cssSelector(".select2-results__options > li > ul > li[id*="+to+"]")).click();
@@ -363,10 +363,10 @@ public class LotBiletyAllOneWayFlightShort extends MainTest{
 
         //TEST START
 
-        //HomePage
+        //HomePagePRE2
         //Take screenshot
         try {
-            GetScreenshot.capture("HomePage " + localization + from + to + departuredata);
+            GetScreenshot.capture("HomePagePRE2 " + localization + from + to + departuredata);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -384,8 +384,8 @@ public class LotBiletyAllOneWayFlightShort extends MainTest{
 
         //Selecting To Flight
         try {
-            //wait.until(ExpectedConditions.elementToBeClickable(HomePage.ToList));
-            //HomePage.ToList.click();
+            //wait.until(ExpectedConditions.elementToBeClickable(HomePagePRE2.ToList));
+            //HomePagePRE2.ToList.click();
             wait.until(ExpectedConditions.elementToBeClickable(HomePage.ToToText));
             HomePage.ToToText.sendKeys(to);
             driver.findElement(By.cssSelector(".select2-results__options > li > ul > li[id*=" + to + "]")).click();

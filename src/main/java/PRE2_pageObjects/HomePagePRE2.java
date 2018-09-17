@@ -7,7 +7,7 @@ import org.openqa.selenium.support.FindBy;
 /**
  * Created by PTeledzinski on 04.04.2018.
  */
-public class HomePage {
+public class HomePagePRE2 {
 
     final WebDriver driver;
 
@@ -46,7 +46,7 @@ public class HomePage {
 
 
 
-    public HomePage(WebDriver driver){
+    public HomePagePRE2(WebDriver driver){
 
         this.driver = driver;
     }

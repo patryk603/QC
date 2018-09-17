@@ -1,20 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="0" failed="2" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
+    <line>
+      <![CDATA[<a href='C:\LOTests\ErrorScreenshot\HomePagePRE2 WAWKRK20180917_154838.jpg'> <img src='C:\LOTests\ErrorScreenshot\HomePagePRE2 WAWKRK20180917_154838.jpg' height='400' width='600'/> </a><br>20180917_154838]]>
+    </line>
+    <line>
+      <![CDATA[<a href='C:\LOTests\ErrorScreenshot\FlightPagePRE2 WAWKRK20180917_154900.jpg'> <img src='C:\LOTests\ErrorScreenshot\FlightPagePRE2 WAWKRK20180917_154900.jpg' height='400' width='600'/> </a><br>20180917_154900]]>
+    </line>
+    <line>
+      <![CDATA[<a href='C:\LOTests\ErrorScreenshot\Test_Pr2ShortEU20180917_154900.jpg'> <img src='C:\LOTests\ErrorScreenshot\Test_Pr2ShortEU20180917_154900.jpg' height='400' width='600'/> </a><br>20180917_154900]]>
+    </line>
+    <line>
+      <![CDATA[<a href='C:\LOTests\ErrorScreenshot\HomePagePRE2 WAWKRK20180917_154904.jpg'> <img src='C:\LOTests\ErrorScreenshot\HomePagePRE2 WAWKRK20180917_154904.jpg' height='400' width='600'/> </a><br>20180917_154904]]>
+    </line>
+    <line>
+      <![CDATA[<a href='C:\LOTests\ErrorScreenshot\FlightPagePRE2 WAWKRK20180917_154926.jpg'> <img src='C:\LOTests\ErrorScreenshot\FlightPagePRE2 WAWKRK20180917_154926.jpg' height='400' width='600'/> </a><br>20180917_154926]]>
+    </line>
+    <line>
+      <![CDATA[<a href='C:\LOTests\ErrorScreenshot\Test_Pr2ShortEU20180917_154926.jpg'> <img src='C:\LOTests\ErrorScreenshot\Test_Pr2ShortEU20180917_154926.jpg' height='400' width='600'/> </a><br>20180917_154926]]>
+    </line>
   </reporter-output>
-  <suite started-at="2018-09-17T13:09:49Z" name="Default Suite" finished-at="2018-09-17T13:10:30Z" duration-ms="41128">
+  <suite started-at="2018-09-17T13:48:29Z" name="Default Suite" finished-at="2018-09-17T13:49:27Z" duration-ms="57649">
     <groups>
       <group name="BuyTickets">
-        <method signature="PRE2Short.Test_Pr2ShortEU(java.lang.String, java.lang.String)[pri:0, instance:PRE2LOT.PRE2Short@46fa7c39]" name="Test_Pr2ShortEU" class="PRE2LOT.PRE2Short"/>
+        <method signature="PRE2Short.Test_Pr2ShortEU(java.lang.String, java.lang.String)[pri:0, instance:PRE2LOT.PRE2Short@55f616cf]" name="Test_Pr2ShortEU" class="PRE2LOT.PRE2Short"/>
       </group> <!-- BuyTickets -->
     </groups>
-    <test started-at="2018-09-17T13:09:49Z" name="LOTests" finished-at="2018-09-17T13:10:30Z" duration-ms="41128">
+    <test started-at="2018-09-17T13:48:29Z" name="LOTests" finished-at="2018-09-17T13:49:27Z" duration-ms="57649">
       <class name="PRE2LOT.PRE2Short">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:PRE2LOT.PRE2Short@46fa7c39]" started-at="2018-09-17T13:09:49Z" name="setUp" finished-at="2018-09-17T13:09:52Z" duration-ms="3304" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:PRE2LOT.PRE2Short@55f616cf]" started-at="2018-09-17T13:48:29Z" name="setUp" finished-at="2018-09-17T13:48:33Z" duration-ms="3281" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="Test_Pr2ShortEU(java.lang.String, java.lang.String)[pri:0, instance:PRE2LOT.PRE2Short@46fa7c39]" started-at="2018-09-17T13:09:53Z" name="Test_Pr2ShortEU" data-provider="dataEU" finished-at="2018-09-17T13:10:14Z" duration-ms="20943" status="FAIL">
+        <test-method signature="Test_Pr2ShortEU(java.lang.String, java.lang.String)[pri:0, instance:PRE2LOT.PRE2Short@55f616cf]" started-at="2018-09-17T13:48:33Z" name="Test_Pr2ShortEU" data-provider="dataEU" finished-at="2018-09-17T13:49:00Z" duration-ms="26739" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -27,42 +45,19 @@
               </value>
             </param>
           </params>
-          <exception class="java.lang.NullPointerException">
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-at Main.GetScreenshot.capture(GetScreenshot.java:17)
-at PRE2LOT.PRE2Short.Test_Pr2ShortEU(PRE2Short.java:108)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:72)
-at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:123)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
+            <line>
+              <![CDATA[<a href='C:\LOTests\ErrorScreenshot\HomePagePRE2 WAWKRK20180917_154838.jpg'> <img src='C:\LOTests\ErrorScreenshot\HomePagePRE2 WAWKRK20180917_154838.jpg' height='400' width='600'/> </a><br>20180917_154838]]>
+            </line>
+            <line>
+              <![CDATA[<a href='C:\LOTests\ErrorScreenshot\FlightPagePRE2 WAWKRK20180917_154900.jpg'> <img src='C:\LOTests\ErrorScreenshot\FlightPagePRE2 WAWKRK20180917_154900.jpg' height='400' width='600'/> </a><br>20180917_154900]]>
+            </line>
+            <line>
+              <![CDATA[<a href='C:\LOTests\ErrorScreenshot\Test_Pr2ShortEU20180917_154900.jpg'> <img src='C:\LOTests\ErrorScreenshot\Test_Pr2ShortEU20180917_154900.jpg' height='400' width='600'/> </a><br>20180917_154900]]>
+            </line>
           </reporter-output>
         </test-method> <!-- Test_Pr2ShortEU -->
-        <test-method signature="Test_Pr2ShortEU(java.lang.String, java.lang.String)[pri:0, instance:PRE2LOT.PRE2Short@46fa7c39]" started-at="2018-09-17T13:10:14Z" name="Test_Pr2ShortEU" data-provider="dataEU" finished-at="2018-09-17T13:10:29Z" duration-ms="14792" status="FAIL">
+        <test-method signature="Test_Pr2ShortEU(java.lang.String, java.lang.String)[pri:0, instance:PRE2LOT.PRE2Short@55f616cf]" started-at="2018-09-17T13:49:00Z" name="Test_Pr2ShortEU" data-provider="dataEU" finished-at="2018-09-17T13:49:26Z" duration-ms="25256" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -75,42 +70,23 @@ at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:123)
               </value>
             </param>
           </params>
-          <exception class="java.lang.NullPointerException">
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-at Main.GetScreenshot.capture(GetScreenshot.java:17)
-at PRE2LOT.PRE2Short.Test_Pr2ShortEU(PRE2Short.java:108)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:72)
-at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:123)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
+            <line>
+              <![CDATA[<a href='C:\LOTests\ErrorScreenshot\HomePagePRE2 WAWKRK20180917_154904.jpg'> <img src='C:\LOTests\ErrorScreenshot\HomePagePRE2 WAWKRK20180917_154904.jpg' height='400' width='600'/> </a><br>20180917_154904]]>
+            </line>
+            <line>
+              <![CDATA[<a href='C:\LOTests\ErrorScreenshot\FlightPagePRE2 WAWKRK20180917_154926.jpg'> <img src='C:\LOTests\ErrorScreenshot\FlightPagePRE2 WAWKRK20180917_154926.jpg' height='400' width='600'/> </a><br>20180917_154926]]>
+            </line>
+            <line>
+              <![CDATA[<a href='C:\LOTests\ErrorScreenshot\Test_Pr2ShortEU20180917_154926.jpg'> <img src='C:\LOTests\ErrorScreenshot\Test_Pr2ShortEU20180917_154926.jpg' height='400' width='600'/> </a><br>20180917_154926]]>
+            </line>
           </reporter-output>
         </test-method> <!-- Test_Pr2ShortEU -->
-        <test-method is-config="true" signature="tearDown1()[pri:0, instance:PRE2LOT.PRE2Short@46fa7c39]" started-at="2018-09-17T13:10:29Z" name="tearDown1" finished-at="2018-09-17T13:10:30Z" duration-ms="1163" status="PASS">
+        <test-method is-config="true" signature="tearDown2()[pri:0, instance:PRE2LOT.PRE2Short@55f616cf]" started-at="2018-09-17T13:49:26Z" name="tearDown2" finished-at="2018-09-17T13:49:26Z" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown2 -->
+        <test-method is-config="true" signature="tearDown1()[pri:0, instance:PRE2LOT.PRE2Short@55f616cf]" started-at="2018-09-17T13:49:26Z" name="tearDown1" finished-at="2018-09-17T13:49:27Z" duration-ms="976" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown1 -->
