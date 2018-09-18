@@ -3048,7 +3048,7 @@ public class LotMultiTickets extends MainTest{
     //Excel configuration
 
     //After and of Class test
-    @AfterTest(alwaysRun = true)
+    @AfterMethod(alwaysRun = true)
     public void tearDown1() throws Exception {
         driver.manage().deleteAllCookies();
         driver.quit();
