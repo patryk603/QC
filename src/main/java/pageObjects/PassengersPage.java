@@ -41,6 +41,9 @@ public class PassengersPage {
     @FindBy(css = ".autofillWrapper>input[id$=name]")
     public static WebElement FirstName;
 
+    @FindBy(css = ".custom-input>input[id$=name]")
+    public static WebElement FirstNameIE11;
+
     @FindBy(css = ".autofillWrapper>input[id$=\"1_name\"]")
     public static WebElement FirstName1;
 
@@ -55,6 +58,9 @@ public class PassengersPage {
 
     @FindBy(css = ".autofillWrapper>input[id$=surname]")
     public static WebElement Surname;
+
+    @FindBy(css = ".custom-input>input[id$=surname]")
+    public static WebElement SurnameIE11;
 
     @FindBy(css = ".autofillWrapper>input[id$=\"1_surname\"]")
     public static WebElement Surname1;
