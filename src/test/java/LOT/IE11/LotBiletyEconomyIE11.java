@@ -5,7 +5,6 @@ import Main.GetScreenshot;
 import Main.MainTest;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.openqa.selenium.By;
-import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -23,7 +22,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.concurrent.TimeUnit;
 
-public class LotBiletyAllIE11 extends MainTest{
+public class LotBiletyEconomyIE11 extends MainTest{
     private String baseUrl;
     private boolean acceptNextAlert = true;
     private StringBuffer verificationErrors = new StringBuffer();
@@ -180,6 +179,12 @@ public class LotBiletyAllIE11 extends MainTest{
         HomePage.ReturnDate.clear();
         HomePage.ReturnDate.sendKeys(newDate2);
         HomePage.Lot.click();
+
+        //Selecting Class
+        Thread.sleep(1000);
+        HomePage.TicketClass.click();
+        HomePage.Economy.click();
+        Thread.sleep(1000);
 
         //Submit Button go from Home Page to Flight Page
         HomePage.Submit.submit();

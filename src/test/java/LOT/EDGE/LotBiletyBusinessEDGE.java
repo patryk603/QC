@@ -1,4 +1,4 @@
-package LOT.IE11;
+package LOT.EDGE;
 
 import DDT.ExcelDataConfig;
 import Main.GetScreenshot;
@@ -6,7 +6,6 @@ import Main.MainTest;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.openqa.selenium.By;
 import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
@@ -23,11 +22,10 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.concurrent.TimeUnit;
 
-public class LotBiletyAllIE11 extends MainTest{
+public class LotBiletyBusinessEDGE extends MainTest{
     private String baseUrl;
     private boolean acceptNextAlert = true;
     private StringBuffer verificationErrors = new StringBuffer();
-
 
     //All Static Data
     String name = "Test";
@@ -50,13 +48,12 @@ public class LotBiletyAllIE11 extends MainTest{
 
     @BeforeTest(alwaysRun = true)
     public void setUp() throws Exception {
-
-        driver = new InternetExplorerDriver();
+        driver = new EdgeDriver();
         driver.manage().deleteAllCookies();
         driver.manage().window().maximize();
         baseUrl = "http://www.lot.com/";
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        driver.manage().timeouts().pageLoadTimeout(90, TimeUnit.SECONDS);
         PageFactory.initElements(driver, HomePage.class);
         PageFactory.initElements(driver, FlightsPage.class);
         PageFactory.initElements(driver, PassengersPage.class);
@@ -135,7 +132,7 @@ public class LotBiletyAllIE11 extends MainTest{
 
         //Take screenshot
         try {
-            GetScreenshot.capture("HomePagePRE2 " + localization + from + to + departuredata + returndata);
+            GetScreenshot.capture("HomePage " + localization + from + to + departuredata + returndata);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -146,7 +143,7 @@ public class LotBiletyAllIE11 extends MainTest{
         wait.until(ExpectedConditions.elementToBeClickable(HomePage.FromToText));
         HomePage.FromToText.sendKeys(from);
 
-        driver.findElement(By.cssSelector(".select2-results__options > li > ul > li[id*="+from+"]")).click();
+        driver.findElement(By.cssSelector(".select2-results__options > li > ul > li[id*=" + from + "]")).click();
         //Click on home page
 
         Thread.sleep(1000);
@@ -157,7 +154,7 @@ public class LotBiletyAllIE11 extends MainTest{
             //HomePagePRE2.ToList.click();
             wait.until(ExpectedConditions.elementToBeClickable(HomePage.ToToText));
             HomePage.ToToText.sendKeys(to);
-            driver.findElement(By.cssSelector(".select2-results__options > li > ul > li[id*="+to+"]")).click();
+            driver.findElement(By.cssSelector(".select2-results__options > li > ul > li[id*=" + to + "]")).click();
         } catch (Exception e) {
             System.out.println("Need additional click : " + e.getMessage());
             HomePage.Lot.click();
@@ -165,7 +162,7 @@ public class LotBiletyAllIE11 extends MainTest{
             HomePage.ToList.click();
             wait.until(ExpectedConditions.elementToBeClickable(HomePage.ToToText));
             HomePage.ToToText.sendKeys(to);
-            driver.findElement(By.cssSelector(".select2-results__options > li > ul > li[id*="+to+"]")).click();
+            driver.findElement(By.cssSelector(".select2-results__options > li > ul > li[id*=" + to + "]")).click();
         }
 
 
@@ -181,20 +178,24 @@ public class LotBiletyAllIE11 extends MainTest{
         HomePage.ReturnDate.sendKeys(newDate2);
         HomePage.Lot.click();
 
+        //Selecting Class
+        Thread.sleep(1000);
+        HomePage.TicketClass.click();
+        HomePage.Business.click();
+        Thread.sleep(1000);
+
         //Submit Button go from Home Page to Flight Page
         HomePage.Submit.submit();
-
 
         //FlightPage
         try {
             wait.until(ExpectedConditions.visibilityOf(FlightsPage.Cart));
         } catch (Exception e) {
-            System.out.println("Zbyt długi czas oczekiwania przejścia z bookera na step 2- flights : "+ e.getMessage());
+            System.out.println("Zbyt długi czas oczekiwania przejścia z bookera na step 2- flights : " + e.getMessage());
         }
 
         //Popup handle
         try {
-            wait.until(ExpectedConditions.visibilityOf(FlightsPage.OK));
             FlightsPage.OK.click();
         } catch (Exception e) {
             System.out.println("Flight are available in that date : " + e.getMessage());
@@ -211,7 +212,7 @@ public class LotBiletyAllIE11 extends MainTest{
         try {
             FlightsPage.FirstTO.click();
         } catch (Exception e) {
-            System.out.println("Other tickets : "+ e.getMessage());
+            System.out.println("Other tickets : " + e.getMessage());
             FlightsPage.FirstTO1.click();
         }
 
@@ -220,7 +221,7 @@ public class LotBiletyAllIE11 extends MainTest{
         try {
             FlightsPage.FirstBack.click();
         } catch (Exception e) {
-            System.out.println("Other tickets : "+ e.getMessage());
+            System.out.println("Other tickets : " + e.getMessage());
             FlightsPage.FirstBack2.click();
         }
         Thread.sleep(1000);
@@ -233,10 +234,9 @@ public class LotBiletyAllIE11 extends MainTest{
             Thread.sleep(1000);
             FlightsPage.BigContinue.click();
             System.out.println("Accepted the alert successfully.");
-            System.out.println("No Element Continue : "+ e.getMessage());
+            System.out.println("No Element Continue : " + e.getMessage());
         }
         // Passengers Page
-        Thread.sleep(5000);
         //Take screenshot
         wait.until(ExpectedConditions.visibilityOf(PassengersPage.CheckboxAccept));
         try {
@@ -253,8 +253,8 @@ public class LotBiletyAllIE11 extends MainTest{
         //Selecting title
 
         //Enter Name and Surname
-        PassengersPage.FirstNameIE11.sendKeys(name);
-        PassengersPage.SurnameIE11.sendKeys(surname);
+        PassengersPage.FirstName.sendKeys(name);
+        PassengersPage.Surname.sendKeys(surname);
 
         //DATE OF BIRTH
         try {
@@ -270,7 +270,7 @@ public class LotBiletyAllIE11 extends MainTest{
             Select year = new Select(PassengersPage.YearOfBirth);
             year.selectByVisibleText(YearOfBirth);
         } catch (Exception e) {
-            System.out.println("Short haul : "+ e.getMessage());
+            System.out.println("Short haul : " + e.getMessage());
         }
         //DATE OF BIRTH
 
@@ -287,8 +287,8 @@ public class LotBiletyAllIE11 extends MainTest{
         PassengersPage.BigContinue.click();
         try {
             PassengersPage.PopupAccept.click();
-        }catch (Exception e){
-            System.out.println("No Popup : "+ e.getMessage());
+        } catch (Exception e) {
+            System.out.println("No Popup : " + e.getMessage());
         }
 
         //Extra Page
@@ -299,15 +299,12 @@ public class LotBiletyAllIE11 extends MainTest{
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-        Thread.sleep(10000);
-
         //Waiting and Clicking on Big Continue Button.
         try {
             wait.until(ExpectedConditions.visibilityOf(ExtrasPage.BigContinue));
             ExtrasPage.BigContinue.click();
         } catch (Exception e) {
-            System.out.println("No Element Continue : "+ e.getMessage());
+            System.out.println("No Element Continue : " + e.getMessage());
         }
         //Extra Page
 
@@ -353,13 +350,12 @@ public class LotBiletyAllIE11 extends MainTest{
             wait.until(ExpectedConditions.visibilityOf(PaymentPage.BigContinue));
             PaymentPage.BigContinue.click();
         } catch (Exception e) {
-            System.out.println("Problem with Continue button : "+ e.getMessage());
+            System.out.println("Problem with Continue button : " + e.getMessage());
         }
         //END OF TEST
-
     }
 
-
+    //Excel configuration
     @DataProvider(name ="data")
     public Object[][] passData()
     {
@@ -377,12 +373,10 @@ public class LotBiletyAllIE11 extends MainTest{
         return data;
     }
 
-
     @AfterTest(alwaysRun = true)
     public void tearDown1() throws Exception {
         driver.manage().deleteAllCookies();
         driver.quit();
     }
-
 
 }

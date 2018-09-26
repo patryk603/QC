@@ -1,12 +1,11 @@
-package LOT.IE11;
+package LOT.FireFox;
 
 import DDT.ExcelDataConfig;
 import Main.GetScreenshot;
 import Main.MainTest;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.openqa.selenium.By;
-import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
@@ -23,7 +22,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.concurrent.TimeUnit;
 
-public class LotBiletyAllIE11 extends MainTest{
+public class LotBiletyPremiumFF extends MainTest{
     private String baseUrl;
     private boolean acceptNextAlert = true;
     private StringBuffer verificationErrors = new StringBuffer();
@@ -48,10 +47,11 @@ public class LotBiletyAllIE11 extends MainTest{
     //--------CreditCard
 
 
+
     @BeforeTest(alwaysRun = true)
     public void setUp() throws Exception {
 
-        driver = new InternetExplorerDriver();
+        driver = new FirefoxDriver();
         driver.manage().deleteAllCookies();
         driver.manage().window().maximize();
         baseUrl = "http://www.lot.com/";
@@ -132,7 +132,7 @@ public class LotBiletyAllIE11 extends MainTest{
         //TIME
 
         //TEST START
-
+        //HomePagePRE2
         //Take screenshot
         try {
             GetScreenshot.capture("HomePagePRE2 " + localization + from + to + departuredata + returndata);
@@ -180,6 +180,12 @@ public class LotBiletyAllIE11 extends MainTest{
         HomePage.ReturnDate.clear();
         HomePage.ReturnDate.sendKeys(newDate2);
         HomePage.Lot.click();
+
+        //Selecting Class
+        Thread.sleep(1000);
+        HomePage.TicketClass.click();
+        HomePage.Premium.click();
+        Thread.sleep(1000);
 
         //Submit Button go from Home Page to Flight Page
         HomePage.Submit.submit();
@@ -357,6 +363,8 @@ public class LotBiletyAllIE11 extends MainTest{
         }
         //END OF TEST
 
+
+        //Excel configuration
     }
 
 
@@ -376,8 +384,11 @@ public class LotBiletyAllIE11 extends MainTest{
         }
         return data;
     }
+    //Excel configuration
 
+    //After and of Class test
 
+    //After and of Class test
     @AfterTest(alwaysRun = true)
     public void tearDown1() throws Exception {
         driver.manage().deleteAllCookies();
