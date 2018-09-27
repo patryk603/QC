@@ -1,60 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
+    <line>
+      <![CDATA[<a href='C:\LOTests\ErrorScreenshot\HomePagePRE2 pl\plWAWAMS13.020.020180927_140846.jpg'> <img src='C:\LOTests\ErrorScreenshot\HomePagePRE2 pl\plWAWAMS13.020.020180927_140846.jpg' height='400' width='600'/> </a><br>20180927_140846]]>
+    </line>
+    <line>
+      <![CDATA[<a href='C:\LOTests\ErrorScreenshot\Test_BuyTicketsEU20180927_140930.jpg'> <img src='C:\LOTests\ErrorScreenshot\Test_BuyTicketsEU20180927_140930.jpg' height='400' width='600'/> </a><br>20180927_140930]]>
+    </line>
   </reporter-output>
-  <suite started-at="2018-09-26T11:40:42Z" name="Default Suite" finished-at="2018-09-26T11:40:49Z" duration-ms="7146">
+  <suite started-at="2018-09-27T12:08:25Z" name="Default Suite" finished-at="2018-09-27T12:09:31Z" duration-ms="66536">
     <groups>
       <group name="BuyTickets">
-        <method signature="LotBiletyAllshortFF.Test_BuyTicketsEU(java.lang.String, java.lang.String, java.lang.String, org.apache.poi.xssf.usermodel.XSSFCell, org.apache.poi.xssf.usermodel.XSSFCell)[pri:0, instance:LOT.FireFox.LotBiletyAllshortFF@46fa7c39]" name="Test_BuyTicketsEU" class="LOT.FireFox.LotBiletyAllshortFF"/>
+        <method signature="TimeCount.Test_BuyTicketsEU(java.lang.String, java.lang.String, java.lang.String, org.apache.poi.xssf.usermodel.XSSFCell, org.apache.poi.xssf.usermodel.XSSFCell)[pri:0, instance:LOT.TimeCount@6497b078]" name="Test_BuyTicketsEU" class="LOT.TimeCount"/>
       </group> <!-- BuyTickets -->
     </groups>
-    <test started-at="2018-09-26T11:40:42Z" name="LOTests" finished-at="2018-09-26T11:40:49Z" duration-ms="7146">
-      <class name="LOT.FireFox.LotBiletyAllshortFF">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:LOT.FireFox.LotBiletyAllshortFF@46fa7c39]" started-at="2018-09-26T11:40:42Z" name="setUp" finished-at="2018-09-26T11:40:47Z" duration-ms="4638" status="PASS">
+    <test started-at="2018-09-27T12:08:25Z" name="LOTests" finished-at="2018-09-27T12:09:31Z" duration-ms="66536">
+      <class name="LOT.TimeCount">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:LOT.TimeCount@6497b078]" started-at="2018-09-27T12:08:25Z" name="setUp" finished-at="2018-09-27T12:08:28Z" duration-ms="3117" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="Test_BuyTicketsEU(java.lang.String, java.lang.String, java.lang.String, org.apache.poi.xssf.usermodel.XSSFCell, org.apache.poi.xssf.usermodel.XSSFCell)[pri:0, instance:LOT.FireFox.LotBiletyAllshortFF@46fa7c39]" started-at="2018-09-26T11:40:47Z" name="Test_BuyTicketsEU" data-provider="data" finished-at="2018-09-26T11:40:47Z" duration-ms="0" status="FAIL">
-          <exception class="org.testng.TestNGException">
-            <message>
-              <![CDATA[
-Method public void LOT.FireFox.LotBiletyAllshortFF.Test_BuyTicketsEU(java.lang.String,java.lang.String,java.lang.String,org.apache.poi.xssf.usermodel.XSSFCell,org.apache.poi.xssf.usermodel.XSSFCell) throws java.lang.Exception requires a @DataProvider named : data]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.TestNGException: 
-Method public void LOT.FireFox.LotBiletyAllshortFF.Test_BuyTicketsEU(java.lang.String,java.lang.String,java.lang.String,org.apache.poi.xssf.usermodel.XSSFCell,org.apache.poi.xssf.usermodel.XSSFCell) throws java.lang.Exception requires a @DataProvider named : data
-at org.testng.internal.Parameters.findDataProvider(Parameters.java:513)
-at org.testng.internal.Parameters.handleParameters(Parameters.java:691)
-at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:49)
-at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:37)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:924)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:72)
-at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:123)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.TestNGException -->
+        <test-method signature="Test_BuyTicketsEU(java.lang.String, java.lang.String, java.lang.String, org.apache.poi.xssf.usermodel.XSSFCell, org.apache.poi.xssf.usermodel.XSSFCell)[pri:0, instance:LOT.TimeCount@6497b078]" started-at="2018-09-27T12:08:29Z" name="Test_BuyTicketsEU" data-provider="data" finished-at="2018-09-27T12:09:30Z" duration-ms="60965" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[pl/pl]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[WAW]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[AMS]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[13.0]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[20.0]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
+            <line>
+              <![CDATA[<a href='C:\LOTests\ErrorScreenshot\HomePagePRE2 pl\plWAWAMS13.020.020180927_140846.jpg'> <img src='C:\LOTests\ErrorScreenshot\HomePagePRE2 pl\plWAWAMS13.020.020180927_140846.jpg' height='400' width='600'/> </a><br>20180927_140846]]>
+            </line>
+            <line>
+              <![CDATA[<a href='C:\LOTests\ErrorScreenshot\Test_BuyTicketsEU20180927_140930.jpg'> <img src='C:\LOTests\ErrorScreenshot\Test_BuyTicketsEU20180927_140930.jpg' height='400' width='600'/> </a><br>20180927_140930]]>
+            </line>
           </reporter-output>
         </test-method> <!-- Test_BuyTicketsEU -->
-        <test-method is-config="true" signature="tearDown1()[pri:0, instance:LOT.FireFox.LotBiletyAllshortFF@46fa7c39]" started-at="2018-09-26T11:40:47Z" name="tearDown1" finished-at="2018-09-26T11:40:49Z" duration-ms="2405" status="PASS">
+        <test-method is-config="true" signature="tearDown1()[pri:0, instance:LOT.TimeCount@6497b078]" started-at="2018-09-27T12:09:30Z" name="tearDown1" finished-at="2018-09-27T12:09:31Z" duration-ms="1216" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown1 -->
-      </class> <!-- LOT.FireFox.LotBiletyAllshortFF -->
+      </class> <!-- LOT.TimeCount -->
     </test> <!-- LOTests -->
   </suite> <!-- Default Suite -->
 </testng-results>

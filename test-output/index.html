@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Default_Suite" class="navigator-link">
-              <span class="suite-name border-failed">Default Suite</span>
+              <span class="suite-name border-passed">Default Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,21 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method, 1 failed,   </span>
+                    <span class="method-stats">1 method,   1 passed</span>
                   </li>
                   <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Default_Suite" class="hide-methods failed suite-Default_Suite"> (hide)</a> <!-- hide-methods failed suite-Default_Suite -->
-                      <a href="#" panel-name="suite-Default_Suite" class="show-methods failed suite-Default_Suite"> (show)</a> <!-- show-methods failed suite-Default_Suite -->
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Default_Suite" class="hide-methods passed suite-Default_Suite"> (hide)</a> <!-- hide-methods passed suite-Default_Suite -->
+                      <a href="#" panel-name="suite-Default_Suite" class="show-methods passed suite-Default_Suite"> (show)</a> <!-- show-methods passed suite-Default_Suite -->
                     </span>
-                    <div class="method-list-content failed suite-Default_Suite">
+                    <div class="method-list-content passed suite-Default_Suite">
                       <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_Suite" title="LOT.FireFox.LotBiletyAllshortFF" class="method navigator-link" hash-for-method="Test_BuyTicketsEU">Test_BuyTicketsEU</a> <!-- method navigator-link -->
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_Suite" title="LOT.TimeCount" class="method navigator-link" hash-for-method="Test_BuyTicketsEU(pl/pl, WAW, AMS, 13.0, 20.0)">Test_BuyTicketsEU(pl/pl, WAW, AMS, 13.0, 20.0)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content failed suite-Default_Suite -->
+                    </div> <!-- method-list-content passed suite-Default_Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -117,25 +117,22 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_Suite" class="panel Default_Suite">
-          <div class="suite-Default_Suite-class-failed">
+          <div class="suite-Default_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">LOT.FireFox.LotBiletyAllshortFF</span>
+              <img src="passed.png"/>
+              <span class="class-name">LOT.TimeCount</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="Test_BuyTicketsEU">
-                  </a> <!-- Test_BuyTicketsEU -->
+                  <a name="Test_BuyTicketsEU(pl/pl, WAW, AMS, 13.0, 20.0)">
+                  </a> <!-- Test_BuyTicketsEU(pl/pl, WAW, AMS, 13.0, 20.0) -->
                   <span class="method-name">Test_BuyTicketsEU</span>
-                  <div class="stack-trace">org.testng.TestNGException: 
-Method public void LOT.FireFox.LotBiletyAllshortFF.Test_BuyTicketsEU(java.lang.String,java.lang.String,java.lang.String,org.apache.poi.xssf.usermodel.XSSFCell,org.apache.poi.xssf.usermodel.XSSFCell) throws java.lang.Exception requires a @DataProvider named : data
-... Removed 21 stack frames
-</div> <!-- stack-trace -->
+                  <span class="parameters">(pl/pl, WAW, AMS, 13.0, 20.0)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_Suite-class-failed -->
+          </div> <!-- suite-Default_Suite-class-passed -->
         </div> <!-- panel Default_Suite -->
         <div panel-name="test-xml-Default_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -148,7 +145,7 @@ Method public void LOT.FireFox.LotBiletyAllshortFF.Test_BuyTicketsEU(java.lang.S
 &lt;suite name=&quot;Default Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;LOTests&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;LOT.FireFox.LotBiletyAllshortFF&quot;/&gt;
+      &lt;class name=&quot;LOT.TimeCount&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- LOTests --&gt;
 &lt;/suite&gt; &lt;!-- Default Suite --&gt;
@@ -199,13 +196,13 @@ data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'Test_BuyTicketsEU')
-data.setCell(0, 2, 'LOT.FireFox.LotBiletyAllshortFF')
-data.setCell(0, 3, 0);
+data.setCell(0, 2, 'LOT.TimeCount')
+data.setCell(0, 3, 60965);
 window.suiteTableData['Default_Suite']= { tableData: data, tableDiv: 'times-div-Default_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 0 ms</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-Default_Suite">
               </div> <!-- times-div-Default_Suite -->
             </div> <!-- times-div -->
@@ -216,6 +213,13 @@ return data;
             <span class="header-content">Reporter output for Default Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">Test_BuyTicketsEU(pl/pl, WAW, AMS, 13.0, 20.0)</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output"><a href='C:\LOTests\ErrorScreenshot\HomePagePRE2 pl\plWAWAMS13.020.020180927_140846.jpg'> <img src='C:\LOTests\ErrorScreenshot\HomePagePRE2 pl\plWAWAMS13.020.020180927_140846.jpg' height='400' width='600'/> </a><br>20180927_140846</span>
+                <span class="reporter-method-output"><a href='C:\LOTests\ErrorScreenshot\Test_BuyTicketsEU20180927_140930.jpg'> <img src='C:\LOTests\ErrorScreenshot\Test_BuyTicketsEU20180927_140930.jpg' height='400' width='600'/> </a><br>20180927_140930</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Default_Suite" class="panel">
@@ -231,14 +235,18 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">LOT.FireFox.LotBiletyAllshortFF</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">LOT.TimeCount</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">setUp</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
+              <div class="test-method">
+                <span class="method-name">Test_BuyTicketsEU(pl/pl, WAW, AMS, 13.0, 20.0)</span>
+                <span class="method-start">3952 ms</span>
+              </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">tearDown1</span>
-                <span class="method-start">4740 ms</span>
+                <span class="method-start">65319 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
