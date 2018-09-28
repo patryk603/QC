@@ -369,7 +369,7 @@ public class LotBiletyEconomyFF extends MainTest{
     @DataProvider(name ="data")
     public Object[][] passData()
     {
-        ExcelDataConfig config = new ExcelDataConfig("C:\\Users\\Public\\LOT\\LOT.xlsx");
+        ExcelDataConfig config = new ExcelDataConfig("C:\\Users\\Public\\LOT\\Economy.xlsx");
         int rows = config.getRowCount(0);
         Object[][] data=new Object[rows][5];
 

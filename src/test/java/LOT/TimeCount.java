@@ -114,12 +114,6 @@ public class TimeCount extends MainTest{
         //TEST START
 
         //HomePage
-        //Take screenshot
-        try {
-            GetScreenshot.capture("HomePagePRE2 " + localization + from + to + departuredata + returndata);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
 
         //Selecting From Flight
         wait.until(ExpectedConditions.elementToBeClickable(HomePage.FromListButton));
@@ -133,21 +127,14 @@ public class TimeCount extends MainTest{
         Thread.sleep(1000);
 
         //Selecting To Flight
-        try {
-            //wait.until(ExpectedConditions.elementToBeClickable(HomePagePRE2.ToList));
-            //HomePagePRE2.ToList.click();
-            wait.until(ExpectedConditions.elementToBeClickable(HomePage.ToToText));
-            HomePage.ToToText.sendKeys(to);
-            driver.findElement(By.cssSelector(".select2-results__options > li > ul > li[id*="+to+"]")).click();
-        } catch (Exception e) {
-            System.out.println("Need additional click : " + e.getMessage());
-            HomePage.Lot.click();
-            wait.until(ExpectedConditions.elementToBeClickable(HomePage.ToList));
-            HomePage.ToList.click();
-            wait.until(ExpectedConditions.elementToBeClickable(HomePage.ToToText));
-            HomePage.ToToText.sendKeys(to);
-            driver.findElement(By.cssSelector(".select2-results__options > li > ul > li[id*="+to+"]")).click();
-        }
+
+        HomePage.Lot.click();
+        wait.until(ExpectedConditions.elementToBeClickable(HomePage.ToList));
+        HomePage.ToList.click();
+        wait.until(ExpectedConditions.elementToBeClickable(HomePage.ToToText));
+        HomePage.ToToText.sendKeys(to);
+        driver.findElement(By.cssSelector(".select2-results__options > li > ul > li[id*="+to+"]")).click();
+
 
 
         //Click on home page
@@ -175,14 +162,14 @@ public class TimeCount extends MainTest{
         long finish = System.currentTimeMillis();
         long totalTime = finish - start;
 
-        System.out.println("Czas ładowania strony w sekundach to: "+totalTime/1000);
-        System.out.println("Czas ładowania strony w milisekundach to: "+totalTime);
+        System.out.println("Czas ladowania strony w sekundach to: "+totalTime/1000 + " dla " + from +"->"+ to+" "+localization);
+        System.out.println("Czas ladowania strony w milisekundach to: "+totalTime + " dla " + from +"->"+ to+" "+localization);
     }
 
     @DataProvider(name ="data")
     public Object[][] passData()
     {
-        ExcelDataConfig config = new ExcelDataConfig("C:\\Users\\Public\\LOT\\Short.xlsx");
+        ExcelDataConfig config = new ExcelDataConfig("C:\\Users\\Public\\LOT\\TimeCount.xlsx");
         int rows = config.getRowCount(0);
         Object[][] data=new Object[rows][5];
 

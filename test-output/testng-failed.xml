@@ -5,6 +5,7 @@
     <classes>
       <class name="LOT.TimeCount">
         <methods>
+          <include name="tearDown1"/>
           <include name="Test_BuyTicketsEU"/>
           <include name="setUp"/>
         </methods>

@@ -1,26 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
     <line>
-      <![CDATA[<a href='C:\LOTests\ErrorScreenshot\HomePagePRE2 pl\plWAWAMS13.020.020180927_140846.jpg'> <img src='C:\LOTests\ErrorScreenshot\HomePagePRE2 pl\plWAWAMS13.020.020180927_140846.jpg' height='400' width='600'/> </a><br>20180927_140846]]>
+      <![CDATA[<a href='C:\LOTests\ErrorScreenshot\HomePagePRE2 nl\enICNWAW120.0130.020180927_144255.jpg'> <img src='C:\LOTests\ErrorScreenshot\HomePagePRE2 nl\enICNWAW120.0130.020180927_144255.jpg' height='400' width='600'/> </a><br>20180927_144255]]>
     </line>
     <line>
-      <![CDATA[<a href='C:\LOTests\ErrorScreenshot\Test_BuyTicketsEU20180927_140930.jpg'> <img src='C:\LOTests\ErrorScreenshot\Test_BuyTicketsEU20180927_140930.jpg' height='400' width='600'/> </a><br>20180927_140930]]>
+      <![CDATA[<a href='C:\LOTests\ErrorScreenshot\Test_BuyTicketsEU20180927_144307.jpg'> <img src='C:\LOTests\ErrorScreenshot\Test_BuyTicketsEU20180927_144307.jpg' height='400' width='600'/> </a><br>20180927_144307]]>
+    </line>
+    <line>
+      <![CDATA[<a href='C:\LOTests\ErrorScreenshot\HomePagePRE2 pl\plICNWAW99.0100.020180927_144312.jpg'> <img src='C:\LOTests\ErrorScreenshot\HomePagePRE2 pl\plICNWAW99.0100.020180927_144312.jpg' height='400' width='600'/> </a><br>20180927_144312]]>
+    </line>
+    <line>
+      <![CDATA[<a href='C:\LOTests\ErrorScreenshot\Test_BuyTicketsEU20180927_144325.jpg'> <img src='C:\LOTests\ErrorScreenshot\Test_BuyTicketsEU20180927_144325.jpg' height='400' width='600'/> </a><br>20180927_144325]]>
     </line>
   </reporter-output>
-  <suite started-at="2018-09-27T12:08:25Z" name="Default Suite" finished-at="2018-09-27T12:09:31Z" duration-ms="66536">
+  <suite started-at="2018-09-27T12:42:45Z" name="Default Suite" finished-at="2018-09-27T12:43:26Z" duration-ms="41250">
     <groups>
       <group name="BuyTickets">
-        <method signature="TimeCount.Test_BuyTicketsEU(java.lang.String, java.lang.String, java.lang.String, org.apache.poi.xssf.usermodel.XSSFCell, org.apache.poi.xssf.usermodel.XSSFCell)[pri:0, instance:LOT.TimeCount@6497b078]" name="Test_BuyTicketsEU" class="LOT.TimeCount"/>
+        <method signature="TimeCount.Test_BuyTicketsEU(java.lang.String, java.lang.String, java.lang.String, org.apache.poi.xssf.usermodel.XSSFCell, org.apache.poi.xssf.usermodel.XSSFCell)[pri:0, instance:LOT.TimeCount@41c2284a]" name="Test_BuyTicketsEU" class="LOT.TimeCount"/>
       </group> <!-- BuyTickets -->
     </groups>
-    <test started-at="2018-09-27T12:08:25Z" name="LOTests" finished-at="2018-09-27T12:09:31Z" duration-ms="66536">
+    <test started-at="2018-09-27T12:42:45Z" name="LOTests" finished-at="2018-09-27T12:43:26Z" duration-ms="41250">
       <class name="LOT.TimeCount">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:LOT.TimeCount@6497b078]" started-at="2018-09-27T12:08:25Z" name="setUp" finished-at="2018-09-27T12:08:28Z" duration-ms="3117" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:LOT.TimeCount@41c2284a]" started-at="2018-09-27T12:42:45Z" name="setUp" finished-at="2018-09-27T12:42:48Z" duration-ms="3424" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="Test_BuyTicketsEU(java.lang.String, java.lang.String, java.lang.String, org.apache.poi.xssf.usermodel.XSSFCell, org.apache.poi.xssf.usermodel.XSSFCell)[pri:0, instance:LOT.TimeCount@6497b078]" started-at="2018-09-27T12:08:29Z" name="Test_BuyTicketsEU" data-provider="data" finished-at="2018-09-27T12:09:30Z" duration-ms="60965" status="PASS">
+        <test-method signature="Test_BuyTicketsEU(java.lang.String, java.lang.String, java.lang.String, org.apache.poi.xssf.usermodel.XSSFCell, org.apache.poi.xssf.usermodel.XSSFCell)[pri:0, instance:LOT.TimeCount@41c2284a]" started-at="2018-09-27T12:42:49Z" name="Test_BuyTicketsEU" data-provider="data" finished-at="2018-09-27T12:43:07Z" duration-ms="17389" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[nl/en]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[ICN]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[WAW]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[120.0]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[130.0]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[<a href='C:\LOTests\ErrorScreenshot\HomePagePRE2 nl\enICNWAW120.0130.020180927_144255.jpg'> <img src='C:\LOTests\ErrorScreenshot\HomePagePRE2 nl\enICNWAW120.0130.020180927_144255.jpg' height='400' width='600'/> </a><br>20180927_144255]]>
+            </line>
+            <line>
+              <![CDATA[<a href='C:\LOTests\ErrorScreenshot\Test_BuyTicketsEU20180927_144307.jpg'> <img src='C:\LOTests\ErrorScreenshot\Test_BuyTicketsEU20180927_144307.jpg' height='400' width='600'/> </a><br>20180927_144307]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- Test_BuyTicketsEU -->
+        <test-method signature="Test_BuyTicketsEU(java.lang.String, java.lang.String, java.lang.String, org.apache.poi.xssf.usermodel.XSSFCell, org.apache.poi.xssf.usermodel.XSSFCell)[pri:0, instance:LOT.TimeCount@41c2284a]" started-at="2018-09-27T12:43:07Z" name="Test_BuyTicketsEU" data-provider="data" finished-at="2018-09-27T12:43:24Z" duration-ms="17207" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -29,35 +72,35 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[WAW]]>
+                <![CDATA[ICN]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[AMS]]>
+                <![CDATA[WAW]]>
               </value>
             </param>
             <param index="3">
               <value>
-                <![CDATA[13.0]]>
+                <![CDATA[99.0]]>
               </value>
             </param>
             <param index="4">
               <value>
-                <![CDATA[20.0]]>
+                <![CDATA[100.0]]>
               </value>
             </param>
           </params>
           <reporter-output>
             <line>
-              <![CDATA[<a href='C:\LOTests\ErrorScreenshot\HomePagePRE2 pl\plWAWAMS13.020.020180927_140846.jpg'> <img src='C:\LOTests\ErrorScreenshot\HomePagePRE2 pl\plWAWAMS13.020.020180927_140846.jpg' height='400' width='600'/> </a><br>20180927_140846]]>
+              <![CDATA[<a href='C:\LOTests\ErrorScreenshot\HomePagePRE2 pl\plICNWAW99.0100.020180927_144312.jpg'> <img src='C:\LOTests\ErrorScreenshot\HomePagePRE2 pl\plICNWAW99.0100.020180927_144312.jpg' height='400' width='600'/> </a><br>20180927_144312]]>
             </line>
             <line>
-              <![CDATA[<a href='C:\LOTests\ErrorScreenshot\Test_BuyTicketsEU20180927_140930.jpg'> <img src='C:\LOTests\ErrorScreenshot\Test_BuyTicketsEU20180927_140930.jpg' height='400' width='600'/> </a><br>20180927_140930]]>
+              <![CDATA[<a href='C:\LOTests\ErrorScreenshot\Test_BuyTicketsEU20180927_144325.jpg'> <img src='C:\LOTests\ErrorScreenshot\Test_BuyTicketsEU20180927_144325.jpg' height='400' width='600'/> </a><br>20180927_144325]]>
             </line>
           </reporter-output>
         </test-method> <!-- Test_BuyTicketsEU -->
-        <test-method is-config="true" signature="tearDown1()[pri:0, instance:LOT.TimeCount@6497b078]" started-at="2018-09-27T12:09:30Z" name="tearDown1" finished-at="2018-09-27T12:09:31Z" duration-ms="1216" status="PASS">
+        <test-method is-config="true" signature="tearDown1()[pri:0, instance:LOT.TimeCount@41c2284a]" started-at="2018-09-27T12:43:25Z" name="tearDown1" finished-at="2018-09-27T12:43:26Z" duration-ms="1579" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown1 -->
