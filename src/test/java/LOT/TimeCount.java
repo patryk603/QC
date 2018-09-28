@@ -157,7 +157,7 @@ public class TimeCount extends MainTest{
         try {
             wait.until(ExpectedConditions.visibilityOf(FlightsPage.Cart));
         } catch (Exception e) {
-            System.out.println("Zbyt długi czas oczekiwania przejścia z bookera na step 2- flights : "+ e.getMessage());
+            System.out.println(localization+"/"+from+"->"+to+"/ Zbyt dlugi czas oczekiwania przejscia z bookera na step 2- flights : "+ e.getMessage());
         }
         long finish = System.currentTimeMillis();
         long totalTime = finish - start;
