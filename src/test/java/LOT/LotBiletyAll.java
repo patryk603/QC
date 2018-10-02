@@ -3,7 +3,6 @@ package LOT;
 import DDT.ExcelDataConfig;
 import Main.GetScreenshot;
 import Main.MainTest;
-import atu.testrecorder.ATUTestRecorder;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -129,8 +128,10 @@ public class LotBiletyAll extends MainTest{
         //TIME
 
         //TEST START
-
+        String start = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
+        System.out.println("Lokalizacja: "+localization+" | Lot z: " +from+ " | Lot do: "+to+" | Data wylotu: "+newDate+" | Data powrotu: "+newDate2+"  Start testu: "+start);
         //Take screenshot
+
         try {
             GetScreenshot.capture("HomePage " + localization + from + to + departuredata + returndata);
         } catch (IOException e) {

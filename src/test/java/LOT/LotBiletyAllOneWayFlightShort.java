@@ -17,6 +17,7 @@ import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
 public class LotBiletyAllOneWayFlightShort extends MainTest{
@@ -61,7 +62,7 @@ public class LotBiletyAllOneWayFlightShort extends MainTest{
     }
 
 
-    @Test(dataProvider = "dataEU",groups=("BuyTickets"))
+    @Test(dataProvider = "data",groups=("BuyTickets"))
     public void Test_BuyTicketsEU(String localization, String from, String to, XSSFCell departuredata) throws Exception {
 
         WebDriverWait wait = new WebDriverWait(driver, 20);
@@ -74,14 +75,27 @@ public class LotBiletyAllOneWayFlightShort extends MainTest{
             dat1 = dat1.substring(0, (dat1.length() - 2));
         }
 
-        //Given Date in String format
-        String timeStamp = new SimpleDateFormat("dd.MM.yyyy").format(Calendar.getInstance().getTime());
+        //Data Formats
+        String eutime = "dd.MM.yyyy";
+        String hutime = "yy.MM.dd";
+        String ustime = "MM.dd.yyyy";
 
-        // Printing Data
-        //System.out.println(timeStamp);
+        String actualtime;
+        if (localization.contains("us")) {
+            actualtime = ustime;
+        }   else if (localization.startsWith("hu/hu")) {
+            actualtime = hutime;
+        }   else {
+            actualtime = eutime;
+        }
+
+        //Given Date in String format
+        String timeStamp = new SimpleDateFormat(actualtime).format(Calendar.getInstance().getTime());
 
         //Specifying date format that matches the given date
-        SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy");
+        SimpleDateFormat sdf = new SimpleDateFormat(actualtime);
+
+
         Calendar c = Calendar.getInstance();
         Calendar b = Calendar.getInstance();
         try {
@@ -90,12 +104,7 @@ public class LotBiletyAllOneWayFlightShort extends MainTest{
         } catch (ParseException e) {
             e.printStackTrace();
         }
-        try {
-            //Setting the date to the given date
-            b.setTime(sdf.parse(timeStamp));
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
+
         //Number of Days to add
         c.add(Calendar.DAY_OF_MONTH, Integer.parseInt(String.valueOf(dat1)));
 
@@ -104,12 +113,18 @@ public class LotBiletyAllOneWayFlightShort extends MainTest{
         String newDate = sdf.format(c.getTime());
 
 
-        //TEST START
+        //Displaying the new Date after addition of Days
+        System.out.println("Data wylotu: " + newDate);
 
-        //HomePagePRE2
+        //TIME
+
+
+        //TEST START
+        String start = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
+        System.out.println("Lokalizacja: "+localization+" | Lot z: " +from+ " | Lot do: "+to+" | Data wylotu: "+newDate+" | Start testu: "+start);
         //Take screenshot
         try {
-            GetScreenshot.capture("HomePagePRE2 " + localization + from + to + departuredata);
+            GetScreenshot.capture("HomePage " + localization + from + to + departuredata);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -178,267 +193,10 @@ public class LotBiletyAllOneWayFlightShort extends MainTest{
         }
 
         //END OF TEST
-
     }
 
-    @Test(dataProvider = "dataHU",groups=("BuyTickets"))
-    public void Test_BuyTicketsHU(String localization, String from, String to, XSSFCell departuredata) throws Exception {
-
-        WebDriverWait wait = new WebDriverWait(driver, 20);
-        driver.get(baseUrl + localization);
-        ImplicitWait(driver);
-
-        //TIME Configuration
-        String dat1 = String.valueOf(departuredata);
-        if (dat1.length() > 0) {
-            dat1 = dat1.substring(0, (dat1.length() - 2));
-        }
-
-
-        //Given Date in String format
-        String timeStamp = new SimpleDateFormat("yy.MM.dd").format(Calendar.getInstance().getTime());
-
-        // Printing Data
-        //System.out.println(timeStamp);
-
-        //Specifying date format that matches the given date
-        SimpleDateFormat sdf = new SimpleDateFormat("yy.MM.dd");
-        Calendar c = Calendar.getInstance();
-        Calendar b = Calendar.getInstance();
-        try {
-            //Setting the date to the given date
-            c.setTime(sdf.parse(timeStamp));
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
-        try {
-            //Setting the date to the given date
-            b.setTime(sdf.parse(timeStamp));
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
-        //Number of Days to add
-        c.add(Calendar.DAY_OF_MONTH, Integer.parseInt(String.valueOf(dat1)));
-
-        //Date after adding the days to the given date
-        String newDate = sdf.format(c.getTime());
-        String newDate2 = sdf.format(b.getTime());
-
-        //Displaying the new Date after addition of Days
-        //System.out.println("Date after Addition/ Departure: " + newDate);
-        //System.out.println("Date after Addition/ Return: " + newDate2);
-        //TIME
-
-        //TEST START
-
-        //HomePagePRE2
-        //Take screenshot
-        try {
-            GetScreenshot.capture("HomePagePRE2 " + localization + from + to + departuredata);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        //Selecting From Flight
-        wait.until(ExpectedConditions.elementToBeClickable(HomePage.FromListButton));
-        HomePage.FromListButton.click();
-        wait.until(ExpectedConditions.elementToBeClickable(HomePage.FromToText));
-        HomePage.FromToText.sendKeys(from);
-
-        driver.findElement(By.cssSelector(".select2-results__options > li > ul > li[id*="+from+"]")).click();
-        //Click on home page
-
-        Thread.sleep(1000);
-
-        //Selecting To Flight
-        try {
-            //wait.until(ExpectedConditions.elementToBeClickable(HomePagePRE2.ToList));
-            //HomePagePRE2.ToList.click();
-            wait.until(ExpectedConditions.elementToBeClickable(HomePage.ToToText));
-            HomePage.ToToText.sendKeys(to);
-            driver.findElement(By.cssSelector(".select2-results__options > li > ul > li[id*="+to+"]")).click();
-        } catch (Exception e) {
-            System.out.println("Need additional click : " + e.getMessage());
-            HomePage.Lot.click();
-            wait.until(ExpectedConditions.elementToBeClickable(HomePage.ToList));
-            HomePage.ToList.click();
-            wait.until(ExpectedConditions.elementToBeClickable(HomePage.ToToText));
-            HomePage.ToToText.sendKeys(to);
-            driver.findElement(By.cssSelector(".select2-results__options > li > ul > li[id*="+to+"]")).click();
-        }
-
-
-        //Click on home page
-        HomePage.Lot.click();
-
-        //Selecting OneWayFlight
-        HomePage.OneWayFlight.click();
-
-        //Selecting Departure Data
-        HomePage.DepartureDate.clear();
-        HomePage.DepartureDate.sendKeys(newDate);
-        HomePage.Lot.click();
-
-        //Submit Button go from Home Page to Flight Page
-        HomePage.Submit.submit();
-
-        //FlightPage
-        try {
-            wait.until(ExpectedConditions.visibilityOf(FlightsPage.Cart));
-        } catch (Exception e) {
-            System.out.println("Zbyt długi czas oczekiwania przejścia z bookera na step 2- flights : "+ e.getMessage());
-        }
-
-        //Popup handle
-        try {
-            FlightsPage.OK.click();
-        } catch (Exception e) {
-            System.out.println("Flight are available in that date : " + e.getMessage());
-        }
-        //Take screenshot
-        try {
-            GetScreenshot.capture("FlightPage " + localization + from + to + departuredata);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        //END OF TEST
-
-    }
-
-
-    @Test(dataProvider = "dataUS",groups=("BuyTickets"))
-    public void Test_BuyTicketsUS(String localization, String from, String to, XSSFCell departuredata) throws Exception {
-
-        WebDriverWait wait = new WebDriverWait(driver, 20);
-        driver.get(baseUrl + localization);
-        ImplicitWait(driver);
-
-        //TIME Configuration
-        String dat1 = String.valueOf(departuredata);
-        if (dat1.length() > 0) {
-            dat1 = dat1.substring(0, (dat1.length() - 2));
-        }
-
-        /* Printing Data
-        System.out.println(departuredata);
-        System.out.println(returndata);
-        System.out.println(dat1);
-        System.out.println(dat2);
-        */
-
-        //Given Date in String format
-        String timeStamp = new SimpleDateFormat("MM.dd.yyyy").format(Calendar.getInstance().getTime());
-
-        // Printing Data
-        //System.out.println(timeStamp);
-
-        //Specifying date format that matches the given date
-        SimpleDateFormat sdf = new SimpleDateFormat("MM.dd.yyyy");
-        Calendar c = Calendar.getInstance();
-        Calendar b = Calendar.getInstance();
-        try {
-            //Setting the date to the given date
-            c.setTime(sdf.parse(timeStamp));
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
-        try {
-            //Setting the date to the given date
-            b.setTime(sdf.parse(timeStamp));
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
-        //Number of Days to add
-        c.add(Calendar.DAY_OF_MONTH, Integer.parseInt(String.valueOf(dat1)));
-
-        //Date after adding the days to the given date
-        String newDate = sdf.format(c.getTime());
-        String newDate2 = sdf.format(b.getTime());
-
-        //Displaying the new Date after addition of Days
-        //System.out.println("Date after Addition/ Departure: " + newDate);
-        //System.out.println("Date after Addition/ Return: " + newDate2);
-        //TIME
-
-        //TEST START
-
-        //HomePagePRE2
-        //Take screenshot
-        try {
-            GetScreenshot.capture("HomePagePRE2 " + localization + from + to + departuredata);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        //Selecting From Flight
-        wait.until(ExpectedConditions.elementToBeClickable(HomePage.FromListButton));
-        HomePage.FromListButton.click();
-        wait.until(ExpectedConditions.elementToBeClickable(HomePage.FromToText));
-        HomePage.FromToText.sendKeys(from);
-
-        driver.findElement(By.cssSelector(".select2-results__options > li > ul > li[id*=" + from + "]")).click();
-        //Click on home page
-
-        Thread.sleep(1000);
-
-        //Selecting To Flight
-        try {
-            //wait.until(ExpectedConditions.elementToBeClickable(HomePagePRE2.ToList));
-            //HomePagePRE2.ToList.click();
-            wait.until(ExpectedConditions.elementToBeClickable(HomePage.ToToText));
-            HomePage.ToToText.sendKeys(to);
-            driver.findElement(By.cssSelector(".select2-results__options > li > ul > li[id*=" + to + "]")).click();
-        } catch (Exception e) {
-            System.out.println("Need additional click : " + e.getMessage());
-            HomePage.Lot.click();
-            wait.until(ExpectedConditions.elementToBeClickable(HomePage.ToList));
-            HomePage.ToList.click();
-            wait.until(ExpectedConditions.elementToBeClickable(HomePage.ToToText));
-            HomePage.ToToText.sendKeys(to);
-            driver.findElement(By.cssSelector(".select2-results__options > li > ul > li[id*=" + to + "]")).click();
-        }
-
-
-        //Click on home page
-        HomePage.Lot.click();
-
-        //Selecting OneWayFlight
-        HomePage.OneWayFlight.click();
-
-        //Selecting Departure Data
-        HomePage.DepartureDate.clear();
-        HomePage.DepartureDate.sendKeys(newDate);
-        HomePage.Lot.click();
-
-        //Submit Button go from Home Page to Flight Page
-        HomePage.Submit.submit();
-
-        //FlightPage
-        try {
-            wait.until(ExpectedConditions.visibilityOf(FlightsPage.Cart));
-        } catch (Exception e) {
-            System.out.println("Zbyt długi czas oczekiwania przejścia z bookera na step 2- flights : "+ e.getMessage());
-        }
-
-        //Popup handle
-        try {
-            FlightsPage.OK.click();
-        } catch (Exception e) {
-            System.out.println("Flight are available in that date : " + e.getMessage());
-        }
-        //Take screenshot
-        try {
-            GetScreenshot.capture("FlightPage " + localization + from + to + departuredata);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        //END OF TEST
-    }
-
-    @DataProvider(name ="dataEU")
-    public Object[][] passDataEU()
+    @DataProvider(name ="data")
+    public Object[][] passData()
     {
         ExcelDataConfig config = new ExcelDataConfig("C:\\Users\\Public\\LOT\\OneWayFlight.xlsx");
         int rows = config.getRowCount(0);
@@ -453,48 +211,13 @@ public class LotBiletyAllOneWayFlightShort extends MainTest{
         }
         return data;
     }
-    @DataProvider(name ="dataUS")
-    public Object[][] passDataUS()
-    {
-        ExcelDataConfig config = new ExcelDataConfig("C:\\Users\\Public\\LOT\\OneWayFlight.xlsx");
-        int rows = config.getRowCount(1);
-        Object[][] data=new Object[rows][4];
 
-        for(int i=0;i<rows;i++){
-            data[i][0]=config.getData(1,i,0);
-            data[i][1]=config.getData(1,i,1);
-            data[i][2]=config.getData(1,i,2);
-            data[i][3]=config.getNumber(1,i,3);
-
-        }
-        return data;
-    }
-    @DataProvider(name ="dataHU")
-    public Object[][] passDataHU()
-    {
-        ExcelDataConfig config = new ExcelDataConfig("C:\\Users\\Public\\LOT\\OneWayFlight.xlsx");
-        int rows = config.getRowCount(2);
-        Object[][] data=new Object[rows][4];
-
-        for(int i=0;i<rows;i++){
-            data[i][0]=config.getData(2,i,0);
-            data[i][1]=config.getData(2,i,1);
-            data[i][2]=config.getData(2,i,2);
-            data[i][3]=config.getNumber(2,i,3);
-
-        }
-        return data;
-    }
-    //Excel configuration
-
-    //After and of Class test
 
     //After and of Class test
     @AfterTest(alwaysRun = true)
     public void tearDown1() throws Exception {
         driver.manage().deleteAllCookies();
         driver.quit();
-
     }
 
 }

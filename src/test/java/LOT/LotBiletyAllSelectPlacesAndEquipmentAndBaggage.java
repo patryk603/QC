@@ -18,6 +18,7 @@ import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
@@ -116,8 +117,8 @@ public class LotBiletyAllSelectPlacesAndEquipmentAndBaggage extends MainTest{
         //TIME
 
         //TEST START
-
-        //HomePagePRE2
+        String start = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
+        System.out.println("Lokalizacja: "+localization+" | Lot z: " +from+ " | Lot do: "+to+" | Data wylotu: "+newDate+" | Data powrotu: "+newDate2+"  Start testu: "+start);
         //Take screenshot
         try {
             GetScreenshot.capture("HomePagePRE2 " + localization + from + to + departuredata + returndata);
@@ -532,8 +533,8 @@ public class LotBiletyAllSelectPlacesAndEquipmentAndBaggage extends MainTest{
         //TIME
 
         //TEST START
-
-        //HomePagePRE2
+        String start = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
+        System.out.println("Lokalizacja: "+localization+" | Lot z: " +from+ " | Lot do: "+to+" | Data wylotu: "+newDate+" | Data powrotu: "+newDate2+"  Start testu: "+start);
         //Take screenshot
         try {
             GetScreenshot.capture("HomePagePRE2 " + localization + from + to + departuredata + returndata);
@@ -948,8 +949,8 @@ public class LotBiletyAllSelectPlacesAndEquipmentAndBaggage extends MainTest{
         //TIME
 
         //TEST START
-
-        //HomePagePRE2
+        String start = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
+        System.out.println("Lokalizacja: "+localization+" | Lot z: " +from+ " | Lot do: "+to+" | Data wylotu: "+newDate+" | Data powrotu: "+newDate2+"  Start testu: "+start);
         //Take screenshot
         try {
             GetScreenshot.capture("HomePagePRE2 " + localization + from + to + departuredata + returndata);
