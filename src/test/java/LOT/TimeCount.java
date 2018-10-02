@@ -118,7 +118,6 @@ public class TimeCount extends MainTest{
         //Take screenshot
 
         //HomePage
-
         //Selecting From Flight
         wait.until(ExpectedConditions.elementToBeClickable(HomePage.FromListButton));
         HomePage.FromListButton.click();
