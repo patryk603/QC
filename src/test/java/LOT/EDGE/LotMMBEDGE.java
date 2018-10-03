@@ -1,26 +1,32 @@
-package LOT;
+package LOT.EDGE;
 
 import DDT.ExcelDataConfig;
 import Main.MainTest;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import org.testng.annotations.*;
-import pageObjects.*;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+import pageObjects.MMBPage;
+
 import java.util.Objects;
+
 import static org.testng.Assert.assertEquals;
 
-public class LotMMB extends MainTest {
+public class LotMMBEDGE extends MainTest {
     private String baseUrl;
     private boolean acceptNextAlert = true;
     private StringBuffer verificationErrors = new StringBuffer();
 
     @BeforeTest(alwaysRun = true)
     public void setUp() throws Exception {
-        driver = new ChromeDriver();
+        driver = new EdgeDriver();
         driver.manage().deleteAllCookies();
         driver.manage().window().maximize();
         baseUrl = "http://www.lot.com/";

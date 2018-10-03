@@ -27,6 +27,10 @@ public class MMBPage {
     @FindBy(css = ".nr-managemybooking__conditions > p > a")
     public static WebElement FareConditions;
 
+    @FindBy(id = "nr-your-ticket--content")
+    public static WebElement ticket;
+
+
     public MMBPage(WebDriver driver){
 
         this.driver = driver;
