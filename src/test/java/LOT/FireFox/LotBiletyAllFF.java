@@ -150,7 +150,6 @@ public class LotBiletyAllFF extends MainTest{
         HomePage.FromToText.sendKeys(from);
 
         driver.findElement(By.cssSelector(".select2-results__options > li > ul > li[id*="+from+"]")).click();
-        //Click on home page
 
         Thread.sleep(1000);
 

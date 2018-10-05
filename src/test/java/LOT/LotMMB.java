@@ -58,7 +58,7 @@ public class LotMMB extends MainTest {
                 System.out.println("Booking Number not found: ");
             }
         } catch (Exception e) {
-            //System.out.println("Nie znaleziono rezerwacji : " + bookinrexcel + e.getMessage());
+            System.out.println("Nie znaleziono rezerwacji : " + " | " + bookinrexcel + e.getMessage());
             Assert.fail("Nie znaleziono rezerwacji : " + bookinrexcel);
 
         }

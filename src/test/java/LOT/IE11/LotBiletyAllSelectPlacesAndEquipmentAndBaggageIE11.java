@@ -1,12 +1,13 @@
-package LOT.EDGE;
+package LOT.IE11;
 
 import DDT.ExcelDataConfig;
 import Main.GetScreenshot;
 import Main.MainTest;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.openqa.selenium.By;
-import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
@@ -22,9 +23,11 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
+import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
-public class LotBiletyAllOneWayFlightEDGE extends MainTest{
+public class LotBiletyAllSelectPlacesAndEquipmentAndBaggageIE11 extends MainTest{
     private String baseUrl;
     private boolean acceptNextAlert = true;
     private StringBuffer verificationErrors = new StringBuffer();
@@ -50,9 +53,7 @@ public class LotBiletyAllOneWayFlightEDGE extends MainTest{
 
     @BeforeTest(alwaysRun = true)
     public void setUp() throws Exception {
-        //DesiredCapabilities caps = DesiredCapabilities.internetExplorer();
-        //caps.setCapability("ignoreZoomSetting", true);
-        driver = new EdgeDriver();
+        driver = new InternetExplorerDriver();
         driver.manage().deleteAllCookies();
         driver.manage().window().maximize();
         baseUrl = "http://www.lot.com/";
@@ -67,7 +68,7 @@ public class LotBiletyAllOneWayFlightEDGE extends MainTest{
 
 
     @Test(dataProvider = "data",groups=("BuyTickets"))
-    public void Test_BuyTicketsEU(String localization, String from, String to, XSSFCell departuredata) throws Exception {
+    public void Test_BuyTicketsEU(String localization, String from, String to, XSSFCell departuredata, XSSFCell returndata) throws Exception {
 
         WebDriverWait wait = new WebDriverWait(driver, 20);
         driver.get(baseUrl + localization);
@@ -79,6 +80,10 @@ public class LotBiletyAllOneWayFlightEDGE extends MainTest{
             dat1 = dat1.substring(0, (dat1.length() - 2));
         }
 
+        String dat2 = String.valueOf(returndata);
+        if (dat2.length() > 0) {
+            dat2 = dat2.substring(0, (dat2.length() - 2));
+        }
 
         //Data Formats
         String eutime = "dd.MM.yyyy";
@@ -109,26 +114,32 @@ public class LotBiletyAllOneWayFlightEDGE extends MainTest{
         } catch (ParseException e) {
             e.printStackTrace();
         }
-
+        try {
+            //Setting the date to the given date
+            b.setTime(sdf.parse(timeStamp));
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
         //Number of Days to add
         c.add(Calendar.DAY_OF_MONTH, Integer.parseInt(String.valueOf(dat1)));
-
+        b.add(Calendar.DAY_OF_MONTH, Integer.parseInt(String.valueOf(dat2)));
 
         //Date after adding the days to the given date
         String newDate = sdf.format(c.getTime());
-
+        String newDate2 = sdf.format(b.getTime());
 
         //Displaying the new Date after addition of Days
         System.out.println("Data wylotu: " + newDate);
-
+        System.out.println("Data powrotu: " + newDate2);
         //TIME
 
         //TEST START
         String start = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
-        System.out.println("Lokalizacja: "+localization+" | Lot z: " +from+ " | Lot do: "+to+" | Data wylotu: "+newDate+" | Start testu: "+start);
+        System.out.println("Lokalizacja: "+localization+" | Lot z: " +from+ " | Lot do: "+to+" | Data wylotu: "+newDate+" | Data powrotu: "+newDate2+"  Start testu: "+start);
+
         //Take screenshot
         try {
-            GetScreenshot.capture("HomePage " + localization + from + to + departuredata);
+            GetScreenshot.capture("HomePagePRE2 " + localization + from + to + departuredata + returndata);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -140,7 +151,6 @@ public class LotBiletyAllOneWayFlightEDGE extends MainTest{
         HomePage.FromToText.sendKeys(from);
 
         driver.findElement(By.cssSelector(".select2-results__options > li > ul > li[id*="+from+"]")).click();
-        //Click on home page
 
         Thread.sleep(1000);
 
@@ -165,16 +175,18 @@ public class LotBiletyAllOneWayFlightEDGE extends MainTest{
         //Click on home page
         HomePage.Lot.click();
 
-        //Selecting OneWayFlight
-        HomePage.OneWayFlight.click();
-
         //Selecting Departure Data
         HomePage.DepartureDate.clear();
         HomePage.DepartureDate.sendKeys(newDate);
+
+        //Selecting Return Date
+        HomePage.ReturnDate.clear();
+        HomePage.ReturnDate.sendKeys(newDate2);
         HomePage.Lot.click();
 
         //Submit Button go from Home Page to Flight Page
         HomePage.Submit.submit();
+
 
         //FlightPage
         try {
@@ -185,13 +197,14 @@ public class LotBiletyAllOneWayFlightEDGE extends MainTest{
 
         //Popup handle
         try {
+            wait.until(ExpectedConditions.visibilityOf(FlightsPage.OK));
             FlightsPage.OK.click();
         } catch (Exception e) {
             System.out.println("Flight are available in that date : " + e.getMessage());
         }
         //Take screenshot
         try {
-            GetScreenshot.capture("FlightPage " + localization + from + to + departuredata);
+            GetScreenshot.capture("FlightPage " + localization + from + to + departuredata + returndata);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -205,6 +218,15 @@ public class LotBiletyAllOneWayFlightEDGE extends MainTest{
             FlightsPage.FirstTO1.click();
         }
 
+        //Selecting First ACTIVE Ticket BACK
+        Thread.sleep(1000);
+        try {
+            FlightsPage.FirstBack.click();
+        } catch (Exception e) {
+            System.out.println("Other tickets : "+ e.getMessage());
+            FlightsPage.FirstBack2.click();
+        }
+        Thread.sleep(1000);
         //Button Continue
         try {
             wait.until(ExpectedConditions.visibilityOf(FlightsPage.BigContinue));
@@ -217,10 +239,11 @@ public class LotBiletyAllOneWayFlightEDGE extends MainTest{
             System.out.println("No Element Continue : "+ e.getMessage());
         }
         // Passengers Page
+        Thread.sleep(5000);
         //Take screenshot
         wait.until(ExpectedConditions.visibilityOf(PassengersPage.CheckboxAccept));
         try {
-            GetScreenshot.capture("PassengersPage " + localization + from + to + departuredata);
+            GetScreenshot.capture("PassengersPage " + localization + from + to + departuredata + returndata);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -233,8 +256,8 @@ public class LotBiletyAllOneWayFlightEDGE extends MainTest{
         //Selecting title
 
         //Enter Name and Surname
-        PassengersPage.FirstName.sendKeys(name);
-        PassengersPage.Surname.sendKeys(surname);
+        PassengersPage.FirstNameIE11.sendKeys(name);
+        PassengersPage.SurnameIE11.sendKeys(surname);
 
         //DATE OF BIRTH
         try {
@@ -272,26 +295,155 @@ public class LotBiletyAllOneWayFlightEDGE extends MainTest{
         }
 
         //Extra Page
-        //Take screenshot
-                wait.until(ExpectedConditions.visibilityOf(ExtrasPage.Column1));
+        wait.until(ExpectedConditions.visibilityOf(ExtrasPage.Column1));
+        //Popup handle
         try {
-            GetScreenshot.capture("ExtraPage " + localization + from + to + departuredata);
+            ExtrasPage.OK.click();
+        } catch (Exception e) {
+            System.out.println("Popup handle : " + e.getMessage());
+        }
+
+        //Selecting random seats TO destination
+        try {
+            List<WebElement> listings = driver.findElements(By.cssSelector(".nr-anc__seats__content__right>div>table>tbody>tr>th>table>tbody>tr>td[id*=\"flight_1_segment_1\"]:not([class*=\"disabled\"])"));
+            Random r = new Random();
+            int randomValue = r.nextInt(listings.size()); //Getting a random value that is between 0 and (list's size)-1
+            listings.get(randomValue).click(); //Clicking on the random item in the list.
+            //Click on add button
+            wait.until(ExpectedConditions.elementToBeClickable(ExtrasPage.AddSeatsButton));
+            ExtrasPage.AddSeatsButton.click();
+        } catch (Exception e) {
+            System.out.println("No Element additional TO : "+ e.getMessage());
+        }
+
+        //Popup handle
+        try {
+            ExtrasPage.OK.click();
+        } catch (Exception e) {
+            System.out.println("Popup handle : " + e.getMessage());
+        }
+
+        //Try selecting additional TO
+        try {
+            List<WebElement> listings3 = driver.findElements(By.cssSelector(".nr-anc__seats__content__right>div>table>tbody>tr>th>table>tbody>tr>td[id*=\"flight_1_segment_2\"]:not([class*=\"disabled\"])"));
+            Random r3 = new Random();
+            int randomValue3 = r3.nextInt(listings3.size()); //Getting a random value that is between 0 and (list's size)-1
+            listings3.get(randomValue3).click(); //Clicking on the random item in the list.
+            //Click on add button
+            wait.until(ExpectedConditions.elementToBeClickable(ExtrasPage.AddSeatsButton));
+            ExtrasPage.AddSeatsButton.click();
+        } catch (Exception e) {
+            System.out.println("No Element additional TO : "+ e.getMessage());
+        }
+
+        //Popup handle
+        try {
+            ExtrasPage.OK.click();
+        } catch (Exception e) {
+            System.out.println("Popup handle : " + e.getMessage());
+        }
+
+
+        //Selecting random seats BACK from destination
+        try {
+            wait.until(ExpectedConditions.elementToBeClickable(ExtrasPage.Flight2));
+            List<WebElement> listings2 = driver.findElements(By.cssSelector(".nr-anc__seats__content__right>div>table>tbody>tr>th>table>tbody>tr>td[id*=\"flight_2_segment_1\"]:not([class*=\"disabled\"])"));
+            Random r2 = new Random();
+            int randomValue2 = r2.nextInt(listings2.size()); //Getting a random value that is between 0 and (list's size)-1
+            listings2.get(randomValue2).click(); //Clicking on the random item in the list.
+            //Click on add button
+            wait.until(ExpectedConditions.elementToBeClickable(ExtrasPage.AddSeatsButton));
+            ExtrasPage.AddSeatsButton.click();
+        } catch (Exception e) {
+            System.out.println("No Element additional TO : "+ e.getMessage());
+        }
+
+        //Popup handle
+        try {
+            ExtrasPage.OK.click();
+        } catch (Exception e) {
+            System.out.println("Popup handle : " + e.getMessage());
+        }
+
+        //Try selecting additional BACK
+        try {
+            List<WebElement> listings3 = driver.findElements(By.cssSelector(".nr-anc__seats__content__right>div>table>tbody>tr>th>table>tbody>tr>td[id*=\"flight_2_segment_2\"]:not([class*=\"disabled\"])"));
+            Random r3 = new Random();
+            int randomValue3 = r3.nextInt(listings3.size()); //Getting a random value that is between 0 and (list's size)-1
+            listings3.get(randomValue3).click(); //Clicking on the random item in the list.
+            //Click on add button
+            wait.until(ExpectedConditions.elementToBeClickable(ExtrasPage.AddSeatsButton));
+            ExtrasPage.AddSeatsButton.click();
+        } catch (Exception e) {
+            System.out.println("No Element additional BACK : "+ e.getMessage());
+        }
+
+        //Take screenshot
+        try {
+            GetScreenshot.capture("ExtraPage " + localization + from + to + departuredata + returndata);
         } catch (IOException e) {
             e.printStackTrace();
         }
-        //Waiting and Clicking on Big Continue Button.
+
+        //Adding extra equipment
+        try {
+            wait.until(ExpectedConditions.elementToBeClickable(ExtrasPage.BuyNowSpecialEquipment));
+            ExtrasPage.BuyNowSpecialEquipment.click();
+
+            wait.until(ExpectedConditions.elementToBeClickable(ExtrasPage.SpecialEquipmentPassanger1));
+            ExtrasPage.SpecialEquipmentPassanger1.click();
+            //Selecting random Equipment for Passanger1
+            List<WebElement> equipment = driver.findElements(By.cssSelector(".nr-anc__passenger-selector__segments>div>div>div>div>div>div>div>div>select[id$=\"pass_1_eq_1\"]>option[aria-label$=\"updated\"]"));
+            Random eq1 = new Random();
+            int randomEquipment = eq1.nextInt(equipment.size()); //Getting a random value that is between 0 and (list's size)-1
+            equipment.get(randomEquipment).click(); //Clicking on the random item in the list.
+        } catch (Exception e) {
+            System.out.println("Adding extra equipment problem : " + e.getMessage());
+        }
+
+        //Clicking SpecialEquipmentSameForAllButton
+        try {
+            ExtrasPage.SpecialEquipmentSameForAllButton.click();
+        } catch (Exception e) {
+            System.out.println("SpecialEquipmentSameForAllButton problem : " + e.getMessage());
+        }
+
+        //Adding extra baggage
+        try {
+            wait.until(ExpectedConditions.elementToBeClickable(ExtrasPage.BuyNowSpecialBaggage));
+            ExtrasPage.BuyNowSpecialBaggage.click();
+
+            wait.until(ExpectedConditions.elementToBeClickable(ExtrasPage.SpecialBaggagePassanger1));
+            ExtrasPage.SpecialBaggagePassanger1.click();
+            //Selecting random Equipment for Passanger1
+            List<WebElement> baggage = driver.findElements(By.cssSelector("#ancillaries-content > div.nr-ancillaries-baggage>div>div>div>div>div>div>div>div>div>div>div>select[id*=\"1_pass_1\"]>option[aria-label$=\"updated\"]"));
+            Random bg1 = new Random();
+            int randomBaggage = bg1.nextInt(baggage.size()); //Getting a random value that is between 0 and (list's size)-1
+            baggage.get(randomBaggage).click(); //Clicking on the random item in the list.
+        } catch (Exception e) {
+            System.out.println("Adding extra baggage problem : " + e.getMessage());
+        }
+
+        //Clicking SpecialBaggageSameForAllButton
+        try {
+            ExtrasPage.SpecialBaggageSameForAllButton.click();
+        } catch (Exception e) {
+            System.out.println("SpecialBaggageSameForAllButton problem : " + e.getMessage());
+        }
+
+        //Big continue button click
         try {
             wait.until(ExpectedConditions.visibilityOf(ExtrasPage.BigContinue));
             ExtrasPage.BigContinue.click();
         } catch (Exception e) {
             System.out.println("No Element Continue : "+ e.getMessage());
         }
-        //Extra Page
+        //Extra Page End
 
         //Payment Page
         wait.until(ExpectedConditions.visibilityOf(PaymentPage.BookNr));
         try {
-            GetScreenshot.capture("PaymentPage " + localization + from + to + departuredata);
+            GetScreenshot.capture("PaymentPage " + localization + from + to + departuredata + returndata);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -333,29 +485,31 @@ public class LotBiletyAllOneWayFlightEDGE extends MainTest{
             System.out.println("Problem with Continue button : "+ e.getMessage());
         }
         //END OF TEST
+
+
+        //Excel configuration
     }
 
     @DataProvider(name ="data")
     public Object[][] passData()
     {
-        ExcelDataConfig config = new ExcelDataConfig("C:\\Users\\Public\\LOT\\OneWayFlight.xlsx");
+        ExcelDataConfig config = new ExcelDataConfig("C:\\Users\\Public\\LOT\\PlacesEquipmentAndBaggage.xlsx");
         int rows = config.getRowCount(0);
-        Object[][] data=new Object[rows][4];
+        Object[][] data=new Object[rows][5];
 
         for(int i=0;i<rows;i++){
             data[i][0]=config.getData(0,i,0);
             data[i][1]=config.getData(0,i,1);
             data[i][2]=config.getData(0,i,2);
             data[i][3]=config.getNumber(0,i,3);
-
+            data[i][4]=config.getNumber(0,i,4);
         }
         return data;
     }
 
 
-    //After and of Class test
     @AfterTest(alwaysRun = true)
-    public void tearDown1() throws Exception {
+    public void tearDown2() throws Exception {
         driver.manage().deleteAllCookies();
         driver.quit();
     }
