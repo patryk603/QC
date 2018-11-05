@@ -44,7 +44,7 @@ public class CouponFollow extends MainTest {
         driver.get(baseUrl);
         ImplicitWait(driver);
         CouponfollowPage.searchField.sendKeys("domino's");
-        wait.until(ExpectedConditions.visibilityOfAllElements(CouponfollowPage.dominospizza));
+        Thread.sleep(1000);
         CouponfollowPage.dominospizza.click();
 
 
@@ -77,8 +77,8 @@ public class CouponFollow extends MainTest {
 
     @AfterTest(alwaysRun = true)
     public void tearDown1() throws Exception {
-        driver.manage().deleteAllCookies();
-        driver.quit();
+        //driver.manage().deleteAllCookies();
+        //driver.quit();
     }
 
 }
