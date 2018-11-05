@@ -77,8 +77,8 @@ public class CouponFollow extends MainTest {
 
     @AfterTest(alwaysRun = true)
     public void tearDown1() throws Exception {
-        //driver.manage().deleteAllCookies();
-        //driver.quit();
+        driver.manage().deleteAllCookies();
+        driver.quit();
     }
 
 }
