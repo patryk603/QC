@@ -1,135 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
-    <line>
-      <![CDATA[<a href='C:\QC\ErrorScreenshot\Test_BuyTicketsEU20181019_144733.jpg'> <img src='C:\QC\ErrorScreenshot\Test_BuyTicketsEU20181019_144733.jpg' height='400' width='600'/> </a><br>20181019_144733]]>
-    </line>
-    <line>
-      <![CDATA[<a href='C:\QC\ErrorScreenshot\Test_BuyTicketsEU20181019_144740.jpg'> <img src='C:\QC\ErrorScreenshot\Test_BuyTicketsEU20181019_144740.jpg' height='400' width='600'/> </a><br>20181019_144740]]>
-    </line>
-    <line>
-      <![CDATA[<a href='C:\QC\ErrorScreenshot\Test_BuyTicketsEU20181019_144747.jpg'> <img src='C:\QC\ErrorScreenshot\Test_BuyTicketsEU20181019_144747.jpg' height='400' width='600'/> </a><br>20181019_144747]]>
-    </line>
   </reporter-output>
-  <suite started-at="2018-10-19T12:47:14Z" name="Default Suite" finished-at="2018-10-19T12:47:48Z" duration-ms="33727">
+  <suite started-at="2018-11-05T13:17:18Z" name="Default Suite" finished-at="2018-11-05T13:17:29Z" duration-ms="10798">
     <groups>
-      <group name="BuyTickets">
-        <method signature="Test.Test_BuyTicketsEU(java.lang.String, java.lang.String, java.lang.String, org.apache.poi.xssf.usermodel.XSSFCell, org.apache.poi.xssf.usermodel.XSSFCell)[pri:0, instance:Selenium.Test@55f616cf]" name="Test_BuyTicketsEU" class="Selenium.Test"/>
-      </group> <!-- BuyTickets -->
     </groups>
-    <test started-at="2018-10-19T12:47:14Z" name="QC" finished-at="2018-10-19T12:47:48Z" duration-ms="33727">
-      <class name="Selenium.Test">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:Selenium.Test@55f616cf]" started-at="2018-10-19T12:47:14Z" name="setUp" finished-at="2018-10-19T12:47:17Z" duration-ms="2805" status="PASS">
+    <test started-at="2018-11-05T13:17:18Z" name="QC" finished-at="2018-11-05T13:17:29Z" duration-ms="10798">
+      <class name="tests.CouponFollow">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CouponFollow@ba54932]" started-at="2018-11-05T13:17:18Z" name="setUp" finished-at="2018-11-05T13:17:21Z" duration-ms="2651" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="Test_BuyTicketsEU(java.lang.String, java.lang.String, java.lang.String, org.apache.poi.xssf.usermodel.XSSFCell, org.apache.poi.xssf.usermodel.XSSFCell)[pri:0, instance:Selenium.Test@55f616cf]" started-at="2018-10-19T12:47:18Z" name="Test_BuyTicketsEU" data-provider="data" finished-at="2018-10-19T12:47:33Z" duration-ms="14753" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[gr/en]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[KTW]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[WAW]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[9.0]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[28.0]]>
-              </value>
-            </param>
-          </params>
+        <test-method signature="Couponfollow_TEST()[pri:0, instance:tests.CouponFollow@ba54932]" started-at="2018-11-05T13:17:21Z" name="Couponfollow_TEST" finished-at="2018-11-05T13:17:29Z" duration-ms="8125" status="PASS">
           <reporter-output>
-            <line>
-              <![CDATA[<a href='C:\QC\ErrorScreenshot\Test_BuyTicketsEU20181019_144733.jpg'> <img src='C:\QC\ErrorScreenshot\Test_BuyTicketsEU20181019_144733.jpg' height='400' width='600'/> </a><br>20181019_144733]]>
-            </line>
           </reporter-output>
-        </test-method> <!-- Test_BuyTicketsEU -->
-        <test-method signature="Test_BuyTicketsEU(java.lang.String, java.lang.String, java.lang.String, org.apache.poi.xssf.usermodel.XSSFCell, org.apache.poi.xssf.usermodel.XSSFCell)[pri:0, instance:Selenium.Test@55f616cf]" started-at="2018-10-19T12:47:33Z" name="Test_BuyTicketsEU" data-provider="data" finished-at="2018-10-19T12:47:39Z" duration-ms="5707" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[pl/pl]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[WAW]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[KTW]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[10.0]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[29.0]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-            <line>
-              <![CDATA[<a href='C:\QC\ErrorScreenshot\Test_BuyTicketsEU20181019_144740.jpg'> <img src='C:\QC\ErrorScreenshot\Test_BuyTicketsEU20181019_144740.jpg' height='400' width='600'/> </a><br>20181019_144740]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- Test_BuyTicketsEU -->
-        <test-method signature="Test_BuyTicketsEU(java.lang.String, java.lang.String, java.lang.String, org.apache.poi.xssf.usermodel.XSSFCell, org.apache.poi.xssf.usermodel.XSSFCell)[pri:0, instance:Selenium.Test@55f616cf]" started-at="2018-10-19T12:47:40Z" name="Test_BuyTicketsEU" data-provider="data" finished-at="2018-10-19T12:47:46Z" duration-ms="6121" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[pl/en]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[KTW]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[WAW]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[11.0]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[30.0]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-            <line>
-              <![CDATA[<a href='C:\QC\ErrorScreenshot\Test_BuyTicketsEU20181019_144747.jpg'> <img src='C:\QC\ErrorScreenshot\Test_BuyTicketsEU20181019_144747.jpg' height='400' width='600'/> </a><br>20181019_144747]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- Test_BuyTicketsEU -->
-        <test-method is-config="true" signature="tearDown1()[pri:0, instance:Selenium.Test@55f616cf]" started-at="2018-10-19T12:47:47Z" name="tearDown1" finished-at="2018-10-19T12:47:48Z" duration-ms="1116" status="PASS">
+        </test-method> <!-- Couponfollow_TEST -->
+        <test-method is-config="true" signature="tearDown1()[pri:0, instance:tests.CouponFollow@ba54932]" started-at="2018-11-05T13:17:29Z" name="tearDown1" finished-at="2018-11-05T13:17:29Z" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown1 -->
-      </class> <!-- Selenium.Test -->
+      </class> <!-- tests.CouponFollow -->
     </test> <!-- QC -->
   </suite> <!-- Default Suite -->
 </testng-results>

@@ -4,7 +4,6 @@ import Main.GetScreenshot;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
-import pageObjects.PaymentPage;
 
 import java.io.IOException;
 
