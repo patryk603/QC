@@ -44,7 +44,7 @@ public class CouponFollow extends MainTest {
         driver.get(baseUrl);
         ImplicitWait(driver);
         CouponfollowPage.searchField.sendKeys("domino's");
-        Thread.sleep(1000);
+        CouponfollowPage.searchField.sendKeys("domino's");
         CouponfollowPage.dominospizza.click();
 
 
