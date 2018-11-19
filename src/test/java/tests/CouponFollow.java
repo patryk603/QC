@@ -2,17 +2,13 @@ package tests;
 
 
 import Main.MainTest;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
 import org.testng.annotations.*;
 import pageObjects.CouponfollowPage;
 
-import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
@@ -33,20 +29,18 @@ public class CouponFollow extends MainTest {
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         driver.manage().timeouts().pageLoadTimeout(90, TimeUnit.SECONDS);
         PageFactory.initElements(driver, CouponfollowPage.class);
-
     }
 
-    @Test
-    public void Couponfollow_TEST() throws Exception {
+    @Test()
+    public void BaseTest() throws Exception {
 
         WebDriverWait wait = new WebDriverWait(driver, 20);
         //Main Page
-        driver.get(baseUrl);
+        driver.get("https://couponfollow.com/");
         ImplicitWait(driver);
         CouponfollowPage.searchField.sendKeys("domino's");
         CouponfollowPage.searchField.sendKeys("domino's");
         CouponfollowPage.dominospizza.click();
-
 
         //Next Page
         wait.until(ExpectedConditions.elementToBeClickable(CouponfollowPage.coupon));

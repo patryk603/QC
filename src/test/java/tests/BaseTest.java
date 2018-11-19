@@ -28,6 +28,8 @@ public class BaseTest {
         driver.manage().window().maximize();
     }
 
+
+
     @AfterClass
     public void teardown () {
         driver.quit();
